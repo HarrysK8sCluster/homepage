@@ -112,7 +112,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1769550883857</updated>
-      <workItem from="1769550884985" duration="63526000" />
+      <workItem from="1769550884985" duration="63739000" />
     </task>
     <task id="LOCAL-00001" summary="v1">
       <option name="closed" value="true" />
@@ -186,7 +186,15 @@
       <option name="project" value="LOCAL" />
       <updated>1769880912871</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="add auto deployment">
+      <option name="closed" value="true" />
+      <created>1769880979316</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1769880979316</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
