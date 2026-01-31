@@ -2,13 +2,7 @@ name: Build & Push Docker Image (GHCR)
 
 on:
   push:
-    branches:
-      - main
-  workflow_dispatch:
-
-permissions:
-  contents: read
-  packages: write
+    branches: [ main ]
 
 jobs:
   docker:
