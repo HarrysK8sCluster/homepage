@@ -35,6 +35,7 @@ jobs:
       - name: Get content repo commit SHA
         run: |
           CONTENT_SHA=$(git rev-parse HEAD)    
+          echo "CONTENT_SHA: $CONTENT_SHA"
           echo "CONTENT_SHA=$CONTENT_SHA" >> $GITHUB_ENV
 
       - name: Build and push image
@@ -58,6 +59,7 @@ jobs:
         run: |
           cd k8s
           sed -i "s|\(newTag:\).*|\1 ${CONTENT_SHA}|" kustomization.yaml
+          cat kustomization.yaml
 
       - name: Commit and push k8s changes
         run: |
