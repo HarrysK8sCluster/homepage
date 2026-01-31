@@ -37,7 +37,7 @@
     </p>
     <p>
         <strong>Kontakt</strong><br>
-        E‑Mail: <a href="mailto:web.delphin@googlemail.com">web.delphin@googlemail.com</a>
+        E‑Mail: <span class="mail"></span>
     </p>
 
     <p>
@@ -105,7 +105,7 @@
         <strong>Betroffenenrechte</strong><br>
         Ihnen stehen die Rechte auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung, Datenübertragbarkeit
         und Widerspruch zu. Zur Ausübung wenden Sie sich bitte an:
-        <a href="mailto:web.delphin@googlemail.com">web.delphin@googlemail.com</a>
+        <span class="mail"></span>
     </p>
 
     <p>
@@ -144,6 +144,13 @@
         </small>
     </div>
 </footer>
-
+<script>
+    const user = "web.delphin";
+    const domain = "googlemail.com";
+    const mails = document.getElementsByClassName("mail");
+    for (let i = 0; i < mails.length; i++) {
+        mails[i].innerHTML = `<a href="mailto:${user}@${domain}">${user}@${domain}</a>`;
+    }
+</script>
 </body>
 </html>
