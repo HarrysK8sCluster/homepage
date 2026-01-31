@@ -23,34 +23,31 @@
 </header>
 
 <main class="content">
-    <h1>Philipp Kremer @ IT</h1>
+    <h1>Homelab </h1>
 
     <p>
-        Kurzüberblick: Kleines, öffentlich erreichbares Homelab in Nürnberg (self‑hosted). Fokus: Kubernetes-Workloads,
-        Netzwerk‑Segmentation und diverse Self‑Hosted Apps.
+        Kurze Zusammenfassung der Hardware- und Netzwerkstruktur. Detaillierte Seiten: Rack, Netzwerk, Kubernetes, Storage, Backups.
     </p>
 
-    <h2>Key-Metrics</h2>
+    <h2>Hardware (auszugsweise)</h2>
 
     <ul>
-        <li>Racks / Units: mehrere 1U/2U/4U Geräte (Synology RS1221+, Server, Switch, Yeastar S20, DrayTek DSL)</li>
-        <li>Kubernetes Host mit Multus, Cilium (LB), kubevirt</li>
-        <li>Wichtige Services: Keycloak (OIDC), Home Assistant, Immich, MkDocs, Vaultwarden, Grafana</li>
-        <li>Externer Game-Server bei Hetzner (pterodactyl)</li>
+        <li>Synology RS1221+ (8 bays)</li>
+        <li>Server i5-11600 mit 64GB RAM</li>
+        <li>Yeastar S20 (Telefonie)</li>
+        <li>DrayTek DSL Modem</li>
+        <li>Hetzner Game‑Server verwaltet via Pterodactyl</li>
     </ul>
 
-    <h2>Aktueller Status / Changelog</h2>
-
-    <p>Letzte Änderung: 31.01.2026 — Datenschutzerklärung & Impressum veröffentlicht. K8s: Flux-Deployment aktiv, Cloudflared im Cluster.</p>
-
-    <h2>Schnellzugriff</h2>
+    <h2>Netzwerk-Überblick</h2>
 
     <ul>
-        <li><a href="/homelab.html">Homelab Details</a></li>
-        <li><a href="/apps.html">Apps Übersicht</a></li>
-        <li><a href="/ops.html">Ops / Deployment</a></li>
-        <li><a href="/deepdive.html">Deepdives / How‑tos</a></li>
+        <li>VLAN‑basiertes Design, alle VLANs werden an der Firewall geroutet.</li>
+        <li>Firewall ↔ Switch: 5x1Gb LAGG mit getaggten VLANs.</li>
+        <li>Kubernetes Host mit Multus für mehrere Netzwerk‑Interfaces; Cloudflared Container im K8s-Cluster.</li>
+        <li>VPNs geplant für Game‑Server und weitere Zwecke.</li>
     </ul>
+
 </main>
 
 <footer class="site-footer">

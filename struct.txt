@@ -1,0 +1,41 @@
+/ — Home
+    Home — Kurzüberblick + Key-metrics (Racks, Hosts, K8s, wichtigste Services) + aktueller Status/Changelog
+/about
+    Über mich — Kurzbiografie, Skills, Kontakt, Link zu CV/GitHub
+/homelab
+    Homelab — Zusammenfassung + Link zu Detailseiten (Rack, Netzwerk, K8s, Storage, Backups)
+
+    /rack
+        Rack & Inventory — Rack-U-Anordnung mit Fotos + Inventarliste (Gerät, Modell, IP, Zweck, Notizen). Optional ausblendbar: Sophos (wie du erwähnt hast).
+    /network
+        Netzwerk-Topologie — VLANs, LAGG, Firewall-Design, VPN-Übersicht, Switch-Ports, Peering (Hetzner Gameserver). Diagram + kurze Erklärung pro VLAN.
+    /kubernetes
+        Kubernetes & Plattform — Architekturbild, Multus, Cilium (+LB), kubevirt, StorageClasses, OIDC, Flux. Pro-Komponente: Zweck, Deployment, Storage, Monitoring, Troubleshooting-Notizen.
+/apps/
+    Anwendungen (Apps) — Liste mit Kacheln (Keycloak, HomeAssistant, Immich, MkDocs, Vaultwarden, Grafana, CUPS u.a.). Jede App: kurzer Überblick + Architektur (Ingress, ServiceAccount, Storage), Zugriff/SSO, Backup-Strategie, Entfaltung für detaillierte Konfigurationen.
+
+    /immich
+        immich
+    /homeassistant
+        homeassistant app
+    /...
+
+/ops
+
+    /deployment
+        CI/CD / Deployment — Flux-Setup, Git-Repos, Bootstrap-Pattern, branch policies, secrets-management (SealedSecrets/Vault).
+    /observation
+        Monitoring Stack grafana
+    /security
+        Keycloak + Firewall
+/deepdive/
+    einzelne Tutorials (z.B. OIDC mit Keycloak + Headlamp, Multus-Setup, VPN für Game-Server, Synology iSCSI in K8s).
+
+    /kubeadm
+        kubeadm installation
+    /pyscript
+        Homeassistant Pyscript
+    /...
+
+/imprint
+    Datenschutz+Imrepssung (rechlich nötiges)

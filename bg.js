@@ -7,6 +7,8 @@ let elements = {
     circuits: []
 };
 maxAgeBlock = 60000;
+let board = null;
+
 
 
 function _ccw(ax, ay, bx, by, cx, cy) {
@@ -21,6 +23,13 @@ function _segmentsIntersect(a, b) {
     );
 }
 
+function randomBetween(min, max) {
+    return min + Math.random() * (max - min);
+}
+
+function pointInRect(x, y, r) {
+    return x >= r.x && x <= r.x + r.w && y >= r.y && y <= r.y + r.h;
+}
 
 class CodeBlock
 {
@@ -151,202 +160,295 @@ class CodeLine {
     }
 }
 
+class Board {
+
+    segments = [];
+
+    constructor() {
+        this.generate();
+    }
+
+    generate() {
+        const w = window.innerWidth;
+        const h = window.innerHeight;
+
+        // 1) Random Layout Type
+        // 0: horizontal stripes, 1: vertical stripes, 2: diagonal \ stripes, 3: diagonal / stripes
+        const mode = Math.floor(Math.random() * 4);
+
+        const count = Math.floor(Math.random() * 4) + 4; // 4..7 stripes
+        const padding = 40;
+
+        this.segments = [];
+
+        if (mode === 0) {
+            // horizontal stripes
+            const stripeH = (h - padding * 2) / count;
+            for (let i = 0; i < count; i++) {
+                this.segments.push({
+                    type: "h",
+                    x: 0,
+                    y: padding + i * stripeH,
+                    w: w,
+                    h: stripeH
+                });
+            }
+        } else if (mode === 1) {
+            // vertical stripes
+            const stripeW = (w - padding * 2) / count;
+            for (let i = 0; i < count; i++) {
+                this.segments.push({
+                    type: "v",
+                    x: padding + i * stripeW,
+                    y: 0,
+                    w: stripeW,
+                    h: h
+                });
+            }
+        } else if (mode === 2) {
+            // diagonal \ stripes as bounding boxes
+            const stripeW = (w - padding * 2) / count;
+            for (let i = 0; i < count; i++) {
+                this.segments.push({
+                    type: "d1",
+                    x: padding + i * stripeW,
+                    y: 0,
+                    w: stripeW,
+                    h: h
+                });
+            }
+        } else if (mode === 3) {
+            // diagonal / stripes as bounding boxes
+            const stripeW = (w - padding * 2) / count;
+            for (let i = 0; i < count; i++) {
+                this.segments.push({
+                    type: "d2",
+                    x: padding + i * stripeW,
+                    y: 0,
+                    w: stripeW,
+                    h: h
+                });
+            }
+        }
+    }
+
+    getRandomSegment() {
+        return this.segments[Math.floor(Math.random() * this.segments.length)];
+    }
+
+    update() {
+        // optional: draw debug overlay
+        // this.drawDebug();
+    }
+
+    drawDebug() {
+        ctx.save();
+        ctx.strokeStyle = "rgba(0,0,0,0.05)";
+        ctx.lineWidth = 1;
+        for (const s of this.segments) {
+            ctx.strokeRect(s.x, s.y, s.w, s.h);
+        }
+        ctx.restore();
+    }
+}
+
 class Circuit {
 
     age = 0;
     maxAge = 0;
-    startAlign = null;
-    elements = [];
-    color = '120,150,205'
 
+    elements = [];
+    color = '120,150,205';
+
+    segments = [];       // allowed segments
+    maxSegments = 2;
+    maxSteps = 150;
 
     constructor(age = 0) {
         this.age = age;
-        const winW = window.innerWidth;
-        const winH = window.innerHeight;
-        let lastAlign = 0;
 
-        let last = this._generateStartLine();
-        let notAllowedAligns = [
-            (last.align - 2 + 8) % 8,
-            (last.align - 3 + 8) % 8,
-            (last.align - 4 + 8) % 8,
-            (last.align - 5 + 8) % 8,
-            (last.align - 6 + 8) % 8
-        ]
-        this.elements.push(last);
-        lastAlign = last.align;
-        do {
-            let newType = 'line';
-            if (last.type === 'line') {
-                if (Math.random() >= 0.9) {
-                    newType = 'hole';
-                } else {
-                    newType = 'line';
-                }
+        // segment plan
+        this._chooseSegments();
+
+        // start element
+        const start = this._generateStartLine();
+        this.elements.push(start);
+
+        let last = start;
+        let lastAlign = start.align;
+
+        for (let step = 0; step < this.maxSteps; step++) {
+
+            // random stop -> VIA
+            if (Math.random() < 0.05 && step > 15) {
+                const via = new CircuitElement(this, 'via', last);
+                via.x = last.getEnd().x;
+                via.y = last.getEnd().y;
+                this.elements.push(via);
+                break;
             }
+
+            // random via (hole)
+            let newType = "line";
+            if (Math.random() >= 0.86) newType = "via";
+
             const el = new CircuitElement(this, newType, last);
             el.x = last.getEnd().x;
             el.y = last.getEnd().y;
-            if (newType === 'line') {
-                let tries = 0
-                for (tries = 0; tries < 50; tries++) {
-                    let newAlign = lastAlign + Math.floor(Math.random() * 3) - 1;
-                    newAlign = (newAlign + 8) % 8;
-                    if (notAllowedAligns.includes(newAlign)) {
-                        continue;
-                    }
-                    el.align = newAlign;
-                    lastAlign = newAlign;
-                    el.length = Math.random() * (winW / 16) + 50;
 
-                    let hit = false;
-                    for (const c of elements.circuits) {
-                        if (c.collide(el)) {
-                            hit = true;
-                            break;
-                        }
-                    }
-                    if (hit) {
-                        //break;
-                        continue;
-                    }
-                    break;
-                }
-                if (tries >= 50) {
-                    console.log(tries)
-                    let hole = new CircuitElement(this, 'hole', last);
-                    hole.x = last.getEnd().x;
-                    hole.y = last.getEnd().y;
-                    this.elements.push(hole);
-                    return;
-                }
+            if (!this._pointAllowed(el.x, el.y)) {
+                break;
             }
-            const {x, y} = el.getEnd();
+
+            if (newType === "via") {
+                this.elements.push(el);
+                last = el;
+                continue;
+            }
+
+            // line
+            let ok = false;
+
+            for (let tries = 0; tries < 35; tries++) {
+
+                // align based on segment type
+                const seg = this._getSegmentForPoint(el.x, el.y);
+                if (!seg) break;
+
+                el.align = this._randomAlignForSegment(seg, lastAlign);
+                el.length = randomBetween(40, window.innerWidth / 12);
+
+                const end = el.getEnd();
+
+                // keep inside allowed segments
+                if (!this._pointAllowed(end.x, end.y)) continue;
+
+                ok = true;
+                lastAlign = el.align;
+                break;
+            }
+
+            if (!ok) {
+                // dead end => VIA end
+                const via = new CircuitElement(this, 'via', last);
+                via.x = last.getEnd().x;
+                via.y = last.getEnd().y;
+                this.elements.push(via);
+                break;
+            }
 
             this.elements.push(el);
-            if (x < 0 || x > 0 + winW || y < 0 || y > 0 + winH)
-                break;
             last = el;
 
+            // out of bounds stop
+            const end = el.getEnd();
+            if (end.x < -10 || end.x > window.innerWidth + 10 || end.y < -10 || end.y > window.innerHeight + 10) {
+                break;
+            }
+        }
+    }
 
-        } while (true);
+    _chooseSegments() {
+        this.segments = [];
+        const a = board.getRandomSegment();
+        this.segments.push(a);
 
+        if (Math.random() < 0.7) {
+            // second segment allowed
+            let b = board.getRandomSegment();
+            if (b === a) b = board.getRandomSegment();
+            this.segments.push(b);
+        }
+    }
 
-        console.log(this);
+    _getSegmentForPoint(x, y) {
+        for (const s of this.segments) {
+            if (pointInRect(x, y, s)) return s;
+        }
+        return null;
+    }
+
+    _pointAllowed(x, y) {
+        return this._getSegmentForPoint(x, y) !== null;
+    }
+
+    _randomAlignForSegment(seg, lastAlign) {
+        let aligns = [];
+
+        if (seg.type === "h") aligns = [0, 4];
+        if (seg.type === "v") aligns = [2, 6];
+        if (seg.type === "d1") aligns = [1, 5];
+        if (seg.type === "d2") aligns = [3, 7];
+
+        // choose similar direction sometimes
+        if (aligns.includes(lastAlign) && Math.random() < 0.7) return lastAlign;
+
+        return aligns[Math.floor(Math.random() * aligns.length)];
     }
 
     _generateStartLine() {
-        const winW = window.innerWidth;
-        const winH = window.innerHeight;
-        this.startAlign = Math.floor(Math.random() * 8);
-        let startSeg = this.startAlign - 4;
-        if (startSeg < 0) startSeg += 8;
+        // pick one of allowed segments
+        const seg = this.segments[0];
 
-        let x = 0;
-        let y = 0;
-
-        switch (startSeg) {
-            case 0:
-                x = winW + 5;
-                y = Math.random() * (winH - (winH * 0.2)) + (winH * 0.1);
-                break;
-            case 1:
-                // random the corner side
-                if (Math.random() >= 0.5) {
-                    x = winW + 5;
-                    y = Math.random() * (winH / 2) + (winH / 2);
-                } else {
-                    x = Math.random() * (winW / 2) + (winW / 2);
-                    y = winH + 5;
-                }
-                break;
-            case 2:
-                x = Math.random() * (winW - (winW * 0.2)) + (winW * 0.1);
-                y = winH + 5;
-                break;
-            case 3:
-                // random the corner side
-                if (Math.random() >= 0.5) {
-                    x = -5
-                    y = Math.random() * (winH / 2) + (winH / 2);
-                } else {
-                    x = Math.random() * (winW / 2)
-                    y = winH + 5;
-                }
-                break;
-            case 4:
-                x = -5;
-                y = Math.random() * (winH - (winH * 0.2)) + (winH * 0.1);
-                break;
-            case 5:
-                // random the corner side
-                if (Math.random() >= 0.5) {
-                    x = -5;
-                    y = Math.random() * (winH / 2)
-                } else {
-                    x = Math.random() * (winW / 2)
-                    y = -5;
-                }
-                break
-            case 6:
-                x = Math.random() * (winW - (winW * 0.2)) + (winW * 0.1);
-                y = -5;
-                break
-            case 7:
-                // random the corner side
-                if (Math.random() >= 0.5) {
-                    x = Math.random() * (winW / 2) + (winW / 2);
-                    y = -5;
-
-                } else {
-                    x = winW + 5;
-                    y = Math.random() * (winH / 2)
-                }
-                break;
-        }
         const el = new CircuitElement(this, 'line', null);
-        el.align = this.startAlign;
-        el.length = Math.random() * (winW / 16) + 50;
-        el.x = x;
-        el.y = y;
-        return el;
-    }
 
-
-
-    collide(testEl) {
-        if (!testEl || testEl.type !== "line") return false;
-
-        const segA = testEl.toSegment();
-        if (!segA) return false;
-
-        // gegen alle existierenden Liniensegmente in diesem Circuit prüfen
-        for (const el of this.elements) {
-            if (el.type !== "line") continue;
-
-            // wichtig: Segment gegen sich selbst / direkten Vorgänger nicht prüfen
-            // weil Startpunkt identisch ist
-            if (testEl.prevElement === el) continue;
-
-            const segB = el.toSegment();
-            if (!segB) continue;
-            if (_segmentsIntersect(segA, segB)) {
-                return true;
+        // choose start on segment border (2 sides only)
+        if (seg.type === "h") {
+            el.y = randomBetween(seg.y + 10, seg.y + seg.h - 10);
+            if (Math.random() < 0.5) {
+                el.x = seg.x - 5;
+                el.align = 0;
+            } else {
+                el.x = seg.x + seg.w + 5;
+                el.align = 4;
             }
         }
 
-        return false;
+        if (seg.type === "v") {
+            el.x = randomBetween(seg.x + 10, seg.x + seg.w - 10);
+            if (Math.random() < 0.5) {
+                el.y = seg.y - 5;
+                el.align = 2;
+            } else {
+                el.y = seg.y + seg.h + 5;
+                el.align = 6;
+            }
+        }
+
+        if (seg.type === "d1") {
+            // diagonal \ -> start from left or right side of bounding rect
+            el.y = randomBetween(seg.y + 10, seg.y + seg.h - 10);
+            if (Math.random() < 0.5) {
+                el.x = seg.x - 5;
+                el.align = 1; // ↘
+            } else {
+                el.x = seg.x + seg.w + 5;
+                el.align = 5; // ↖
+            }
+        }
+
+        if (seg.type === "d2") {
+            // diagonal / -> start from left or right
+            el.y = randomBetween(seg.y + 10, seg.y + seg.h - 10);
+            if (Math.random() < 0.5) {
+                el.x = seg.x - 5;
+                el.align = 7; // ↗
+            } else {
+                el.x = seg.x + seg.w + 5;
+                el.align = 3; // ↙
+            }
+        }
+
+        el.length = randomBetween(60, window.innerWidth / 10);
+        return el;
     }
 
     getOlder(count) {
         this.age += count;
     }
 
-    isDead()
-    {
+    isDead() {
         return false;
-        //return this.age >= this.maxAge;
     }
 
     update() {
@@ -365,18 +467,8 @@ class Circuit {
                 ctx.moveTo(el.x, el.y);
             }
 
-            if (el.type === 'line' && lastEl !== null && path && el.opacity() !== lastEl.opacity()) {
-                const opacity = lastEl.opacity();
-                ctx.strokeStyle = `rgba(${this.color},${opacity})`;
-                ctx.stroke();
-
-                ctx.beginPath();
-                ctx.moveTo(el.x, el.y);
-            }
-
-            if (el.type === 'hole' && path) {
-                const opacity = lastEl.opacity();
-                ctx.strokeStyle = `rgba(${this.color},${opacity})`;
+            if (el.type === 'via' && path) {
+                ctx.strokeStyle = `rgba(${this.color},1)`;
                 ctx.stroke();
                 path = false;
             }
@@ -386,13 +478,11 @@ class Circuit {
         }
 
         if (path && lastEl) {
-            ctx.strokeStyle = `rgba(${this.color},${lastEl.opacity()})`;
+            ctx.strokeStyle = `rgba(${this.color},1)`;
             ctx.stroke();
         }
     }
-
 }
-
 
 
 class CircuitElement {
@@ -421,6 +511,9 @@ class CircuitElement {
         }
         if (this.type === 'hole') {
             return this._drawHole();
+        }
+        if (this.type === 'via') {
+            return this._drawVia();
         }
     }
 
@@ -467,6 +560,16 @@ class CircuitElement {
         return {x: this.x, y: this.y}
     }
 
+    _drawVia() {
+        ctx.save();
+        ctx.fillStyle = `rgba(0,0,0,0.7)`;
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, 4, 0, Math.PI * 2);
+        ctx.fill();
+        ctx.restore();
+    }
+
+
 }
 
 function update()
@@ -482,7 +585,8 @@ function update()
         container.style.height = h + "px";
     }
     ctx.clearRect(0, 0, w, h);
-    elements.circuits.forEach(circuit => circuit.update(w, h));
+    board.update();
+    elements.circuits.forEach(line => line.update(w, h));
     elements.codelines.forEach(line => line.update(w, h));
 }
 
@@ -556,13 +660,9 @@ for (let i = 0; i < maxCodeBlocks; i++) {
         }
     }
 }
-elements.circuits.push(new Circuit(0));
-elements.circuits.push(new Circuit(0));
 
+board = new Board();
 elements.circuits.push(new Circuit(0));
-
-elements.circuits.push(new Circuit(0));
-
 elements.circuits.push(new Circuit(0));
 
 
