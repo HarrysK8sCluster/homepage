@@ -3,6 +3,11 @@ name: Build & Push Docker Image (GHCR)
 on:
   push:
     branches: [ main ]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  packages: write
 
 jobs:
   docker:
@@ -36,6 +41,5 @@ jobs:
         with:
           context: .
           push: true
-          tags: |
-            ${{ env.REGISTRY }}/${{ env.IMAGE_NAME_LC  }}:${{ env.COMBINED }}
-            ${{ env.REGISTRY }}/${{ env.IMAGE_NAME_LC  }}:latest
+          tags: ${{ steps.meta.outputs.tags }}
+          labels: ${{ steps.meta.outputs.labels }}
