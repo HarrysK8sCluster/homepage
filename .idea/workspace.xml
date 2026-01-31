@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5f9b890d-3c1d-4b04-a87f-f70f5ed4a900" name="Changes" comment="add build prozess" />
+    <list default="true" id="5f9b890d-3c1d-4b04-a87f-f70f5ed4a900" name="Changes" comment="add build prozess">
+      <change beforePath="$PROJECT_DIR$/.github/workflows/docker-ghcr.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/docker-ghcr.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -49,7 +52,7 @@
     "RunOnceActivity.git.unshallow": "true",
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
     "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
-    "git-widget-placeholder": "master",
+    "git-widget-placeholder": "main",
     "javascript.preferred.runtime.type.id": "node",
     "junie.onboarding.icon.badge.shown": "true",
     "last_opened_file_path": "C:/Users/webde/projects/website/frontend",
@@ -110,7 +113,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1769550883857</updated>
-      <workItem from="1769550884985" duration="58677000" />
+      <workItem from="1769550884985" duration="59897000" />
     </task>
     <task id="LOCAL-00001" summary="v1">
       <option name="closed" value="true" />
