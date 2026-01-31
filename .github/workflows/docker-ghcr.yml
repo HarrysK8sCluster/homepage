@@ -16,7 +16,7 @@ jobs:
     env:
       REGISTRY: ghcr.io
       K8S_REPO: HarrysK8sCluster/k8s-website
-      IMAGE_NAME_LC: HarrysK8sCluster/homepage
+      IMAGE_NAME_LC: harrysk8scluster/homepage
 
     steps:
       - name: Checkout
