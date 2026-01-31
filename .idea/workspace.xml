@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="5f9b890d-3c1d-4b04-a87f-f70f5ed4a900" name="Changes" comment="add build prozess">
       <change beforePath="$PROJECT_DIR$/.github/workflows/docker-ghcr.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/docker-ghcr.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -113,7 +112,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1769550883857</updated>
-      <workItem from="1769550884985" duration="59897000" />
+      <workItem from="1769550884985" duration="60064000" />
     </task>
     <task id="LOCAL-00001" summary="v1">
       <option name="closed" value="true" />
@@ -139,7 +138,15 @@
       <option name="project" value="LOCAL" />
       <updated>1769873668924</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="add build prozess">
+      <option name="closed" value="true" />
+      <created>1769874933313</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1769874933313</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
