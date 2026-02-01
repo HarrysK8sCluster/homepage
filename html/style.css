@@ -4,6 +4,11 @@
     padding: 0;
 }
 
+html, body {
+    height: 100%;
+}
+
+
 html {
     background: url("bg.png");
     background-size: cover;
@@ -12,12 +17,19 @@ html {
     line-height: 1.2em;
 }
 
-ul {
-    list-style-position: inside;
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: system-ui, sans-serif;
 }
 
-body {
-    font-family: system-ui, sans-serif;
+main {
+    flex: 1;
+}
+
+ul {
+    list-style-position: inside;
 }
 
 h1 {

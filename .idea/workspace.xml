@@ -4,31 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5f9b890d-3c1d-4b04-a87f-f70f5ed4a900" name="Changes" comment="change menu name from imprint to impressum">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dev-php.ini" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/html/.htaccess" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/html/index.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/prod-php.ini" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/layouts/base.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/frontend.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/frontend.iml" afterDir="false" />
+    <list default="true" id="5f9b890d-3c1d-4b04-a87f-f70f5ed4a900" name="Changes" comment="add frontcontroller and layout">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/about.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/apps.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bg.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/bg.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bg.png" beforeDir="false" afterPath="$PROJECT_DIR$/html/bg.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/deepdive.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/deepdive.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/democode.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/democode.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/homelab.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/homelab.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/imprint.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/imprint.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/newindex.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ops.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/ops.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/struct.txt" beforeDir="false" afterPath="$PROJECT_DIR$/test/struct.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/html/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/html/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/style2.css" beforeDir="false" afterPath="$PROJECT_DIR$/test/style2.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -165,7 +144,7 @@
       <option name="presentableId" value="Default" />
       <updated>1769550883857</updated>
       <workItem from="1769550884985" duration="68283000" />
-      <workItem from="1769961517160" duration="3064000" />
+      <workItem from="1769961517160" duration="3535000" />
     </task>
     <task id="LOCAL-00001" summary="v1">
       <option name="closed" value="true" />
@@ -279,7 +258,15 @@
       <option name="project" value="LOCAL" />
       <updated>1769882097416</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="add frontcontroller and layout">
+      <option name="closed" value="true" />
+      <created>1769964701416</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1769964701416</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -292,7 +279,8 @@
     <MESSAGE value="fix mail visibility and add auto deployment" />
     <MESSAGE value="add auto deployment" />
     <MESSAGE value="change menu name from imprint to impressum" />
-    <option name="LAST_COMMIT_MESSAGE" value="change menu name from imprint to impressum" />
+    <MESSAGE value="add frontcontroller and layout" />
+    <option name="LAST_COMMIT_MESSAGE" value="add frontcontroller and layout" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
