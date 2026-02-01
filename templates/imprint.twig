@@ -1,28 +1,6 @@
-<!DOCTYPE html>
-<html lang="de">
-<head>
-    <meta charset="UTF-8" />
-    <title>Dynamic Homelab Background</title>
-    <link rel="stylesheet" href="style.css" />
-</head>
-<body>
+{% extends "layouts/base.twig" %}
 
-<header class="site-header">
-    <div class="header-inner">
-        <a class="brand" href="/">Philipp Kremer</a>
-
-        <nav class="main-nav" aria-label="Hauptnavigation">
-            <a href="/">Home</a>
-            <a href="/about.html">Über mich</a>
-            <a href="/homelab.html">Homelab</a>
-            <a href="/apps.html">Apps</a>
-            <a href="/ops.html">Ops</a>
-            <a href="/deepdive.html">Abtauchen</a>
-        </nav>
-    </div>
-</header>
-
-<main class="content">
+{% block content %}
 
     <h1>Impressum</h1>
 
@@ -128,29 +106,5 @@
         Diese Datenschutzerklärung kann bei Bedarf aktualisiert werden. Datum der letzten Änderung: 31.01.2026
     </p>
 
-</main>
 
-<footer class="site-footer">
-    <div class="footer-inner">
-        <nav class="meta-nav" aria-label="Meta Navigation">
-            <a href="/imprint.html">Impressum</a>
-        </nav>
-
-        <small class="copyright">
-            © <span id="year"></span> Philipp Kremer
-            <script>
-                document.getElementById("year").textContent = new Date().getFullYear();
-            </script>
-        </small>
-    </div>
-</footer>
-<script>
-    const user = "web.delphin";
-    const domain = "googlemail.com";
-    const mails = document.getElementsByClassName("mail");
-    for (let i = 0; i < mails.length; i++) {
-        mails[i].innerHTML = `<a href="mailto:${user}@${domain}">${user}@${domain}</a>`;
-    }
-</script>
-</body>
-</html>
+{% endblock %}

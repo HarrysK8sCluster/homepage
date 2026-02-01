@@ -4,29 +4,53 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5f9b890d-3c1d-4b04-a87f-f70f5ed4a900" name="Changes" comment="add auto deployment">
+    <list default="true" id="5f9b890d-3c1d-4b04-a87f-f70f5ed4a900" name="Changes" comment="change menu name from imprint to impressum">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dev-php.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/.htaccess" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/index.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/prod-php.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/layouts/base.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/frontend.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/frontend.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/about.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps.html" beforeDir="false" afterPath="$PROJECT_DIR$/apps.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/deepdive.html" beforeDir="false" afterPath="$PROJECT_DIR$/deepdive.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/homelab.html" beforeDir="false" afterPath="$PROJECT_DIR$/homelab.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/imprint.html" beforeDir="false" afterPath="$PROJECT_DIR$/imprint.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ops.html" beforeDir="false" afterPath="$PROJECT_DIR$/ops.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/about.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/apps.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bg.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/bg.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bg.png" beforeDir="false" afterPath="$PROJECT_DIR$/html/bg.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/deepdive.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/deepdive.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/democode.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/democode.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/homelab.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/homelab.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/imprint.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/imprint.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/newindex.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ops.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/ops.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/struct.txt" beforeDir="false" afterPath="$PROJECT_DIR$/test/struct.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/html/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="ComposerSettings" requirePlatformReqs="true" synchronizationState="SYNCHRONIZE">
+    <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
+    <execution>
+      <phar pharPath="$PROJECT_DIR$/composer.phar" interpreterId="1d0dd857-bf17-4da3-a320-afbbae54dc84" />
+    </execution>
+  </component>
   <component name="EmbeddingIndexingInfo">
-    <option name="cachedIndexableFilesCount" value="9" />
+    <option name="cachedIndexableFilesCount" value="22" />
     <option name="fileBasedEmbeddingIndicesEnabled" value="true" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JavaScript File" />
+        <option value="composer.json" />
+        <option value="PHP File" />
       </list>
     </option>
   </component>
@@ -37,9 +61,19 @@
     <commands />
     <urls />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 8
-}]]></component>
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="php:latest">
+    <include_path>
+      <path value="$PROJECT_DIR$/vendor/composer" />
+      <path value="$PROJECT_DIR$/vendor/pecee/simple-router" />
+      <path value="$PROJECT_DIR$/vendor/symfony/deprecation-contracts" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-ctype" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-mbstring" />
+      <path value="$PROJECT_DIR$/vendor/twig/twig" />
+    </include_path>
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
   <component name="ProjectId" id="38rHgrbkggiYoUKSJDTKGuDD1s3" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -58,7 +92,10 @@
     "RunOnceActivity.git.unshallow": "true",
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
     "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
+    "credentialsType com.jetbrains.php.remote.interpreter.ui.PhpCreateRemoteSdkForm": "Docker",
+    "credentialsType com.jetbrains.php.remote.interpreter.ui.PhpInplaceEditRemoteSdkForm": "Docker",
     "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
     "javascript.preferred.runtime.type.id": "node",
     "junie.onboarding.icon.badge.shown": "true",
     "last_opened_file_path": "C:/Users/webde/projects/website/frontend",
@@ -67,20 +104,28 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "editor.preferences.inline.completion",
+    "settings.editor.selected.configurable": "reference.webide.settings.project.settings.php.composer",
     "to.speed.mode.migration.done": "true",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\webde\projects\website\frontend\html" />
       <recent name="C:\Users\webde\projects\website\frontend" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\webde\projects\website\frontend\test" />
+      <recent name="C:\Users\webde\projects\website\frontend\templates" />
+      <recent name="C:\Users\webde\projects\website\frontend\html" />
       <recent name="C:\Users\webde\projects\website\frontend" />
     </key>
   </component>
   <component name="RunManager" selected="Docker.Compose">
+    <configuration default="true" type="ComposerRunConfigurationType" factoryName="Composer Script">
+      <option name="pathToComposerJson" value="$PROJECT_DIR$/composer.json" />
+      <method v="2" />
+    </configuration>
     <configuration name="Build" type="docker-deploy" factoryName="dockerfile" server-name="Docker">
       <deployment type="dockerfile">
         <settings>
@@ -93,12 +138,11 @@
     <configuration name="Compose" type="docker-deploy" factoryName="docker-compose.yml" server-name="Docker">
       <deployment type="docker-compose.yml">
         <settings>
+          <option name="commandLineOptions" value="--build" />
           <option name="sourceFilePath" value="docker-compose.yml" />
         </settings>
       </deployment>
-      <method v="2">
-        <option name="RunConfigurationTask" enabled="true" run_configuration_name="Build" run_configuration_type="docker-deploy" />
-      </method>
+      <method v="2" />
     </configuration>
     <list>
       <item itemvalue="Docker.Build" />
@@ -108,7 +152,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-d6986cc7102b-9b0f141eb926-JavaScript-WS-253.29346.242" />
+        <option value="bundled-js-predefined-d6986cc7102b-9b0f141eb926-JavaScript-PS-253.29346.257" />
+        <option value="bundled-php-predefined-a98d8de5180a-0e0d91225499-com.jetbrains.php.sharedIndexes-PS-253.29346.257" />
       </set>
     </attachedChunks>
   </component>
@@ -119,7 +164,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1769550883857</updated>
-      <workItem from="1769550884985" duration="64583000" />
+      <workItem from="1769550884985" duration="68283000" />
+      <workItem from="1769961517160" duration="3064000" />
     </task>
     <task id="LOCAL-00001" summary="v1">
       <option name="closed" value="true" />
@@ -225,7 +271,15 @@
       <option name="project" value="LOCAL" />
       <updated>1769881559437</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="change menu name from imprint to impressum">
+      <option name="closed" value="true" />
+      <created>1769882097416</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1769882097416</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -237,6 +291,11 @@
     <MESSAGE value="add build prozess" />
     <MESSAGE value="fix mail visibility and add auto deployment" />
     <MESSAGE value="add auto deployment" />
-    <option name="LAST_COMMIT_MESSAGE" value="add auto deployment" />
+    <MESSAGE value="change menu name from imprint to impressum" />
+    <option name="LAST_COMMIT_MESSAGE" value="change menu name from imprint to impressum" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

@@ -1,0 +1,35 @@
+{% extends "layouts/base.twig" %}
+
+{% block content %}
+    <h1>Philipp Kremer @ IT</h1>
+
+    <p>
+        Kurzüberblick: Kleines, öffentlich erreichbares Homelab in Nürnberg (self‑hosted). Fokus: Kubernetes-Workloads,
+        Netzwerk‑Segmentation und diverse Self‑Hosted Apps.
+    </p>
+
+    <h2>Key-Metrics</h2>
+
+    <ul>
+        <li>Racks / Units: mehrere 1U/2U/4U Geräte (Synology RS1221+, Server, Switch, Yeastar S20, DrayTek DSL)</li>
+        <li>Kubernetes Host mit Multus, Cilium (LB), kubevirt</li>
+        <li>Wichtige Services: Keycloak (OIDC), Home Assistant, Immich, MkDocs, Vaultwarden, Grafana</li>
+        <li>Externer Game-Server bei Hetzner (pterodactyl)</li>
+    </ul>
+
+    <h2>Aktueller Status / Changelog</h2>
+
+    <p>Letzte Änderung: 31.01.2026 — Datenschutzerklärung & Impressum veröffentlicht. K8s: Flux-Deployment aktiv, Cloudflared im Cluster.</p>
+
+    <h2>Schnellzugriff</h2>
+
+    <ul>
+        <li><a href="/templates/homelab.htmlmelab.html">Homelab Details</a></li>
+        <li><a href="/templates/apps.twig/apps.html">Apps Übersicht</a></li>
+        <li><a href="/templates/ops.htmls/ops.html">Ops / Deployment</a></li>
+        <li><a href="/templates/deepdive.htmlpdive.html">Deepdives / How‑tos</a></li>
+    </ul>
+
+
+
+{% endblock %}

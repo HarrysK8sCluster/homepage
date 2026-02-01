@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8" />
+    <title>{% block title %}Homelab{% endblock %}</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header class="site-header">
+    <div class="header-inner">
+        <a class="brand" href="/">Philipp Kremer</a>
+
+        <nav class="main-nav" aria-label="Hauptnavigation">
+            <a href="/">Home</a>
+            <a href="/about">Über mich</a>
+            <a href="/homelab">Homelab</a>
+            <a href="/apps">Apps</a>
+            <a href="/ops">Ops</a>
+            <a href="/deepdive">Abtauchen</a>
+        </nav>
+    </div>
+</header>
+
+<main class="content">
+    {% block content %}{% endblock %}
+
+</main>
+
+<footer class="site-footer">
+    <div class="footer-inner">
+        <nav class="meta-nav" aria-label="Meta Navigation">
+            <a href="/imprint">Impressum</a>
+        </nav>
+
+        <small class="copyright">
+            © <span id="year"></span> Philipp Kremer
+            <script>
+                document.getElementById("year").textContent = new Date().getFullYear();
+            </script>
+        </small>
+    </div>
+</footer>
+
+</body>
+</html>

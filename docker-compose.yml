@@ -1,7 +1,10 @@
 services:
   web:
-    image: nginx:alpine
+    build:
+      dockerfile: Dockerfile
+      context: .
     ports:
       - "8080:80"
     volumes:
-      - ./:/usr/share/nginx/html:ro
+      - ./:/var/www
+      - ./dev-php.ini:/usr/local/etc/php/conf.d/99-dev.ini

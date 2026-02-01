@@ -1,0 +1,29 @@
+{% extends "layouts/base.twig" %}
+
+{% block content %}
+    <h1>Homelab </h1>
+
+    <p>
+        Kurze Zusammenfassung der Hardware- und Netzwerkstruktur. Detaillierte Seiten: Rack, Netzwerk, Kubernetes, Storage, Backups.
+    </p>
+
+    <h2>Hardware (auszugsweise)</h2>
+
+    <ul>
+        <li>Synology RS1221+ (8 bays)</li>
+        <li>Server i5-11600 mit 64GB RAM</li>
+        <li>Yeastar S20 (Telefonie)</li>
+        <li>DrayTek DSL Modem</li>
+        <li>Hetzner Game‑Server verwaltet via Pterodactyl</li>
+    </ul>
+
+    <h2>Netzwerk-Überblick</h2>
+
+    <ul>
+        <li>VLAN‑basiertes Design, alle VLANs werden an der Firewall geroutet.</li>
+        <li>Firewall ↔ Switch: 5x1Gb LAGG mit getaggten VLANs.</li>
+        <li>Kubernetes Host mit Multus für mehrere Netzwerk‑Interfaces; Cloudflared Container im K8s-Cluster.</li>
+        <li>VPNs geplant für Game‑Server und weitere Zwecke.</li>
+    </ul>
+
+{% endblock %}
