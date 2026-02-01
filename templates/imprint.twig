@@ -105,6 +105,13 @@
         <strong>Änderungen dieser Datenschutzerklärung</strong><br>
         Diese Datenschutzerklärung kann bei Bedarf aktualisiert werden. Datum der letzten Änderung: 31.01.2026
     </p>
-
+    <script>
+        const user = "web.delphin";
+        const domain = "googlemail.com";
+        const mails = document.getElementsByClassName("mail");
+        for (let i = 0; i < mails.length; i++) {
+            mails[i].innerHTML = `<a href="mailto:${user}@${domain}">${user}@${domain}</a>`;
+        }
+    </script>
 
 {% endblock %}

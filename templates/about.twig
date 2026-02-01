@@ -20,7 +20,15 @@
     <h2>Kontakt / Links</h2>
 
     <p>
-        <strong>Email:</strong> web.delphin@googlemail.com<br>
+        <strong>Email:</strong> <span class="mail"></span><br>
         <strong>GitHub:</strong> <a href="https://github.com/philippkremer">https://github.com/philippkremer</a>
     </p>
+    <script>
+        const user = "web.delphin";
+        const domain = "googlemail.com";
+        const mails = document.getElementsByClassName("mail");
+        for (let i = 0; i < mails.length; i++) {
+            mails[i].innerHTML = `<a href="mailto:${user}@${domain}">${user}@${domain}</a>`;
+        }
+    </script>
 {% endblock %}
