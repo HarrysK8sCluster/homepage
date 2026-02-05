@@ -1,0 +1,21 @@
+{% extends "layouts/base.twig" %}
+{% block title %}500{% endblock %}
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ manifest['home.css'] ?? '/assets/home.css' }}">
+{% endblock %}
+
+{% block content %}
+    <header class="entry">
+        <div>
+            <h1>
+                <small class="main">500</small>
+                <small class="outro">Unerwarteter Fehler</small>
+            </h1>
+            <p>
+                Hier ist etwas schiefgelaufen. Versuch es bitte später noch einmal oder geh zurück zur Startseite.
+            </p>
+            <a class="btn" href="/">Zurück nach Home →</a>
+        </div>
+    </header>
+{% endblock %}
+

@@ -1,0 +1,21 @@
+{% extends "layouts/base.twig" %}
+{% block title %}404{% endblock %}
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ manifest['home.css'] ?? '/assets/home.css' }}">
+{% endblock %}
+
+{% block content %}
+    <header class="entry">
+        <div>
+            <h1>
+                <small class="main">404</small>
+                <small class="outro">Seite nicht gefunden</small>
+            </h1>
+            <p>
+                Der Link sieht korrekt aus, aber hier gibt’s gerade nichts. Wenn du magst, spring zurück zur Startseite.
+            </p>
+            <a class="btn" href="/">Zurück nach Home →</a>
+        </div>
+    </header>
+{% endblock %}
+
