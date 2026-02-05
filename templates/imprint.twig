@@ -1,42 +1,70 @@
 {% extends "layouts/base.twig" %}
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ manifest['law.css'] ?? '/assets/law.css' }}">
+{% endblock %}
 
 {% block content %}
 
-    <h1>Impressum</h1>
-
-    <p>Angaben gemäß § 5 TMG:</p>
-
-    <p><strong>Name / Betreiber:</strong><br>Philipp Kremer</p>
-    <p>
-        <strong>Anschrift</strong><br>
-        Innsbrucker Strasse 9F<br>
-        90461 Nürnberg<br>
-        Deutschland
-    </p>
-    <p>
-        <strong>Kontakt</strong><br>
-        E‑Mail: <span class="mail"></span>
-    </p>
-
-    <p>
-        <strong>Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV</strong><br>
-        Philipp Kremer, Innsbrucker Strasse 9F, 90461 Nürnberg, Deutschland
-    </p>
-
-    <p>
-        <strong>Haftungsausschluss</strong><br>
-        Trotz sorgfältiger inhaltlicher Kontrolle übernehmen ich keine Haftung für die Inhalte externer Links. Für den
-        Inhalt verlinkter Seiten sind ausschließlich deren Betreiber verantwortlich.
-    </p>
-    <p>
-        <strong>Streitschlichtung</strong><br>
-        Die EU-Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit:
-        <a href="https://ec.europa.eu/consumers/odr/">https://ec.europa.eu/consumers/odr/</a> Ich bin nicht verpflichtet
-        und nicht bereit, an einem Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.
-    </p>
 
 
-    <h1>Datenschutzerklärung</h1>
+
+    <header class="entry">
+        <img src="media/law/law.png" alt="Über mich" />
+        <div>
+            <h1>
+                <small class="main">Impressum</small>
+                <small class="outro">Angaben gemäß § 5 TMG</small>
+            </h1>
+
+            <div class="iconbox">
+                <span class="icon">{{ svg('user') }}</span>
+                <h3>Name / Betreiber</h3>
+                <p>Philipp Kremer</p>
+            </div>
+
+            <div class="iconbox">
+                <span class="icon">{{ svg('mail') }}</span>
+                <h3>Anschrift</h3>
+                <p>
+                    Innsbrucker Straße 9F<br>
+                    90461 Nürnberg<br>
+                    Deutschland
+                </p>
+                <p>
+                    <span class="mail"></span>
+                </p>
+            </div>
+
+        </div>
+    </header>
+
+    <div class="iconbox">
+        <span class="icon">{{ svg('shield-check') }}</span>
+        <h2>Haftungsausschluss</h2>
+    </div>
+
+    <div class="iconbox">
+        <span class="icon">{{ svg('table-of-contents') }}</span>
+        <h3>Haftung für Inhalte</h3>
+        <p>
+            Trotz sorgfältiger inhaltlicher Kontrolle übernehme ich keine Haftung für die Inhalte externer Links. Für den
+            Inhalt verlinkter Seiten sind ausschließlich deren Betreiber verantwortlich.
+        </p>
+    </div>
+
+    <div class="iconbox">
+        <span class="icon">{{ svg('peace') }}</span>
+        <h3>Streitschlichtung</h3>
+        <p>
+            Die EU-Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit:
+            <a href="https://ec.europa.eu/consumers/odr/">https://ec.europa.eu/consumers/odr/</a> Ich bin nicht verpflichtet
+            und nicht bereit, an einem Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.
+        </p>
+    </div>
+
+
+
+    <!--h1>Datenschutzerklärung</h1>
     <p>
         <strong>Einleitung</strong><br>
         Diese Website ist statisch (keine Cookies, kein Tracking). Sie dient der öffentlichen Darstellung meines Homelabs
@@ -104,7 +132,7 @@
     <p>
         <strong>Änderungen dieser Datenschutzerklärung</strong><br>
         Diese Datenschutzerklärung kann bei Bedarf aktualisiert werden. Datum der letzten Änderung: 31.01.2026
-    </p>
+    </p-->
     <script>
         const user = "web.delphin";
         const domain = "googlemail.com";

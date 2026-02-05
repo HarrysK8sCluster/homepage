@@ -3,7 +3,11 @@
 <head>
     <meta charset="UTF-8" />
     <title>{% block title %}Homelab{% endblock %}</title>
-    <link rel="stylesheet" href="style.css" />
+
+    {% set manifest = manifest is defined ? manifest : {} %}
+
+    <link rel="stylesheet" href="{{ manifest['layout.css'] ?? '/assets/app.css' }}">
+    {% block stylesheets %}{% endblock %}
 
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -13,16 +17,18 @@
 <body>
 
 <header class="site-header">
-    <div class="header-inner">
-        <a class="brand" href="/"><span class="logo"><img src="/logo.png" /><span class="akzent">pk</span>remer</span></a>
+    <div>
+        <a class="logo" href="/">
+            <img src="/logo.png" alt="Logo" />
+            <span class="akzent">pk</span>remer
+        </a>
 
         <nav class="main-nav" aria-label="Hauptnavigation">
             <a href="/">Home</a>
             <a href="/about">Über mich</a>
             <a href="/homelab">Homelab</a>
             <a href="/apps">Apps</a>
-            <a href="/ops">Ops</a>
-            <a href="/deepdive">Abtauchen</a>
+            <a href="/devops">DevOps</a>
         </nav>
     </div>
 </header>
@@ -33,9 +39,10 @@
 </main>
 
 <footer class="site-footer">
-    <div class="footer-inner">
-        <nav class="meta-nav" aria-label="Meta Navigation">
+    <div>
+        <nav aria-label="Meta Navigation">
             <a href="/imprint">Impressum</a>
+            <a href="/privacy">Datenschutz</a>
         </nav>
 
         <small class="copyright">

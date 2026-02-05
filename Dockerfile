@@ -10,12 +10,22 @@ RUN composer install \
 COPY . .
 RUN composer dump-autoload --optimize
 
+FROM node:20-alpine AS webpack_build
+
+WORKDIR /app
+COPY package.json ./
+RUN npm i
+COPY webpack ./webpack
+COPY assets ./assets
+RUN npm run build
+
 
 FROM php:8.5-apache
 
 WORKDIR /var/www
 COPY . /var/www
 COPY --from=composer_deps /app/vendor /var/www/vendor
+COPY --from=webpack_build /app/html/assets /var/www/html/assets
 COPY prod-php.ini /usr/local/etc/php/conf.d/50-prod.ini
 
 RUN a2enmod rewrite

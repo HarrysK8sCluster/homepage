@@ -1,34 +1,89 @@
 {% extends "layouts/base.twig" %}
-
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ manifest['home.css'] ?? '/assets/home.css' }}">
+{% endblock %}
 {% block content %}
-    <h1>Philipp Kremer @ IT</h1>
 
-    <p>
-        Kurzüberblick: Kleines, öffentlich erreichbares Homelab in Nürnberg (self‑hosted). Fokus: Kubernetes-Workloads,
-        Netzwerk‑Segmentation und diverse Self‑Hosted Apps.
-    </p>
 
-    <h2>Key-Metrics</h2>
 
-    <ul>
-        <li>Racks / Units: mehrere 1U/2U/4U Geräte (Synology RS1221+, Server, Switch, Yeastar S20, DrayTek DSL)</li>
-        <li>Kubernetes Host mit Multus, Cilium (LB), kubevirt</li>
-        <li>Wichtige Services: Keycloak (OIDC), Home Assistant, Immich, MkDocs, Vaultwarden, Grafana</li>
-        <li>Externer Game-Server bei Hetzner (pterodactyl)</li>
-    </ul>
+    <header class="entry">
+        <img src="media/home/hiiam.png" alt="Über mich" />
+        <div>
+            <h1>
+                <small class="intro">Hallo, ich bin</small>
+                <small class="main">Philipp Kremer</small>
+                <small class="outro">DevOps-Enthusiast // Tech-Tüftler</small>
+            </h1>
+            <p>
+                Ich schreibe über Homelab-Projekte, Automatisierung und nützliche Apps. Von Infrastruktur bis Self-Hosting
+                hier gibt's alles rund um spannende Tech-Themen.
+            </p>
+            <p>
+                Schau dich gern um!
+            </p>
+            <a class="btn" href="/about">
+                Lerne mich kennen →
+            </a>
 
-    <h2>Aktueller Status / Changelog</h2>
+        </div>
+    </header>
 
-    <p>Letzte Änderung: 31.01.2026 — Datenschutzerklärung & Impressum veröffentlicht. K8s: Flux-Deployment aktiv, Cloudflared im Cluster.</p>
+    <div class="row">
 
-    <h2>Schnellzugriff</h2>
 
-    <ul>
-        <li><a href="/templates/homelab.htmlmelab.html">Homelab Details</a></li>
-        <li><a href="/templates/apps.twig/apps.html">Apps Übersicht</a></li>
-        <li><a href="/templates/ops.htmls/ops.html">Ops / Deployment</a></li>
-        <li><a href="/templates/deepdive.htmlpdive.html">Deepdives / How‑tos</a></li>
-    </ul>
+        <article class="card">
+            <img src="/media/home/homelab.png" alt="Homelab" />
+
+            <div>
+                <h2>Mein Homelab</h2>
+                <p>
+                    Einblick in mein Homelab, Hardware-Setups und Netzwerkprojekte.
+                </p>
+            </div>
+
+            <footer>
+                <a class="btn btn--primary btn--sm" href="/homelab">
+                    Zu meinem Homelab →
+                </a>
+            </footer>
+        </article>
+
+        <article class="card">
+            <img src="/media/home/apps.png" alt="Apps" />
+
+            <div>
+                <h2>Meine Apps</h2>
+                <p>
+                    Meine eigenen Web-Projekte – von klassischen LAMP-Stacks bis zu kleinen Tools,
+                    APIs und Automatisierungen.
+                </p>
+            </div>
+
+            <footer>
+                <a class="btn btn--primary btn--sm" href="/devops">
+                    Zu Ops/CI/CD →
+                </a>
+            </footer>
+        </article>
+
+        <article class="card">
+            <img src="/media/home/ops.png" alt="Apps" />
+
+            <div>
+                <h2>DevOps</h2>
+                <p>
+                    Alles rund um GitOps & Kubernetes: Deployments, CI/CD, Automatisierung und Betrieb moderner Services.
+                </p>
+            </div>
+
+            <footer>
+                <a class="btn btn--primary btn--sm" href="/apps">
+                    Zu meinen Projekten →
+                </a>
+            </footer>
+        </article>
+
+    </div>
 
 
 

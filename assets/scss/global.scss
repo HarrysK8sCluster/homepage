@@ -1,0 +1,83 @@
+@use "vars";
+
+@font-face {
+  font-family: "Manrope";
+  src: url("/font/Manrope/Manrope-VariableFont_wght.ttf") format("truetype");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+body {
+  font-family: "Manrope", system-ui, sans-serif;
+  line-height: 1.2em;
+  font-size: 16px;
+}
+
+ul {
+  margin: 10px 0;
+  padding-left: 0;
+  list-style: none;
+
+  li {
+    margin: 5px 0;
+    position: relative;
+    padding-left: 1.2em;
+  }
+
+  li::before {
+    content: "•";
+    font-size: 0.8em;
+    position: absolute;
+    left: 0;
+    top: 0.1em;
+    width: 1.2em;
+    text-align: center;
+  }
+}
+
+ol {
+  margin: 10px 0 10px 20px;
+  list-style-type: decimal;
+  padding-left: 0;
+}
+
+h1 {
+  color: vars.$pk-blue;
+  margin: 50px auto;
+}
+
+h2 {
+  color: vars.$pk-text;
+  margin: 30px auto;
+}
+
+h3 {
+  color: vars.$pk-text;
+  margin: 20px auto;
+}
+
+p {
+  margin: 10px auto;
+}
+
+ul.nopoint {
+  list-style-type: none;
+
+  li {
+    padding-left: 0;
+  }
+
+  li:before {
+    content: "";
+    margin: 0;
+  }
+}
+
+a,
+a:hover,
+a:visited {
+  color: vars.$pk-blue;
+  text-decoration: none;
+}

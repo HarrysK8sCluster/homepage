@@ -1,29 +1,107 @@
 {% extends "layouts/base.twig" %}
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ manifest['home.css'] ?? '/assets/home.css' }}">
+{% endblock %}
 
 {% block content %}
-    <h1>Homelab </h1>
 
-    <p>
-        Kurze Zusammenfassung der Hardware- und Netzwerkstruktur. Detaillierte Seiten: Rack, Netzwerk, Kubernetes, Storage, Backups.
-    </p>
 
-    <h2>Hardware (auszugsweise)</h2>
+    <header class="entry">
+        <img src="media/home/homelab.png" alt="Homelab" />
+        <div>
+            <h1>
+                <small class="main">Homelab</small>
+                <small class="outro">Synology // OPNsense // Server</small>
+            </h1>
+            <p>
+                Hier ein paar Details zu meinem Homelab hier in Nürnberg. Es dient als Netzwerkknotenpunkt
+                als auch als Hostingplattform, für all meine Applikationen
+            </p>
+        </div>
+    </header>
 
-    <ul>
-        <li>Synology RS1221+ (8 bays)</li>
-        <li>Server i5-11600 mit 64GB RAM</li>
-        <li>Yeastar S20 (Telefonie)</li>
-        <li>DrayTek DSL Modem</li>
-        <li>Hetzner Game‑Server verwaltet via Pterodactyl</li>
-    </ul>
 
-    <h2>Netzwerk-Überblick</h2>
+    <div class="teaser">
+        <h2>Homelab - mein Spielplatz für Infrastruktur</h2>
+        <p>
+            Dieses Rack ist mein persönlicher Playground für Kubernetes, Selfhosting und VoIP. Hier laufen die Dienste,
+            die ich täglich brauche — und die, an denen ich schraube, um neue Deployments, Monitoring‑Pipelines und
+            Automatisierung zu testen. Kurz: labben, lernen, liefern.
+        </p>
+    </div>
 
-    <ul>
-        <li>VLAN‑basiertes Design, alle VLANs werden an der Firewall geroutet.</li>
-        <li>Firewall ↔ Switch: 5x1Gb LAGG mit getaggten VLANs.</li>
-        <li>Kubernetes Host mit Multus für mehrere Netzwerk‑Interfaces; Cloudflared Container im K8s-Cluster.</li>
-        <li>VPNs geplant für Game‑Server und weitere Zwecke.</li>
-    </ul>
+    <div class="row">
+        <article class="card">
+            <div>
+                <h2>Hardware</h2>
+                <ul>
+                    <li>D-Link Switch 1250-28X</li>
+                    <li>Firewall i5-2520M mit OPNsense</li>
+                    <li>Synology RS1221+</li>
+                    <li>Server i5-11600k / 64GB RAM</li>
+                    <li>Yeastar S20</li>
+                    <li>Draytek DSL Modem</li>
+                </ul>
+            </div>
+        </article>
+
+        <article class="card">
+            <div>
+                <h2>Netzwerk & Architektur</h2>
+                <p>
+                    Das Homelab ist in mehrere Netzsegmente aufgeteilt: LAN für Clients, ein Server‑Netz für Kubernetes
+                    Synology etc., ein isoliertes IoT‑Netz und ein LB‑Netz für Ingress/Load‑Balancing.
+                    Cloudflare übernimmt Außen‑Security, DNS und selektive Freigaben während die OPNsense diese Aufgabe
+                    intern übernimmt.
+                </p>
+            </div>
+        </article>
+    </div>
+
+    <div class="row">
+        <article class="card">
+            <div>
+                <h2>Quick Stats</h2>
+                <dl class="stats">
+                    <div>
+                        <dt>VLANs</dt>
+                        <dd>6</dd>
+                    </div>
+                    <div>
+                        <dt>Services</dt>
+                        <dd>9</dd>
+                    </div>
+                    <div>
+                        <dt>Downlink</dt>
+                        <dd>100Mbit</dd>
+                    </div>
+                    <div>
+                        <dt>Uplink</dt>
+                        <dd>40Mbit</dd>
+                    </div>
+                    <div>
+                        <dt>ISP</dt>
+                        <dd>Telekom</dd>
+                    </div>
+                </dl>
+            </div>
+        </article>
+    </div>
+
+    <div class="row">
+        <article class="card">
+            <div>
+                <h2>Wieso</h2>
+                <p>
+                    Zu experimentieren und Kontrolle über meine Infrastruktur zu behalten.
+                    Durch meine Segmentierung (Client, SERVER, IOT, LB) schütze ich Produktivdienste vor unsicheren Testgeräten,
+                    ermögliche reproduzierbare Kubernetes‑ und VM‑Deployments und teste gezielt Ingress/Load‑Balancing.
+                    Cloudflare erlaubt mir sichere, selektive Außen‑Exposition, und statt teurer lokaler Redundanz
+                    sichere ich Daten kosteneffizient offsite in einem S3‑Bucket — so bleibe ich flexibel,
+                    erweiterbar und ausfallsicher genug für meine Zwecke.
+                </p>
+            </div>
+        </article>
+    </div>
 
 {% endblock %}

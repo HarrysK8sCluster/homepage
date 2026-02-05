@@ -1,0 +1,25 @@
+@use "vars";
+
+ul.tagcloud {
+  list-style-type: none;
+
+  li {
+    float: left;
+    background: vars.$pk-blue;
+    color: #ffffff;
+    padding: 7px 13px;
+    margin: 5px 8px;
+    border-radius: 999px;
+    line-height: 14px;
+  }
+
+  li::before {
+    display: none;
+  }
+
+  &::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+}

@@ -4,3 +4,8 @@
 .github
 docker-compose.yml
 Dockerfile
+vendor
+composer.lock
+node_modules
+package-lock.json
+html/assets/*

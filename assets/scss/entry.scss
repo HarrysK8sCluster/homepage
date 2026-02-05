@@ -1,0 +1,64 @@
+@use "vars";
+@use "button";
+
+.entry {
+  margin: 0 -50px;
+  padding: 0 50px;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 50px;
+
+  &>div {
+    position: relative;
+    z-index: 2;
+    background: linear-gradient(
+                    90deg,
+                    rgba(255, 255, 255, 1) 0%,
+                    rgba(255, 255, 255, 1) 50%,
+                    rgba(255, 255, 255, 0) 80%
+    );
+    padding: 20px;
+    padding-right: 40%;
+  }
+
+  img {
+    display: block;
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    right: 0;
+    width: 50%;
+    z-index: -1;
+  }
+  h1 {
+    color: vars.$pk-text;
+    display: flex;
+    flex-direction: column;
+
+    .intro {
+      font-weight: 500;
+      font-size: 20px;
+      align-content: center;
+    }
+
+    .main {
+      font-weight: 500;
+      font-size: 40px;
+      height: 45px;
+      align-content: center;
+    }
+
+    .outro {
+      font-weight: 300;
+      font-size: 20px;
+      color: vars.$pk-blue;
+      align-content: center;
+      margin-top: 20px;
+    }
+  }
+
+  .btn {
+    margin-top: 40px;
+  }
+
+}
