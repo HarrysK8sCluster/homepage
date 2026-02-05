@@ -5,71 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5f9b890d-3c1d-4b04-a87f-f70f5ed4a900" name="Changes" comment="redesign">
-      <change afterPath="$PROJECT_DIR$/assets/img/bg.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/js/app.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/scss/button.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/scss/card.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/scss/entry.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/scss/global.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/scss/home.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/scss/icon.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/scss/law.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/scss/layout.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/scss/messaagebox.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/scss/stats.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/scss/tagcloud.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/scss/teaser.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/scss/vars.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/html/font/Manrope/Manrope-VariableFont_wght.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/html/font/Manrope/OFL.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/html/font/Manrope/README.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/html/font/Manrope/static/Manrope-Bold.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/html/font/Manrope/static/Manrope-ExtraBold.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/html/font/Manrope/static/Manrope-ExtraLight.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/html/font/Manrope/static/Manrope-Light.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/html/font/Manrope/static/Manrope-Medium.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/html/font/Manrope/static/Manrope-Regular.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/html/font/Manrope/static/Manrope-SemiBold.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/html/icons/circle-alert.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/html/icons/contact.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/html/icons/cookie.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/html/icons/info.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/html/icons/mail.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/html/icons/peace.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/html/icons/server-cog.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/html/icons/server.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/html/icons/share-2.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/html/icons/shield-check.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/html/icons/shield-user.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/html/icons/table-of-contents.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/html/icons/user.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/html/media/home/apps.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/html/media/home/hiiam.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/html/media/home/homelab.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/html/media/home/ops.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/html/media/law/law.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/postcss.config.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Twig/SvgExtension.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/devops.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/privacy.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack/webpack.common.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack/webpack.dev.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/webpack/webpack.prod.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.dockerignore" beforeDir="false" afterPath="$PROJECT_DIR$/.dockerignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/frontend.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/frontend.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/html/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/html/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/about.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/about.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/apps.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/apps.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/deepdive.twig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/homelab.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/homelab.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/imprint.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/imprint.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/index.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/layouts/base.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/layouts/base.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/ops.twig" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -252,7 +188,7 @@
       <workItem from="1769550884985" duration="68283000" />
       <workItem from="1769961517160" duration="43876000" />
       <workItem from="1770222762564" duration="7975000" />
-      <workItem from="1770308732824" duration="7975000" />
+      <workItem from="1770308732824" duration="8320000" />
     </task>
     <task id="LOCAL-00001" summary="v1">
       <option name="closed" value="true" />
@@ -398,7 +334,15 @@
       <option name="project" value="LOCAL" />
       <updated>1769968593583</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="redesign">
+      <option name="closed" value="true" />
+      <created>1770317357437</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1770317357437</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
