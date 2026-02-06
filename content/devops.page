@@ -1,0 +1,121 @@
+Template: "index"
+
+- Heading:
+    Main: "DevOps"
+    Outro: "GitOps-first // Wiederholbar // Clean Code"
+    Image: "media/home/ops.webp"
+
+    - Text:
+        Content: |
+            Hier geht’s um den Teil, der Dinge zuverlässig laufen lässt: ein Workflow, der sich erklären und
+            reproduzieren lässt – damit Deployments nicht vom Bauchgefühl, sondern von Git und Automatisierung
+            abhängen.
+
+- Teaser:
+    Header: "DevOps – Clean Code im Betrieb"
+
+    - Text:
+        Content: |
+            DevOps ist für mich Clean Code, nur eben außerhalb des Editors: klare Standards, nachvollziehbare Änderungen
+            und so wenig Handarbeit wie möglich. Deployments sollen reproduzierbar sein, Konfiguration in Git reviewbar
+            bleiben und der Betrieb so strukturiert laufen, dass man ihn jederzeit sauber wiederholen oder erweitern kann.
+
+- Row:
+
+    - Card:
+        Heading:  "Ops in 60 Sekunden"
+
+        - Stats:
+            - StatItem:
+                Name: "Env"
+                Value: "Homelab"
+            - StatItem:
+                Name: "CI"
+                Value: "GitHub Actions"
+            - StatItem:
+                Name: "Registry"
+                Value: "GHCR"
+            - StatItem:
+                Name: "Delivery"
+                Value: "Flux"
+            - StatItem:
+                Name: "Runtime"
+                Value: "kubeadm"
+            - StatItem:
+                Name: "Metrics"
+                Value: "VictoriaMetrics"
+            - StatItem:
+                Name: "Logs"
+                Value: "OpenSearch"
+
+- Row:
+
+    - Card:
+        Heading:  "Der Weg einer Änderung"
+
+        - Text:
+            Content: |
+                Das Ziel ist: von „ich ändere was“ zu „läuft produktiv“ ohne manuelle Zwischen-Schritte.
+
+        - Enum:
+            - Item:
+                Content: "Änderung committen (Code oder Deployment-Konfig)"
+            - Item:
+                Content: "GitHub Actions baut Images und pushed nach GHCR"
+            - Item:
+                Content: "Flux reconciled automatisch und rollt das Update aus"
+            - Item:
+                Content: "Observability zeigt, ob alles gesund ist"
+
+    - Card:
+        Heading:  "GitOps: Multi-Repo, vollautomatisch"
+
+        - Text:
+            Content: |
+                Ein Bootstrap-Repo initialisiert das Cluster. Danach lebt jede App in einem
+                eigenen Repo – sauber getrennt, eindeutig versioniert.
+
+        - List:
+            - Item:
+                Content: "Git ist Source of Truth (kein „Klick-Drift“)"
+            - Item:
+                Content: "Standardisierte Struktur für IaC und Deployments"
+            - Item:
+                Content: "Rollbacks sind ein Git-Change, nicht ein Ritual"
+
+- Row:
+
+    - Card:
+        Heading:  "Kubernetes – Bausteine"
+
+        - List:
+            - Item:
+                Content: "Cilium + Cilium LB, Multus für zusätzliche Interfaces"
+            - Item:
+                Content: "Nginx Ingress, Cloudflared Tunnels"
+            - Item:
+                Content: "Storage: ZFS hostpath + Synology iSCSI"
+            - Item:
+                Content: "KubeVirt für VM-Workloads"
+            - Item:
+                Content: "Headlamp als UI, Login via Keycloak (OIDC) + RBAC"
+
+        - Text:
+            Content: |
+                Secrets sind aktuell „Kubernetes-Standard“ – Vault ist als nächster Schritt eingeplant.
+
+    - Card:
+        Heading:  "Monitoring, Logs & Restore-Fähigkeit"
+        Footer: "@(button|Hardware im Homelab ansehen →|/homelab)"
+
+        - List:
+            - Item:
+                Content: "Metrics: VictoriaMetrics, Visualisierung in Grafana"
+            - Item:
+                Content: "Logs: Filebeat/Fluentd sammeln, OpenSearch zum Suchen"
+            - Item:
+                Content: "Backups: Velero (Target: MinIO auf Synology + S3)"
+
+        - Text:
+            Content: |
+                Ziel ist nicht „möglichst viel Tooling“, sondern ein Set, das im Alltag hilft.

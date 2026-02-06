@@ -1,0 +1,83 @@
+Template: "index"
+
+- Heading:
+    Main: "Homelab"
+    Outro: "Synology // OPNsense // Server"
+    Image: "media/home/homelab.webp"
+
+    - Text:
+        Content: |
+            Hier ein paar Details zu meinem Homelab hier in Nürnberg. Es dient als Netzwerkknotenpunkt
+            als auch als Hostingplattform, für all meine Applikationen
+
+- Teaser:
+    Header: "Homelab - mein Spielplatz für Infrastruktur"
+
+    - Text:
+        Content: |
+            Dieses Rack ist mein persönlicher Playground für Kubernetes, Selfhosting und VoIP. Hier laufen die Dienste,
+            die ich täglich brauche — und die, an denen ich schraube, um neue Deployments, Monitoring‑Pipelines und
+            Automatisierung zu testen. Kurz: labben, lernen, liefern.
+
+- Row:
+
+    - Card:
+        Heading:  "Hardware"
+
+        - List:
+            - Item:
+                Content: "D-Link Switch 1250-28X"
+            - Item:
+                Content: "Firewall i5-2520M mit OPNsense"
+            - Item:
+                Content: "Synology RS1221"
+            - Item:
+                Content: "Server i5-11600k / 64GB RAM"
+            - Item:
+                Content: "Yeastar S20"
+            - Item:
+                Content: "Draytek DSL Modem"
+
+    - Card:
+        Heading:  "Netzwerk & Architektur"
+
+        - Text:
+            Content: |
+                Das Homelab ist in mehrere Netzsegmente aufgeteilt: LAN für Clients, ein Server‑Netz für Kubernetes
+                Synology etc., ein isoliertes IoT‑Netz und ein LB‑Netz für Ingress/Load‑Balancing.
+                Cloudflare übernimmt Außen‑Security, DNS und selektive Freigaben während die OPNsense diese Aufgabe
+                intern übernimmt.
+
+- Row:
+    - Card:
+        Heading:  "Quick Stats"
+
+        - Stats:
+            - StatItem:
+                Name: "VLANs"
+                Value: "6"
+            - StatItem:
+                Name: "Services"
+                Value: "9"
+            - StatItem:
+                Name: "Downlink"
+                Value: "100Mbit"
+            - StatItem:
+                Name: "Uplink"
+                Value: "40Mbit"
+            - StatItem:
+                Name: "ISP"
+                Value: "Telekom"
+
+- Row:
+    - Card:
+        Heading:  "Wieso"
+
+        - Text:
+            Content: |
+                Zu experimentieren und Kontrolle über meine Infrastruktur zu behalten.
+                Durch meine Segmentierung (Client, SERVER, IOT, LB) schütze ich Produktivdienste vor unsicheren Testgeräten,
+                ermögliche reproduzierbare Kubernetes‑ und VM‑Deployments und teste gezielt Ingress/Load‑Balancing.
+                Cloudflare erlaubt mir sichere, selektive Außen‑Exposition, und statt teurer lokaler Redundanz
+                sichere ich Daten kosteneffizient offsite in einem S3‑Bucket — so bleibe ich flexibel,
+                erweiterbar und ausfallsicher genug für meine Zwecke.

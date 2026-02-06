@@ -3,7 +3,7 @@
   "authors": [
     {
       "name": "pkremer",
-      "email": "email@example.com"
+      "email": "web.delphin@googlemail.com"
     }
   ],
   "autoload": {
@@ -12,7 +12,6 @@
     }
   },
   "require": {
-    "pecee/simple-router": "5.4.1.7",
     "twig/twig": "v3.23.0"
   }
 }

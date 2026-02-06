@@ -1,0 +1,103 @@
+Template: "index"
+
+- Heading:
+    Main: "Apps"
+    Outro: "Web // Automatisierung // Clean Code"
+    Image: "media/home/apps.webp"
+
+    - Text:
+        Content: |
+            Hier findest du meine eigenen, produktiven Projekte: pragmatische Web-Entwicklung mit Fokus auf sauberem
+            Code, reproduzierbaren Deployments und möglichst wenig Handarbeit.
+
+- Teaser:
+    Header: "Eigene Projekte – klein, nützlich, produktiv"
+
+    - Text:
+        Content: |
+            Ich baue Dinge, die ich selbst täglich nutze. Meist klassisch im LAMP-Stack (Linux, Apache, MySQL, PHP),
+            kombiniert mit Twig und Webpack. Wenn es um Betrieb und Ausrollen geht, denke ich gern in Richtung Nginx,
+            Container und Kubernetes – die Details dazu liegen auf der Ops-Seite.
+
+- Row:
+
+    - Card:
+        Heading:  "Diese Website"
+
+        - Text:
+            Content: |
+                Meine persönliche Webpräsenz: eine kleine, performante Seite als Home für
+                Inhalte rund um Homelab, Automatisierung und Projekte.
+
+        - List:
+            - Item:
+                Content: "schlanke Templates mit Twig, klare Struktur statt Over-Engineering"
+            - Item:
+                Content: "Asset-Build mit Webpack, saubere Trennung von Layout und Inhalt"
+            - Item:
+                Content: "Fokus auf Lesbarkeit, Wartbarkeit und schnelle Iteration"
+
+    - Card:
+        Heading: "Home Assistant – Pyscript Automationen"
+
+        - Text:
+            Content: |
+                Python-basierte Automationen in Home Assistant – nicht als „Spielerei“, sondern als produktive
+                Logik, die zuverlässig im Alltag läuft.
+
+        - List:
+            - Item:
+                Content: "Automatisierungen als Code: versionierbar, nachvollziehbar, erweiterbar"
+            - Item:
+                Content: "Fokus auf robuste Logik statt Clicki-Bunti-Regeln"
+            - Item:
+                Content: "weniger manuelle Schritte: Events, Trigger und Zustände sauber zusammengeführt"
+
+        - Text:
+            Content: |
+                Hinweis: Das ist intern im Homelab und nicht öffentlich als Demo verfügbar.
+
+- Row:
+
+    - Card:
+        Heading: "Stack & Tools"
+
+        - Tagcloud:
+            - Item:
+                Content: "Linux"
+            - Item:
+                Content: "Apache"
+            - Item:
+                Content: "MySQL"
+            - Item:
+                Content: "PHP"
+            - Item:
+                Content: "Twig"
+            - Item:
+                Content: "Webpack"
+            - Item:
+                Content: "PHP-DI"
+            - Item:
+                Content: "Nginx"
+            - Item:
+                Content: "Kubernetes"
+
+        - Text:
+            Content: |
+                Frameworks: Ich habe lange und gern mit Zend gearbeitet –
+                heute halte ich es oft bewusst schlank und setze lieber
+                auf klare Architektur, saubere Libraries und Automatisierung.
+
+    - Card:
+        Heading: "Worauf ich Wert lege"
+        Footer: "@(button|Mehr zu Ops/CI/CD →|/devops)"
+
+         - List:
+            - Item:
+                Content: "Clean Code: Lesbarkeit, klare Verantwortlichkeiten, weniger Magie"
+            - Item:
+                Content: "Automatisierung: Builds und Deployments reproduzierbar statt „läuft auf meinem Rechner“"
+            - Item:
+                Content: "Pragmatismus: sinnvoller Tech-Stack, nicht der nächste Hype"
+
+

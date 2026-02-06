@@ -1,0 +1,111 @@
+Template: "index"
+
+- Heading:
+    Intro: "Hallo, ich bin"
+    Main: "Philipp Kremer"
+    Outro: "Entwickler // Nerd // Automatisierungs-Fan"
+    Image: "media/home/hiiam.webp"
+
+    - Text:
+        Content: |
+            Ich baue Web-Anwendungen (klassisch mit LAMP, aber auch modern gedacht) und betreibe meine eigene kleine
+            Plattform zu Hause – inklusive Kubernetes, GitOps und Selfhosting.
+
+- Teaser:
+    Header: "Über mich - kurz & ehrlich"
+
+    - Text:
+        Content: |
+            Ich bin Philipp - Fullstack/Platform-Tüftler. Ich liebe es, wenn Code sauber ist.
+            Deployments reproduzierbar sind und Automatisierung nervige Handarbeit ersetzt.
+
+- Row:
+
+    - Card:
+        Heading:  "Warum ich das mache"
+
+        - Text:
+            Content: |
+                Neugier, Lernen und Spaß am Optimieren. Mein Homelab ist meine Spielwiese -
+                hier teste ich Tools, baue Plattformen und mache Dinge so automatisch wie möglich.
+
+    - Card:
+        Heading:  "Was du hier findest"
+
+        - List:
+            - Item:
+                Content: "eigene Entwicklungen"
+            - Item:
+                Content: "GitOps Deployments mit Flux"
+            - Item:
+                Content: "Kubernetes Setup & Learnings"
+            - Item:
+                Content: "Selfhosting & Tools"
+- Row:
+    - Card:
+        Heading:  "Schwerpunkte"
+
+        - Tagcloud:
+            - Item:
+                Content: "Softwarearchitektur"
+            - Item:
+                Content: "LAMP / PHP Backend"
+            - Item:
+                Content: "Kubernetes"
+            - Item:
+                Content: "GitOps (Flux)"
+            - Item:
+                Content: "Automatisierung"
+            - Item:
+                Content: "Selfhosting"
+            - Item:
+                Content: "Netzwerke"
+            - Item:
+                Content: "Clean Code"
+            - Item:
+                Content: "Netzwerk & VLANs"
+            - Item:
+                Content: "Identity & Access (OIDC)"
+            - Item:
+                Content: "Secrets Management"
+            - Item:
+                Content: "Release / Deployment Automation"
+            - Item:
+                Content: "API Design"
+            - Item:
+                Content: "Observability Basics (Logs/Metrics)"
+            - Item:
+                Content: "Fullstack Webentwicklung"
+            - Item:
+                Content: "Bastelprojekte"
+
+- Row:
+    - Card:
+        Heading:  "Nerd-Facts"
+
+        - List:
+            - Item:
+                Content: "Ich mag cleanes Automation-Setup"
+            - Item:
+                Content: "Ich vertraue nichts, was nicht in Git liegt."
+            - Item:
+                Content: "Deployment nicht reproduzierbar? Oh no!"
+            - Item:
+                Content: "Ich benenne Dinge gerne ordentlich"
+            - Item:
+                Content: "Kabelmanagement? Dafür gibt's KI-Bilder 😄"
+
+    - Card:
+        Heading:  "Kontakt"
+
+        - List:
+            NoPoint: true
+
+            - Item:
+                Content: "E-Mail: @(mail|web.delphin@googlemail.com|true)"
+            - Item:
+                Content: "GitHub: @(link|phiKremer|https://github.com/phiKremer)"
+            - Item:
+                Content: "Xing: @(link|Philipp_Kremer4|https://www.xing.com/profile/Philipp_Kremer4)"
+            - Item:
+                Content: "LinkedIn: @(link|philipp-kremer-67a5b3385|https://www.linkedin.com/in/philipp-kremer-67a5b3385/)"

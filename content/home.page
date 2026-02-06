@@ -1,0 +1,53 @@
+Template: "index"
+
+- Heading:
+    Intro: "Hallo, ich bin"
+    Main: "Philipp Kremer"
+    Outro: "DevOps-Enthusiast // Tech-Tüftler"
+    Image: "media/home/hiiam.webp"
+
+    - Text:
+        Content: |
+            Ich schreibe über Homelab-Projekte, Automatisierung und nützliche Apps.
+            Von Infrastruktur bis Self-Hosting hier gibt's alles rund um
+            spannende Tech-Themen.
+
+    - Text:
+        Content: |
+            Schau dich gern um!
+
+    - Text:
+        Content: |
+            @(button|Lerne mich kennen →|/about)
+
+- Row:
+
+    - Card:
+        Image: "media/home/homelab.webp"
+        Heading:  "Mein Homelab"
+        Footer: @(button|Zu meinem Homelab →|/homelab)
+
+        - Text:
+            Content: |
+                Einblick in mein Homelab, Hardware-Setups und Netzwerkprojekte.
+
+
+    - Card:
+        Image: "media/home/apps.webp"
+        Heading:  "Meine Apps"
+        Footer: @(button|Zu meinen Projekten →|/apps)
+
+        - Text:
+            Content: |
+                Meine eigenen Web-Projekte – von klassischen LAMP-Stacks bis zu
+                kleinen Tools, APIs und Automatisierungen.
+
+    - Card:
+        Image: "media/home/ops.webp"
+        Heading:  "DevOps"
+        Footer: @(button|Zu Ops/CI/CD|/devops)
+
+        - Text:
+            Content: |
+                Alles rund um GitOps & Kubernetes: Deployments, CI/CD,
+                Automatisierung und Betrieb moderner Services.

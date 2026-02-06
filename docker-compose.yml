@@ -3,6 +3,8 @@ services:
     build:
       dockerfile: Dockerfile
       context: .
+    environment:
+      APP_ENV: dev
     ports:
       - "8080:80"
     volumes:

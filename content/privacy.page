@@ -1,0 +1,100 @@
+Template: "index"
+
+- Heading:
+    Main: "Datenschutzerklärung"
+    Outro: "Einleitung"
+    Image: "media/law/law.webp"
+
+    - Text:
+        Content: |
+            Diese Website ist statisch (keine Cookies, kein Tracking). Sie dient der öffentlichen Darstellung meines Homelabs
+            und meiner Projekte. Ich erhebe keine personenbezogenen Daten über Cookies oder Analyse‑Tools.
+
+- IconBox:
+    Icon: server
+    Header: "Server- und Protokolldaten"
+
+    - Text:
+        Content: |
+            Beim Aufruf der Website werden technisch notwendige Server-Logdaten verarbeitet (z. B. IP‑Adresse, Zeitpunkt,
+            angeforderte Ressource, User-Agent). Diese Daten dienen dem Betrieb und der Sicherheit des Servers sowie zur
+            Abwehr von Missbrauch. Rechtsgrundlage: berechtigtes Interesse (Art. 6 Abs. 1 lit. f DSGVO). Logdaten werden nur
+            so lange gespeichert, wie es zur Erfüllung dieser Zwecke erforderlich ist 30 Tage bzw. soweit
+            gesetzliche Aufbewahrungspflichten bestehen.
+
+- IconBox:
+    Icon: cookie
+    Header: "Cookies / Tracking"
+
+    - Text:
+        Content: |
+            Es werden keine Cookies gesetzt und keine Tracking‑ oder Analyse‑Dienste eingesetzt. Sollte zukünftig ein
+            Drittservice (z. B. Google Analytics, Matomo) hinzugefügt werden, wird dies hier transparent angegeben und ggf.
+            eine Einwilligung erforderlich gemacht.
+
+- IconBox:
+    Icon: contact
+    Header: "Kontaktaufnahme"
+
+    - Text:
+        Content: |
+            Wenn Sie per E‑Mail Kontakt aufnehmen, werden die von Ihnen mitgeteilten personenbezogenen Daten
+            (E‑Mail‑Adresse, ggf. Name) zur Beantwortung Ihrer Anfrage gespeichert. Rechtsgrundlage: Einwilligung/Erfüllung
+            vorvertraglicher Maßnahmen (Art. 6 Abs. 1 lit. a/b DSGVO). Daten werden gelöscht, wenn sie für die Zwecke der
+            Verarbeitung nicht mehr erforderlich sind bzw. gesetzliche Aufbewahrungspflichten dem nicht entgegenstehen.
+
+- IconBox:
+    Icon: server-cog
+    Header: "Hosting / Drittanbieter"
+
+    - Text:
+        Content: |
+            Diese Website wird selbst gehostet auf Servern in meinem Homelab (Standort: Nürnberg).
+
+- IconBox:
+    Icon: share-2
+    Header: "Weitergabe / Empfänger"
+
+    - Text:
+        Content: |
+            Eine Weitergabe personenbezogener Daten an Dritte erfolgt nur, sofern dies zur Erfüllung gesetzlicher Pflichten,
+            zur Vertragserfüllung oder auf Grundlage Ihrer Einwilligung erforderlich ist.
+
+- IconBox:
+    Icon: shield-user
+    Header: "Betroffenenrechte"
+
+    - Text:
+        Content: |
+            Ihnen stehen die Rechte auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung, Datenübertragbarkeit
+            und Widerspruch zu. Zur Ausübung wenden Sie sich bitte an: @(mail|web.delphin@googlemail.com|true)
+
+- IconBox:
+    Icon: circle-alert
+    Header: "Beschwerderecht"
+
+    - Text:
+        Content: |
+            Sie haben das Recht, eine Beschwerde bei einer Aufsichtsbehörde einzureichen. Zuständige Aufsichtsbehörde in Bayern:
+            Bayerisches Landesamt für Datenschutzaufsicht (BayLDA)
+            Promenade 27, 91522 Ansbach@(nl)
+            E‑Mail: poststelle@lda.bayern.de@(nl)
+            @(link|https://www.lda.bayern.de|https://www.lda.bayern.de)
+
+- IconBox:
+    Icon: shield-check
+    Header: "Sicherheit"
+
+    - Text:
+        Content: |
+            Ich setze technische und organisatorische Maßnahmen ein, um Ihre Daten zu schützen. Absolute Sicherheit kann
+            jedoch nicht garantiert werden.
+
+
+- MessageBox:
+    Type: info
+    Header: "Änderungen dieser Datenschutzerklärung"
+
+    - Text:
+        Content: |
+            Diese Datenschutzerklärung kann bei Bedarf aktualisiert werden. Datum der letzten Änderung: 31.01.2026

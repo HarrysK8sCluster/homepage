@@ -1,0 +1,15 @@
+<article class="card {% if Image %}card-image{% endif %}">
+    {% if Image %}
+        <img src="{{ Image }}" alt="{{ Heading }}" />
+    {% endif %}
+
+    <div>
+        <h2>{{ Heading }}</h2>
+
+        %content%
+    </div>
+
+    <footer>
+        {{ Footer }}
+    </footer>
+</article>

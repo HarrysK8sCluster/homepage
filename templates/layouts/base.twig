@@ -6,7 +6,7 @@
 
     {% set manifest = manifest is defined ? manifest : {} %}
 
-    <link rel="stylesheet" href="{{ manifest['layout.css'] ?? '/assets/app.css' }}">
+    <link rel="stylesheet" href="{{ _manifest['layout.css'] }}">
     {% block stylesheets %}{% endblock %}
 
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">

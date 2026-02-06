@@ -1,0 +1,20 @@
+- route: /
+  page: home
+
+- route: /about
+  page: about
+
+- route: /homelab
+  page: homelab
+
+- route: /apps
+  page: apps
+
+- route: /devops
+  page: devops
+
+- route: /imprint
+  page: imprint
+
+- route: /privacy
+  page: privacy

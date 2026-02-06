@@ -14,6 +14,28 @@
             <p>
                 Hier ist etwas schiefgelaufen. Versuch es bitte später noch einmal oder geh zurück zur Startseite.
             </p>
+
+            {% if app_debug and exception is defined %}
+
+                <h2>Debug-Informationen</h2>
+
+                <pre style="
+                    background:#111;
+                    color:#eee;
+                    padding:1rem;
+                    overflow:auto;
+                    max-height:60vh;
+                    font-size:0.85rem;
+                    margin-bottom: 20px;
+                ">{{ exception.message }}
+
+{{ exception.file }}:{{ exception.line }}
+
+{{ exception.traceAsString }}</pre>
+
+
+            {% endif %}
+
             <a class="btn" href="/">Zurück nach Home →</a>
         </div>
     </header>

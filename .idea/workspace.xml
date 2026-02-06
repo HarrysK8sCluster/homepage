@@ -4,13 +4,80 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5f9b890d-3c1d-4b04-a87f-f70f5ed4a900" name="Changes" comment="optimize images">
-      <change afterPath="$PROJECT_DIR$/assets/logo.FCStd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/html/logo.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/html/media/test-BodySketch.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/html/test.svg" afterDir="false" />
+    <list default="true" id="5f9b890d-3c1d-4b04-a87f-f70f5ed4a900" name="Changes" comment="change logo to svg">
+      <change afterPath="$PROJECT_DIR$/content/about.page" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/apps.page" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/devops.page" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/home.page" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/homelab.page" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/imprint.page" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/privacy.page" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/content/routes.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Element/AbstractElement.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Element/CardElement.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Element/ElementInterface.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Element/EnumElement.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Element/HeadingElement.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Element/IconBoxElement.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Element/ItemElement.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Element/ListElement.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Element/MessageBoxElement.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Element/PageElement.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Element/RenderableElementInterface.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Element/RowElement.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Element/StatItemElement.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Element/StatsElement.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Element/TagcloudElement.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Element/TeaserElement.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Element/TextElement.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ElementFactory.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Inline/ButtonInline.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Inline/InlineElementInterface.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Inline/InlineParser.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Inline/InlineRegistry.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Inline/LinkInline.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Inline/MailInline.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Inline/NlInline.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/PageParser.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Property/Property.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Property/PropertyMap.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Property/PropertyMapInterface.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Render/RenderContext.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Render/Renderer.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Schema/HasPropertySchema.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Schema/PropertyMapSchema.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Schema/PropertySchema.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Validation/ElementNormalizer.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/elements/card.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/elements/enum.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/elements/heading.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/elements/iconbox.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/elements/item.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/elements/list.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/elements/messagebox.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/elements/row.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/elements/statitem.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/elements/stats.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/elements/tagcloud.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/elements/teaser.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/elements/text.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/page/index.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/frontend.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/frontend.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/scss/home.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/scss/home.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/html/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/500.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/500.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/about.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/apps.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/devops.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/homelab.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/imprint.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/index.twig" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/layouts/base.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/layouts/base.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/privacy.twig" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,7 +91,7 @@
     </execution>
   </component>
   <component name="EmbeddingIndexingInfo">
-    <option name="cachedIndexableFilesCount" value="91" />
+    <option name="cachedIndexableFilesCount" value="109" />
     <option name="fileBasedEmbeddingIndicesEnabled" value="true" />
   </component>
   <component name="FileTemplateManagerImpl">
@@ -53,6 +120,9 @@
       <path value="$PROJECT_DIR$/vendor/twig/twig" />
     </include_path>
   </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 8
 }</component>
@@ -80,7 +150,7 @@
     "ignore.virus.scanning.warn.message": "true",
     "javascript.preferred.runtime.type.id": "node",
     "junie.onboarding.icon.badge.shown": "true",
-    "last_opened_file_path": "C:/Users/webde/projects/website/frontend/html/font",
+    "last_opened_file_path": "C:/Users/webde/projects/website/frontend/templates/elements",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -90,18 +160,19 @@
     "npm.build.executor": "Run",
     "npm.dev.executor": "Run",
     "npm.watch.executor": "Run",
-    "settings.editor.selected.configurable": "editor.preferences.completion",
+    "php.override.implement.member.chooser.php.doc": "NONE",
+    "settings.editor.selected.configurable": "preferences.fileTypes",
     "to.speed.mode.migration.done": "true",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\webde\projects\website\frontend\templates\elements" />
+      <recent name="C:\Users\webde\projects\website\frontend\content" />
+      <recent name="C:\Users\webde\projects\website\frontend\templates\templates" />
       <recent name="C:\Users\webde\projects\website\frontend\html\font" />
       <recent name="C:\Users\webde\projects\website\frontend\html\font\JetBrains_Mono" />
-      <recent name="C:\Users\webde\projects\website\frontend\assets\scss" />
-      <recent name="C:\Users\webde\projects\website\frontend\html\media\home" />
-      <recent name="C:\Users\webde\projects\website\frontend\templates" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\webde\projects\website\frontend\html\media" />
@@ -193,7 +264,7 @@
       <workItem from="1769550884985" duration="68283000" />
       <workItem from="1769961517160" duration="43876000" />
       <workItem from="1770222762564" duration="7975000" />
-      <workItem from="1770308732824" duration="15819000" />
+      <workItem from="1770308732824" duration="37315000" />
     </task>
     <task id="LOCAL-00001" summary="v1">
       <option name="closed" value="true" />
@@ -379,11 +450,22 @@
       <option name="project" value="LOCAL" />
       <updated>1770319016698</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="change logo to svg">
+      <option name="closed" value="true" />
+      <created>1770340742831</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1770340742831</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.page" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -412,7 +494,8 @@
     <MESSAGE value="fix devops and errorr pages" />
     <MESSAGE value="fix devops" />
     <MESSAGE value="optimize images" />
-    <option name="LAST_COMMIT_MESSAGE" value="optimize images" />
+    <MESSAGE value="change logo to svg" />
+    <option name="LAST_COMMIT_MESSAGE" value="change logo to svg" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
