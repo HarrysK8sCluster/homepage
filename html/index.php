@@ -25,23 +25,37 @@ if ($debug) {
 }
 $manifest = json_decode(file_get_contents(__DIR__ . '/../html/assets/manifest.json'), true);
 $vars = ['_manifest' => $manifest];
+$cacheDir =  __DIR__ . '/../var/cache/dsl';
+if (!is_dir($cacheDir)) {
+    mkdir($cacheDir, 0775, true);
+}
 
 try {
     $routes = yaml_parse_file(__DIR__ . '/../content/routes.yaml');
     foreach ($routes as $route) {
         if ($route['route'] === $_SERVER['REQUEST_URI']) {
+            $dslContent = file_get_contents(__DIR__ . "/../content/{$route['page']}.page");
+            $cacheKey = hash('sha256', $dslContent);
+            $cacheFile = "{$cacheDir}/{$cacheKey}.php";
+            if (file_exists($cacheFile)) {
+                require $cacheFile;
+                exit;
+            }
+
             $parser = new PageParser();
-            $ast = $parser->parse(file_get_contents(__DIR__ . "/../content/{$route['page']}.page"));
+            $ast = $parser->parse($dslContent);
 
             $factory = new ElementFactory();
-            $page = $factory->create($ast);
+            $pageElement = $factory->create($ast);
 
             $normalizer = new ElementNormalizer();
-            $normalizer->normalize($page);
+            $normalizer->normalize($pageElement);
 
             $context = new RenderContext($twig, $vars);
             $renderer = new Renderer($context, new InlineParser());
-            echo $renderer->render($page);
+            $html = $renderer->render($pageElement);
+            file_put_contents($cacheFile, "<?php echo " . var_export($html, true) . ";");
+            require $cacheFile;
             exit;
         }
     }

@@ -4,80 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5f9b890d-3c1d-4b04-a87f-f70f5ed4a900" name="Changes" comment="change logo to svg">
-      <change afterPath="$PROJECT_DIR$/content/about.page" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/content/apps.page" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/content/devops.page" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/content/home.page" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/content/homelab.page" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/content/imprint.page" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/content/privacy.page" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/content/routes.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Element/AbstractElement.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Element/CardElement.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Element/ElementInterface.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Element/EnumElement.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Element/HeadingElement.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Element/IconBoxElement.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Element/ItemElement.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Element/ListElement.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Element/MessageBoxElement.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Element/PageElement.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Element/RenderableElementInterface.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Element/RowElement.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Element/StatItemElement.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Element/StatsElement.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Element/TagcloudElement.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Element/TeaserElement.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Element/TextElement.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ElementFactory.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Inline/ButtonInline.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Inline/InlineElementInterface.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Inline/InlineParser.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Inline/InlineRegistry.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Inline/LinkInline.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Inline/MailInline.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Inline/NlInline.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/PageParser.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Property/Property.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Property/PropertyMap.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Property/PropertyMapInterface.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Render/RenderContext.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Render/Renderer.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Schema/HasPropertySchema.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Schema/PropertyMapSchema.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Schema/PropertySchema.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Validation/ElementNormalizer.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/elements/card.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/elements/enum.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/elements/heading.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/elements/iconbox.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/elements/item.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/elements/list.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/elements/messagebox.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/elements/row.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/elements/statitem.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/elements/stats.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/elements/tagcloud.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/elements/teaser.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/elements/text.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/page/index.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/frontend.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/frontend.iml" afterDir="false" />
+    <list default="true" id="5f9b890d-3c1d-4b04-a87f-f70f5ed4a900" name="Changes" comment="add content renderer">
+      <change beforePath="$PROJECT_DIR$/.dockerignore" beforeDir="false" afterPath="$PROJECT_DIR$/.dockerignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/scss/home.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/scss/home.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/scss/global.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/scss/global.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/html/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/html/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/500.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/500.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/about.twig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/apps.twig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/devops.twig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/homelab.twig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/imprint.twig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/index.twig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/layouts/base.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/layouts/base.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/privacy.twig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/postcss.config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Inline/InlineRegistry.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Render/Renderer.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Render/Renderer.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Validation/ElementNormalizer.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Validation/ElementNormalizer.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -264,7 +201,7 @@
       <workItem from="1769550884985" duration="68283000" />
       <workItem from="1769961517160" duration="43876000" />
       <workItem from="1770222762564" duration="7975000" />
-      <workItem from="1770308732824" duration="37315000" />
+      <workItem from="1770308732824" duration="40252000" />
     </task>
     <task id="LOCAL-00001" summary="v1">
       <option name="closed" value="true" />
@@ -458,7 +395,15 @@
       <option name="project" value="LOCAL" />
       <updated>1770340742831</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="add content renderer">
+      <option name="closed" value="true" />
+      <created>1770405687443</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1770405687443</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -495,7 +440,8 @@
     <MESSAGE value="fix devops" />
     <MESSAGE value="optimize images" />
     <MESSAGE value="change logo to svg" />
-    <option name="LAST_COMMIT_MESSAGE" value="change logo to svg" />
+    <MESSAGE value="add content renderer" />
+    <option name="LAST_COMMIT_MESSAGE" value="add content renderer" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

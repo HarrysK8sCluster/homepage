@@ -12,6 +12,7 @@
     }
   },
   "require": {
-    "twig/twig": "v3.23.0"
+    "twig/twig": "v3.23.0",
+    "ext-yaml": "*"
   }
 }

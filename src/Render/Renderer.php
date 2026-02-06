@@ -2,7 +2,7 @@
 
 namespace pkremer\WebFrontend\Render;
 
-use pkremer\WebFrontend\Element\AbstractElement;
+use pkremer\WebFrontend\Element\ElementInterface;
 use pkremer\WebFrontend\Inline\InlineParser;
 
 final class Renderer
@@ -12,7 +12,7 @@ final class Renderer
         private readonly InlineParser $inlineParser
     ) {}
 
-    public function render(AbstractElement $element): string
+    public function render(ElementInterface $element): string
     {
         $html = $element->render($this->context);
         return $this->inlineParser->parse($html);

@@ -3,9 +3,11 @@
 .git
 .github
 docker-compose.yml
+composer.phar
 Dockerfile
-vendor
+vendor/
 composer.lock
-node_modules
+node_modules/
 package-lock.json
+var/
 html/assets/*

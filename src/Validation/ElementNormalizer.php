@@ -2,14 +2,15 @@
 
 namespace pkremer\WebFrontend\Validation;
 
-use pkremer\WebFrontend\Element\AbstractElement;
+use pkremer\WebFrontend\Element\ElementInterface;
 use pkremer\WebFrontend\Property\Property;
+use pkremer\WebFrontend\Property\PropertyMap;
 use pkremer\WebFrontend\Schema\HasPropertySchema;
 use RuntimeException;
 
 final class ElementNormalizer
 {
-    public function normalize(AbstractElement $element): void
+    public function normalize(ElementInterface $element): void
     {
         if ($element instanceof HasPropertySchema) {
             $this->applySchema($element);
@@ -20,7 +21,7 @@ final class ElementNormalizer
         }
     }
 
-    private function applySchema(AbstractElement $element): void
+    private function applySchema(ElementInterface $element): void
     {
         $schema = [];
 
@@ -61,7 +62,7 @@ final class ElementNormalizer
         }
     }
 
-    private function assertType(Property $property, string $expected, AbstractElement $element): void
+    private function assertType(Property $property, string $expected, ElementInterface $element): void
     {
         $value = $property->getValue();
 
@@ -69,7 +70,7 @@ final class ElementNormalizer
             'string' => is_string($value),
             'int'    => is_int($value),
             'bool'   => is_bool($value),
-            'map'    => $value instanceof \pkremer\WebFrontend\Property\PropertyMap,
+            'map'    => $value instanceof PropertyMap,
             default  => true,
         };
 
