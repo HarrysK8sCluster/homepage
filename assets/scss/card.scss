@@ -8,7 +8,16 @@
   overflow: hidden;
   box-shadow: 0 14px 40px rgba(15, 23, 42, 0.06);
   display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
   flex-direction: column;
+  margin: 50px auto;
+
+  .card {
+    flex: 1 1 320px;
+    width: auto;
+  }
 
   &>img {
     width: 100%;
@@ -44,4 +53,37 @@
   .card {
     width: 100%;
   }
+}
+
+@media (max-width: 800px) {
+
+  .row.row-3 {
+    flex-wrap: wrap;
+  }
+
+  .card {
+    margin: 35px 0;
+  }
+
+}
+
+@media (max-width: 600px) {
+
+  .row {
+    gap: 16px;
+    margin: 24px auto;
+  }
+
+  .row .card {
+    flex-basis: 100%;
+  }
+
+  .row.row-2 {
+    flex-wrap: wrap;
+  }
+
+  .card {
+    margin: 25px 0;
+  }
+
 }

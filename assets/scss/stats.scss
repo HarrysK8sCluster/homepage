@@ -34,6 +34,24 @@
       font-weight: 700;
     }
   }
+}
 
+@media (max-width: 600px) {
+  .stats div {
+    width: 100%;
+    margin-right: 0;
 
+    dt {
+      width: 38.2% ;
+      border: none;
+    }
+    dd {
+      width: 61.8%;
+      border-top: none;
+      border-right: none;
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+      background: none;
+    }
+  }
 }

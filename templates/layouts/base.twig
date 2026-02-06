@@ -2,6 +2,7 @@
 <html lang="de">
 <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{% block title %}Homelab{% endblock %}</title>
 
     {% set manifest = manifest is defined ? manifest : {} %}
@@ -23,12 +24,24 @@
             <span class="akzent">pk</span>remer
         </a>
 
+        <button class="nav-toggle"
+                type="button"
+                aria-label="Menü öffnen"
+                aria-controls="main-nav"
+                aria-expanded="false">
+            ☰
+        </button>
         <nav class="main-nav" aria-label="Hauptnavigation">
             <a href="/">Home</a>
             <a href="/about">Über mich</a>
             <a href="/homelab">Homelab</a>
             <a href="/apps">Apps</a>
             <a href="/devops">DevOps</a>
+
+            <hr class="metanav nav-sep" />
+
+            <a class="metanav" href="/imprint">Impressum</a>
+            <a class="metanav" href="/privacy">Datenschutz</a>
         </nav>
     </div>
 </header>
@@ -53,6 +66,25 @@
         </small>
     </div>
 </footer>
-
+<script>
+    const header = document.querySelector(".site-header");
+    const btn = document.querySelector(".nav-toggle");
+    const nav = document.getElementById("main-nav");
+    function setOpen(open) {
+        header.dataset.navOpen = open ? "true" : "false";
+        btn.setAttribute("aria-expanded", open ? "true" : "false");
+        btn.setAttribute("aria-label", open ? "Menü schließen" : "Menü öffnen");
+    }
+    btn.addEventListener("click", () => {
+        setOpen(header.dataset.navOpen !== "true");
+    });
+    document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") setOpen(false);
+    });
+    nav.addEventListener("click", (e) => {
+        if (e.target.tagName === "A") setOpen(false);
+    });
+    setOpen(false);
+</script>
 </body>
 </html>

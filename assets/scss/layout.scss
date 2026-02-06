@@ -1,6 +1,8 @@
 @use "vars";
 @use "global";
 
+$content-width: 1300px;
+
 * {
   margin: 0;
   padding: 0;
@@ -30,8 +32,8 @@ main {
 
 .site-header {
   margin: 0 auto;
-  max-width: 1000px;
-  width: 1000px;
+  max-width: $content-width;
+  width: 100%;
   backdrop-filter: blur(10px);
   background: rgba(255, 255, 255, 0.65);
   border-bottom: 1px solid rgba(0, 0, 0, 0.06);
@@ -65,11 +67,33 @@ main {
       }
     }
 
+    .nav-toggle {
+      display: none;
+      border: 1px solid rgba(15, 23, 42, 0.12);
+      background: rgba(255, 255, 255, 0.65);
+      border-radius: 12px;
+      padding: 8px 10px;
+      font-size: 18px;
+      font-weight: 700;
+      color: vars.$pk-blue;
+    }
+
     .main-nav {
       display: flex;
       flex-wrap: wrap;
       gap: 14px;
       justify-content: flex-end;
+
+      .metanav {
+        display: none;
+      }
+
+      .nav-sep {
+        width: 100%;
+        border: 0;
+        border-top: 1px solid rgba(15, 23, 42, 0.08);
+        margin: 8px 0;
+      }
 
       a {
         font-weight: 600;
@@ -85,10 +109,11 @@ main {
 }
 
 .content{
-  max-width: 1000px;
-  width: 1000px;
+  --content-padding: 50px;
+  max-width: $content-width;
+  width: 100%;
   margin: 0 auto;
-  padding: 50px;
+  padding: var(--content-padding);
   background: rgba(255,255,255,0.88);
   backdrop-filter: blur(12px);
   box-shadow: 0 20px 60px rgba(0,0,0,0.05);
@@ -101,12 +126,12 @@ main {
   background: #26323F;
   color: #fff;
   backdrop-filter: blur(8px);
-  max-width: 1000px;
-  width: 1000px;
+  max-width: $content-width;
+  width: 100%;
 
   &>div {
-    max-width: 900px;
-    width: 900px;
+    max-width: $content-width;
+    width: 100%;
     margin: 0 auto;
     padding: 0 20px;
     display: flex;
@@ -123,4 +148,58 @@ main {
 }
 
 
+@media (max-width: 800px) {
+  .content { --content-padding: 24px; }
+
+  .site-header > div {
+    flex-direction: row;
+    align-items: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+
+    .nav-toggle {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin-left: auto;
+    }
+
+    .main-nav {
+      display: none;
+      width: 100%;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 6px;
+      padding-top: 10px;
+
+      .metanav {
+        display: inline;
+      }
+    }
+  }
+
+  .site-header[data-nav-open="true"] > div .main-nav {
+    display: flex;
+  }
+
+  .site-footer > div {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .site-footer nav {
+    display: none;
+  }
+}
+
+
+@media (max-width: 600px) {
+  .content { --content-padding: 16px; }
+
+  .site-header > div { padding: 12px 16px; }
+  .site-footer > div { padding: 0 16px; }
+
+  .site-header > div .main-nav { gap: 8px; }
+  .site-header > div .main-nav a { padding: 6px 8px; }
+}
 

@@ -4,18 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5f9b890d-3c1d-4b04-a87f-f70f5ed4a900" name="Changes" comment="add cache">
-      <change afterPath="$PROJECT_DIR$/.editorconfig" afterDir="false" />
+    <list default="true" id="5f9b890d-3c1d-4b04-a87f-f70f5ed4a900" name="Changes" comment="change ident value for page dsl">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/about.page" beforeDir="false" afterPath="$PROJECT_DIR$/content/about.page" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/apps.page" beforeDir="false" afterPath="$PROJECT_DIR$/content/apps.page" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/devops.page" beforeDir="false" afterPath="$PROJECT_DIR$/content/devops.page" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/home.page" beforeDir="false" afterPath="$PROJECT_DIR$/content/home.page" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/homelab.page" beforeDir="false" afterPath="$PROJECT_DIR$/content/homelab.page" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/imprint.page" beforeDir="false" afterPath="$PROJECT_DIR$/content/imprint.page" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/privacy.page" beforeDir="false" afterPath="$PROJECT_DIR$/content/privacy.page" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/html/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PageParser.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/PageParser.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/scss/card.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/scss/card.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/scss/entry.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/scss/entry.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/scss/layout.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/scss/layout.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/scss/stats.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/scss/stats.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Element/AbstractElement.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Element/AbstractElement.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Element/RowElement.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Element/RowElement.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/elements/row.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/elements/row.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/layouts/base.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/layouts/base.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -202,7 +200,7 @@
       <workItem from="1769550884985" duration="68283000" />
       <workItem from="1769961517160" duration="43876000" />
       <workItem from="1770222762564" duration="7975000" />
-      <workItem from="1770308732824" duration="43946000" />
+      <workItem from="1770308732824" duration="48455000" />
     </task>
     <task id="LOCAL-00001" summary="v1">
       <option name="closed" value="true" />
@@ -412,7 +410,15 @@
       <option name="project" value="LOCAL" />
       <updated>1770408815571</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="change ident value for page dsl">
+      <option name="closed" value="true" />
+      <created>1770414269446</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1770414269446</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -451,7 +457,8 @@
     <MESSAGE value="change logo to svg" />
     <MESSAGE value="add content renderer" />
     <MESSAGE value="add cache" />
-    <option name="LAST_COMMIT_MESSAGE" value="add cache" />
+    <MESSAGE value="change ident value for page dsl" />
+    <option name="LAST_COMMIT_MESSAGE" value="change ident value for page dsl" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

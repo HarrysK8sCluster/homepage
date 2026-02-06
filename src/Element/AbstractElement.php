@@ -36,12 +36,17 @@ abstract class AbstractElement implements ElementInterface, RenderableElementInt
         return $this->elements;
     }
 
+    protected function getVars(): array {
+        return [];
+    }
+
     public function render(RenderContext $context): string
     {
+        $vars = $this->getVars();
         $template = $this->defaultTemplateName();
         $html = $context->twig->render(
             "{$context->elementTemplatePath}/{$template}.twig",
-            array_merge($this->extractProperties(), $context->vars)
+            array_merge($this->extractProperties(), $vars, $context->vars)
         );
         $html = str_replace('%content%', $this->renderChildren($context), $html);
         return $html;
