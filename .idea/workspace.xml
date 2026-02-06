@@ -4,19 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5f9b890d-3c1d-4b04-a87f-f70f5ed4a900" name="Changes" comment="fix devops">
-      <change afterPath="$PROJECT_DIR$/html/media/home/apps.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/html/media/home/hiiam.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/html/media/home/homelab.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/html/media/home/ops.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/html/media/law/law.webp" afterDir="false" />
+    <list default="true" id="5f9b890d-3c1d-4b04-a87f-f70f5ed4a900" name="Changes" comment="optimize images">
+      <change afterPath="$PROJECT_DIR$/assets/logo.FCStd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/logo.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/media/test-BodySketch.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/html/test.svg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/about.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/about.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/apps.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/apps.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/devops.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/devops.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/homelab.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/homelab.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/imprint.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/imprint.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/index.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/layouts/base.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/layouts/base.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -110,14 +104,14 @@
       <recent name="C:\Users\webde\projects\website\frontend\templates" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\webde\projects\website\frontend\html\media" />
       <recent name="C:\Users\webde\projects\website\frontend\html" />
       <recent name="C:\Users\webde\projects\website\frontend\assets" />
       <recent name="C:\Users\webde\projects\website\frontend\html\icons" />
       <recent name="C:\Users\webde\projects\website\frontend\assets\layouts" />
-      <recent name="C:\Users\webde\projects\website\frontend\test" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.watch">
+  <component name="RunManager" selected="Docker.Compose">
     <configuration name="Build" type="docker-deploy" factoryName="dockerfile" server-name="Docker">
       <deployment type="dockerfile">
         <settings>
@@ -199,7 +193,7 @@
       <workItem from="1769550884985" duration="68283000" />
       <workItem from="1769961517160" duration="43876000" />
       <workItem from="1770222762564" duration="7975000" />
-      <workItem from="1770308732824" duration="9562000" />
+      <workItem from="1770308732824" duration="15819000" />
     </task>
     <task id="LOCAL-00001" summary="v1">
       <option name="closed" value="true" />
@@ -377,7 +371,15 @@
       <option name="project" value="LOCAL" />
       <updated>1770317940189</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="optimize images">
+      <option name="closed" value="true" />
+      <created>1770319016698</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1770319016698</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -409,7 +411,8 @@
     <MESSAGE value="fix home" />
     <MESSAGE value="fix devops and errorr pages" />
     <MESSAGE value="fix devops" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix devops" />
+    <MESSAGE value="optimize images" />
+    <option name="LAST_COMMIT_MESSAGE" value="optimize images" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
