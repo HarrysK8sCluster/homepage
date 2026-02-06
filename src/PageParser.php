@@ -6,7 +6,7 @@ use RuntimeException;
 
 class PageParser
 {
-    private const INDENT_SIZE = 4;
+    private const INDENT_SIZE = 2;
 
     private array $lines = [];
     private int $lineNumber = 0;

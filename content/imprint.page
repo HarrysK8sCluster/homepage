@@ -1,51 +1,40 @@
 Template: "index"
 
 - Heading:
-    Main: "Impressum"
-    Outro: "Angaben gemäß § 5 TMG"
-    Image: "media/law/law.webp"
-
-    - IconBox:
-        Icon: user
-        Header: "Name / Betreiber"
-
-        - Text:
-            Content: "Philipp Kremer"
-
-    - IconBox:
-        Icon: mail
-        Header: "Anschrift"
-
-        - Text:
-            Content: |
-                Innsbrucker Straße 9F@(nl)
-                90461 Nürnberg@(nl)
-                Deutschland
-
-        - Text:
-            Content: "@(mail|web.delphin@googlemail.com|true)"
-
-- IconBox:
-    Icon: shield-check
-    Header: "Haftungsausschluss"
-
-- IconBox:
-    Icon: table-of-contents
-    Header: "Haftung für Inhalte"
-
+  Main: "Impressum"
+  Outro: "Angaben gemäß § 5 TMG"
+  Image: "media/law/law.webp"
+  - IconBox:
+    Icon: user
+    Header: "Name / Betreiber"
     - Text:
-        Content: |
-            Trotz sorgfältiger inhaltlicher Kontrolle übernehme ich keine Haftung für die Inhalte externer
-            Links. Für den Inhalt verlinkter Seiten sind ausschließlich deren Betreiber verantwortlich.
-
-- IconBox:
-    Icon: peace
-    Header: "Streitschlichtung"
-
+      Content: "Philipp Kremer"
+  - IconBox:
+    Icon: mail
+    Header: "Anschrift"
     - Text:
-        Content: |
-            Die EU-Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit:
-            @(link|https://ec.europa.eu/consumers/odr/|https://ec.europa.eu/consumers/odr/)
-            Ich bin nicht verpflichtet und nicht bereit, an einem Streitbeilegungsverfahren
-            vor einer Verbraucherschlichtungsstelle teilzunehmen.
-
+      Content: |
+        Innsbrucker Straße 9F@(nl)
+        90461 Nürnberg@(nl)
+        Deutschland
+    - Text:
+      Content: "@(mail|web.delphin@googlemail.com|true)"
+- IconBox:
+  Icon: shield-check
+  Header: "Haftungsausschluss"
+- IconBox:
+  Icon: table-of-contents
+  Header: "Haftung für Inhalte"
+  - Text:
+    Content: |
+      Trotz sorgfältiger inhaltlicher Kontrolle übernehme ich keine Haftung für die Inhalte externer
+      Links. Für den Inhalt verlinkter Seiten sind ausschließlich deren Betreiber verantwortlich.
+- IconBox:
+  Icon: peace
+  Header: "Streitschlichtung"
+  - Text:
+    Content: |
+      Die EU-Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit:
+      @(link|https://ec.europa.eu/consumers/odr/|https://ec.europa.eu/consumers/odr/)
+      Ich bin nicht verpflichtet und nicht bereit, an einem Streitbeilegungsverfahren
+      vor einer Verbraucherschlichtungsstelle teilzunehmen.
