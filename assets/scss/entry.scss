@@ -3,7 +3,7 @@
 
 .entry {
   margin: 0 calc(-1 * var(--content-padding, 50px));
-  padding: 0 var(--content-padding, 50px);
+  padding: 0;
   position: relative;
   overflow: hidden;
   margin-bottom: 50px;
@@ -17,8 +17,15 @@
                     rgba(255, 255, 255, 1) 50%,
                     rgba(255, 255, 255, 0) 80%
     );
-    padding: 20px;
-    padding-right: 40%;
+    @media (prefers-color-scheme: dark) {
+      background: linear-gradient(
+                      90deg,
+                      rgba(3, 6, 9, 1) 0%,
+                      rgba(3, 6, 9, 1) 50%,
+                      rgba(3, 6, 9, 0) 80%
+      );
+    }
+    padding: 20px calc(40% + var(--content-padding, 50px)) 20px var(--content-padding, 50px);
   }
 
   img {
@@ -32,6 +39,9 @@
   }
   h1 {
     color: vars.$pk-text;
+    @media (prefers-color-scheme: dark) {
+      color: vars.$pkdark-text;
+    }
     display: flex;
     flex-direction: column;
 
@@ -72,6 +82,9 @@
       padding-right: 20px;
       margin-top: 300px;
       background: #ffffff;
+      @media (prefers-color-scheme: dark) {
+        background: rgba(0, 0, 0, 0.88);
+      }
 
       h1 {
         margin-top: 0;

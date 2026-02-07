@@ -3,6 +3,9 @@
 
 .card {
   background: vars.$pk-card;
+  @media (prefers-color-scheme: dark) {
+    background: vars.$pkdark-card;
+  }
   border: 1px solid rgba(15, 23, 42, 0.08);
   border-radius: 1.25rem;
   overflow: hidden;
@@ -31,6 +34,9 @@
     font-size: 1.25rem;
     font-weight: 750;
     color: vars.$pk-text;
+    @media (prefers-color-scheme: dark) {
+      color: vars.$pkdark-text;
+    }
   }
 
   &>div {

@@ -4,16 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5f9b890d-3c1d-4b04-a87f-f70f5ed4a900" name="Changes" comment="change ident value for page dsl">
+    <list default="true" id="5f9b890d-3c1d-4b04-a87f-f70f5ed4a900" name="Changes" comment="responsive design">
+      <change afterPath="$PROJECT_DIR$/assets/img/bg-dark.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/bg-dark.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/img/bg.webp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/scss/card.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/scss/card.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/scss/entry.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/scss/entry.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/scss/global.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/scss/global.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/scss/layout.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/scss/layout.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/scss/stats.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/scss/stats.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Element/AbstractElement.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Element/AbstractElement.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Element/RowElement.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Element/RowElement.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/elements/row.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/elements/row.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/layouts/base.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/layouts/base.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/scss/vars.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/scss/vars.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/bg.png" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -111,11 +112,11 @@
       <recent name="C:\Users\webde\projects\website\frontend\html\font\JetBrains_Mono" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\webde\projects\website\frontend\assets\img" />
       <recent name="C:\Users\webde\projects\website\frontend\html\media" />
       <recent name="C:\Users\webde\projects\website\frontend\html" />
       <recent name="C:\Users\webde\projects\website\frontend\assets" />
       <recent name="C:\Users\webde\projects\website\frontend\html\icons" />
-      <recent name="C:\Users\webde\projects\website\frontend\assets\layouts" />
     </key>
   </component>
   <component name="RunManager" selected="Docker.Compose">
@@ -200,7 +201,7 @@
       <workItem from="1769550884985" duration="68283000" />
       <workItem from="1769961517160" duration="43876000" />
       <workItem from="1770222762564" duration="7975000" />
-      <workItem from="1770308732824" duration="48455000" />
+      <workItem from="1770308732824" duration="51142000" />
     </task>
     <task id="LOCAL-00001" summary="v1">
       <option name="closed" value="true" />
@@ -418,7 +419,23 @@
       <option name="project" value="LOCAL" />
       <updated>1770414269446</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="responsive design">
+      <option name="closed" value="true" />
+      <created>1770418930116</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1770418930116</updated>
+    </task>
+    <task id="LOCAL-00029" summary="responsive design">
+      <option name="closed" value="true" />
+      <created>1770418968774</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1770418968774</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -458,7 +475,8 @@
     <MESSAGE value="add content renderer" />
     <MESSAGE value="add cache" />
     <MESSAGE value="change ident value for page dsl" />
-    <option name="LAST_COMMIT_MESSAGE" value="change ident value for page dsl" />
+    <MESSAGE value="responsive design" />
+    <option name="LAST_COMMIT_MESSAGE" value="responsive design" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
