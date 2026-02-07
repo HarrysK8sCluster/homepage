@@ -92,6 +92,4 @@ Template: "index"
       - Item:
         Content: "GitHub: @(link|phiKremer|https://github.com/phiKremer)"
       - Item:
-        Content: "Xing: @(link|Philipp_Kremer4|https://www.xing.com/profile/Philipp_Kremer4)"
-      - Item:
         Content: "LinkedIn: @(link|philipp-kremer-67a5b3385|https://www.linkedin.com/in/philipp-kremer-67a5b3385/)"
