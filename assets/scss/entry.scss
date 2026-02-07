@@ -22,7 +22,7 @@
                       90deg,
                       rgba(3, 6, 9, 1) 0%,
                       rgba(3, 6, 9, 1) 50%,
-                      rgba(3, 6, 9, 0) 80%
+                      rgba(3, 6, 9, 0) 90%
       );
     }
     padding: 20px calc(40% + var(--content-padding, 50px)) 20px var(--content-padding, 50px);
@@ -81,9 +81,9 @@
     &>div {
       padding-right: 20px;
       margin-top: 300px;
-      background: #ffffff;
+      background: rgba(255, 255, 255, 0.9);
       @media (prefers-color-scheme: dark) {
-        background: rgba(0, 0, 0, 0.88);
+        background: rgba(0, 0, 0, 0.9);
       }
 
       h1 {
@@ -93,7 +93,7 @@
   }
 
   .entry img {
-    top: 33%;
+    top: 50%;
     transform: translate(-50%, -50%);
     left: 50%;
     width: 100%;
