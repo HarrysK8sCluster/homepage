@@ -1,0 +1,112 @@
+Template: "index"
+
+- Heading:
+  Main: 'Website "pkremer.de"'
+  Outro: "Twig // Layouts // Elements"
+  Image: "/media/apps/website.png"
+  - Text:
+    Content: |
+      Twig ist hier die View-Schicht: ein Basis-Layout, Page-Templates und viele kleine Element-Templates.
+      Der Renderer setzt daraus den finalen HTML-Output zusammen.
+
+- Text:
+  Content: |
+    @(Button|Zurück zur Übersicht des Projekts|/apps/website|house)
+
+- Header:
+  Type: "h2"
+  Content: "Twig Templates"
+
+- FileItem:
+  Type: "Directory"
+  Path: "/templates"
+  Content: "Twig Layout + Page + Element Templates"
+
+- Card:
+  - Text:
+    Content: |
+      Twig ist hier die reine View-Schicht: Es gibt ein Basis-Layout (HTML-Shell) und viele kleine Element-Templates.
+      Der Renderer ruft für jedes DSL-Element ein passendes Template auf und ersetzt im Template den Platzhalter
+      %content% mit den gerenderten Kindern.
+
+      Page-Templates liegen unter /templates/page (z.B. index.twig). Layouts unter /templates/layouts.
+      Die eigentlichen Bausteine sind /templates/elements (Card, Row, Heading, ...).
+
+- FileTree:
+  - FileTreeItem:
+    Type: "Directory"
+    Path: "/templates/layouts"
+    Content: "Base Layout + Shared Blocks"
+  - FileTreeItem:
+    Type: "Directory"
+    Path: "/templates/page"
+    Content: "Page Templates (index, ...)"
+  - FileTreeItem:
+    Type: "Directory"
+    Path: "/templates/elements"
+    Content: "UI-Elemente (Row/Card/Text/...)"
+  - FileTreeItem:
+    Type: "File"
+    Path: "/templates/layouts/base.twig"
+    Content: "HTML-Shell + globale Assets"
+  - FileTreeItem:
+    Type: "File"
+    Path: "/templates/page/index.twig"
+    Content: "Default-Page (injiziert %content% in base.twig)"
+  - FileTreeItem:
+    Type: "File"
+    Path: "/templates/elements/heading.twig"
+    Content: "Hero/Entry Header"
+  - FileTreeItem:
+    Type: "File"
+    Path: "/templates/elements/card.twig"
+    Content: "Card-Layout (Content via %content%)"
+  - FileTreeItem:
+    Type: "File"
+    Path: "/templates/elements/row.twig"
+    Content: "Row-Layout fuer Cards"
+  - FileTreeItem:
+    Type: "File"
+    Path: "/templates/elements/text.twig"
+    Content: "Standard-Textblock"
+
+- Header:
+  Type: "h2"
+  Content: "Beispiele"
+
+- SourceFile:
+  Language: "twig"
+  Title: "templates/layouts/base.twig (Layout)"
+  Source: "apps/website/base.twig"
+
+  - CodeBlock:
+    Comment: |
+      Das globale Seitenlayout: HTML-Grundgeruest, gemeinsame Meta-Infos und Einbindung der Basis-Assets.
+    - Code:
+      LineNumbers: 1:14
+  - CollapseBlock:
+    LineNumbers: 15:30
+    Summary: "Header/Nav + Content Slot + Footer"
+
+- SourceFile:
+  Language: "twig"
+  Title: "templates/page/index.twig (Page Template)"
+  Source: "apps/website/page-index.twig"
+
+  - CodeBlock:
+    Comment: |
+      Eine konkrete Seite: erweitert das Layout, bindet page-spezifische Styles ein und liefert den Inhalt fuer den Hauptbereich.
+    - Code:
+      LineNumbers: 1:10
+
+- SourceFile:
+  Language: "twig"
+  Title: "templates/elements/card.twig (Element Template)"
+  Source: "apps/website/card.twig"
+
+  - CodeBlock:
+    Comment: |
+      Ein Element-Template bleibt klein: es zeichnet den Rahmen und laesst innen Platz fuer den gerenderten Inhalt der Kind-Elemente.
+    - Code:
+      LineNumbers: 1:18
+

@@ -1,0 +1,132 @@
+Template: "index"
+
+- Heading:
+  Main: 'Website "pkremer.de"'
+  Outro: "Assets // SCSS // Webpack"
+  Image: "/media/apps/website.png"
+  - Text:
+    Content: |
+      Alles rund um Styles, Bilder und den Asset-Build: was im Source-Ordner liegt, was im DocumentRoot landet
+      und wie das Manifest in Twig genutzt wird.
+
+
+- Text:
+  Content: |
+    @(Button|Zurück zur Übersicht des Projekts|/apps/website|house)
+
+- Header:
+  Type: "h2"
+  Content: "Assets"
+
+- FileItem:
+  Type: "Directory"
+  Path: "/assets"
+  Content: "CSS, JS Assets"
+
+- Card:
+  - Text:
+    Content: |
+      Im Verzeichnis /assets liegt alles, was als "Source" in den Build geht: SCSS-Module, Bilder und sonstige Medien.
+      Webpack kompiliert daraus versionierte Artefakte (mit Content-Hash) nach /html/assets und erzeugt dazu ein
+      manifest.json, das Twig für Cache-Busting nutzt.
+  - Text:
+    Content: |
+      Wichtig: /assets ist nicht Document-Root. Was der Browser am Ende lädt, liegt in /html (bzw. /html/assets).
+
+- FileTree:
+  - FileTreeItem:
+    Type: "Directory"
+    Path: "/assets/scss"
+    Content: "SCSS-Module (Sass Modules via @use)"
+  - FileTreeItem:
+    Type: "File"
+    Path: "/assets/scss/vars.scss"
+    Content: "Design Tokens (Farben/Abstände)"
+  - FileTreeItem:
+    Type: "File"
+    Path: "/assets/scss/global.scss"
+    Content: "Basis-Styles (Typo, Links, Listen, Headlines)"
+  - FileTreeItem:
+    Type: "File"
+    Path: "/assets/scss/layout.scss"
+    Content: "Layout-Entry: Header/Nav/Footer, .content, Breakpoints"
+  - FileTreeItem:
+    Type: "File"
+    Path: "/assets/scss/home.scss"
+    Content: "Page-Entry: importiert die Content/Component-Module"
+  - FileTreeItem:
+    Type: "File"
+    Path: "/assets/scss/entry.scss"
+    Content: "Hero/Heading-Header (Bild + Gradient)"
+  - FileTreeItem:
+    Type: "File"
+    Path: "/assets/scss/codeblock.scss"
+    Content: "Doku-Komponenten: SourceFile/CodeBlock/Collapse"
+  - FileTreeItem:
+    Type: "File"
+    Path: "/assets/scss/filetree.scss"
+    Content: "Doku-Komponenten: FileTree/FileItem"
+  - FileTreeItem:
+    Type: "Directory"
+    Path: "/assets/img"
+    Content: "Bilder für den Build (z.B. Hintergründe)"
+  - FileTreeItem:
+    Type: "File"
+    Path: "/webpack/webpack.common.js"
+    Content: "Build-Definition: Entries, Loader, Output + manifest.json"
+
+- Card:
+  - Text:
+    Content: |
+      Die SCSS-Dateien sind bewusst in kleine Module geschnitten: Jede Komponente/Section bekommt ihre eigene Datei.
+      Gebündelt wird das erst in wenigen Entry-Files (z.B. layout.scss und home.scss).
+  - Text:
+    Content: |
+      Importiert wird über Sass Modules mit @use: Das verhindert "global leakage", macht Abhängigkeiten explizit
+      und hält die Bundles sauber wartbar.
+
+- Header:
+  Type: "h2"
+  Content: "Webpack Build (kommentiert)"
+
+- SourceFile:
+  Language: "javascript"
+  Title: "webpack/webpack.common.js"
+  Source: "apps/website/webpack.common.js"
+
+  - CodeBlock:
+    Comment: |
+      Grundlagen fuer den Build: benoetigte Module und kleine Helfer, damit Pfade und Ausgaben konsistent bleiben.
+    - Code:
+      LineNumbers: 1:3
+
+  - CodeBlock:
+    Comment: |
+      Build-Cache: beschleunigt wiederholte Builds, weil Webpack Zwischenergebnisse wiederverwenden kann.
+    - Code:
+      LineNumbers: 5:9
+
+  - CodeBlock:
+    Comment: |
+      Entry-Definition: welche Stylesheets als eigene Bundles gebaut werden und wie sie im Projekt benannt sind.
+    - Code:
+      LineNumbers: 10:20
+
+  - CodeBlock:
+    Comment: |
+      Ausgabe: Zielordner im DocumentRoot, Hashing fuer Cache-Busting und Aufraeumen alter Dateien.
+    - Code:
+      LineNumbers: 22:28
+
+  - CodeBlock:
+    Comment: |
+      Verarbeitungsregeln: JavaScript, Styles und Assets laufen durch ihre jeweiligen Pipelines, damit am Ende saubere, browserfertige Dateien entstehen.
+    - Code:
+      LineNumbers: 30:65
+
+  - CodeBlock:
+    Comment: |
+      Plugins: schreibt CSS aus den Bundles heraus und erzeugt ein Manifest, damit Templates immer die richtigen gehashten Dateinamen finden.
+    - Code:
+      LineNumbers: 67:79
+

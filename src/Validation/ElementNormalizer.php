@@ -15,6 +15,7 @@ final class ElementNormalizer
         if ($element instanceof HasPropertySchema) {
             $this->applySchema($element);
         }
+        $element->validate();
 
         foreach ($element->getElements() as $child) {
             $this->normalize($child);

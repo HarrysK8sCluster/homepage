@@ -1,5 +1,7 @@
 <?php
-require_once __DIR__ . "/../vendor/autoload.php";
+define('APP_ROOT', realpath(__DIR__ . '/../'));
+
+require_once APP_ROOT . "/vendor/autoload.php";
 
 use pkremer\WebFrontend\ElementFactory;
 use pkremer\WebFrontend\PageParser;
@@ -14,26 +16,26 @@ use Twig\Extension\DebugExtension;
 
 $env = getenv('APP_ENV') ?: 'prod';
 $debug = ($env === 'dev');
-$loader = new FilesystemLoader(__DIR__ . '/../templates');
+$loader = new FilesystemLoader(APP_ROOT . '/templates');
 $twig = new Environment($loader, [
-    'cache' => $env === 'prod' ? __DIR__ . '/../var/cache/twig' : false, // dev: false, prod: __DIR__ . '/../var/cache/twig'
+    'cache' => $env === 'prod' ? APP_ROOT . '/var/cache/twig' : false, // dev: false, prod: APP_ROOT . '/var/cache/twig'
     'debug' => $debug,
 ]);
-$twig->addExtension(new SvgExtension(realpath(__DIR__ . '/..')));
+$twig->addExtension(new SvgExtension(realpath(APP_ROOT)));
 if ($debug) {
     $twig->addExtension(new DebugExtension());
 }
-$manifest = json_decode(file_get_contents(__DIR__ . '/../html/assets/manifest.json'), true);
+$manifest = json_decode(file_get_contents(APP_ROOT . '/html/assets/manifest.json'), true);
 $vars = ['_manifest' => $manifest];
-$cacheDir =  __DIR__ . '/../var/cache/dsl';
+$cacheDir =  APP_ROOT . '/var/cache/dsl';
 if ($env === 'prod' && !is_dir($cacheDir)) {
     mkdir($cacheDir, 0775, true);
 }
 try {
-    $routes = yaml_parse_file(__DIR__ . '/../content/routes.yaml');
+    $routes = yaml_parse_file(APP_ROOT . '/content/routes.yaml');
     foreach ($routes as $route) {
         if ($route['route'] === $_SERVER['REQUEST_URI']) {
-            $dslContent = file_get_contents(__DIR__ . "/../content/{$route['page']}.page");
+            $dslContent = file_get_contents(APP_ROOT . "/content/{$route['page']}.page");
             if ($env === 'prod') {
                 $cacheKey = hash('sha256', $dslContent);
                 $cacheFile = "{$cacheDir}/{$cacheKey}.php";

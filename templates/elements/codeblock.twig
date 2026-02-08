@@ -1,0 +1,20 @@
+<section class="codeblock">
+
+    {% if Comment %}
+        <aside>
+
+            <details open>
+                <summary>
+                    <pre class="title">/**
+ * ▶ Show notes
+ */</pre>
+                </summary>
+                <p>{{ Comment|raw }}</p>
+            </details>
+        </aside>
+    {% endif %}
+    <div>
+        %content%
+    </div>
+</section>
+

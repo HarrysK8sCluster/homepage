@@ -2,14 +2,14 @@
     {% if Image %}
         <img src="{{ Image }}" alt="{{ Heading }}" />
     {% endif %}
-
     <div>
         <h2>{{ Heading }}</h2>
 
         %content%
     </div>
-
-    <footer>
-        {{ Footer }}
-    </footer>
+    {% if Footer %}
+        <footer>
+            {{ Footer }}
+        </footer>
+    {% endif %}
 </article>

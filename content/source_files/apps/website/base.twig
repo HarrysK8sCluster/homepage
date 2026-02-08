@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>{% block title %}pkremer.de{% endblock %}</title>
+
+    {# _manifest kommt aus html/index.php (manifest.json von Webpack) #}
+    <link rel="stylesheet" href="{{ _manifest['layout.css'] }}">
+    {% block stylesheets %}{% endblock %}
+</head>
+<body>
+
+<header class="site-header">
+    <nav class="main-nav">
+        <a href="/">Home</a>
+        <a href="/apps">Apps</a>
+        <a href="/devops">DevOps</a>
+    </nav>
+</header>
+
+<main class="content">
+    {% block content %}{% endblock %}
+</main>
+
+<footer class="site-footer">
+    <small>© Philipp Kremer</small>
+</footer>
+
+</body>
+</html>
+

@@ -1,0 +1,112 @@
+Template: "index"
+
+- Heading:
+  Main: 'Website "pkremer.de"'
+  Outro: "DSL // Parser // Inline"
+  Image: "/media/apps/website.png"
+  - Text:
+    Content: |
+      Diese Seite zeigt das Content-Format (DSL) im Detail: Aufbau, Inline-Makros und wie der Parser daraus
+      eine stabile Element-Struktur macht.
+
+- Text:
+  Content: |
+    @(Button|Zurück zur Übersicht des Projekts|/apps/website|house)
+
+- Header:
+  Type: "h2"
+  Content: "DSL - was ist das?"
+
+- Card:
+  Heading: "Content als Element-Baum"
+  - Text:
+    Content: |
+      Mein "DSL" ist ein bewusst simples, YAML‑ähnliches Content-Format für diese Website: Statt Markdown oder CMS
+      beschreibe ich Seiten als Baum aus UI‑Elementen (z.B. Heading, Row, Card, Text, List). Ein kleiner Parser baut
+      daraus eine AST/Element-Struktur, validiert Properties (Schema/Defaults) und rendert sie über Twig-Templates zu
+      sauberem HTML. Ergebnis: Inhalte bleiben versionierbar, strukturiert und ohne Editor‑Magie reproduzierbar.
+
+  - Text:
+    Content: |
+      @(strong|Hier mal ein Beispiel:)
+
+- SourceFile:
+  Language: "DSL"
+  Title: "/content/devops.page"
+  Source: "apps/website/demo.page"
+
+  - CodeBlock:
+    Comment: |
+      Seitenkopf und Metadaten: welches Layout verwendet wird und welche Basisinfos der Renderer spaeter braucht.
+    - Code:
+      LineNumbers: 1:2
+  - CodeBlock:
+    Comment: |
+      Ein erster Inhaltsslot: Ueberschrift plus begleitender Text. Das zeigt, wie Elemente Kinder haben koennen.
+    - Code:
+      LineNumbers: 3:11
+  - CollapseBlock:
+    LineNumbers: 12:43
+    Summary: "Weiterer Demo-Code"
+  - CodeBlock:
+    Comment: |
+      Eigenschaften und verschachtelte Elemente werden gemischt: oben stehen Werte, darunter folgt eine Liste weiterer Bausteine.
+    - Code:
+      LineNumbers: 44:58
+  - CollapseBlock:
+    LineNumbers: 59:88
+    Summary: "Restlicher Demo-Code"
+  - CodeBlock:
+    Comment: |
+      Inline-Makros erlauben kleine Bausteine direkt im Fliesstext, ohne den Seitenbaum aufzubrechen.
+    - Code:
+      LineNumbers: 89:102
+
+- Header:
+  Type: "h2"
+  Content: "Parser - von Text zu Struktur"
+
+- Card:
+  - Text:
+    Content: |
+      Der Parser ist absichtlich pragmatisch: zwei Spaces pro Indent, klare Trennung zwischen Eigenschaften und
+      Kind-Elementen und gute Fehlermeldungen mit Zeilennummern. Das Ziel ist nicht "alles erlauben", sondern
+      Content stabil und vorhersehbar zu interpretieren.
+
+- SourceFile:
+  Language: "php"
+  Title: "src/PageParser.php (DSL Parser)"
+  Source: "apps/website/test.php"
+
+  - CodeBlock:
+    Comment: |
+      Startpunkt des Parsers: der Input wird vorbereitet und der Seitenbaum beginnt mit einem Root-Knoten.
+    - Code:
+      LineNumbers: 1:33
+
+  - CodeBlock:
+    Comment: |
+      Kernlogik: anhand der Einrueckung wird entschieden, ob neue Elemente beginnen oder ob Eigenschaften zum aktuellen Element gehoeren.
+    - Code:
+      LineNumbers: 35:95
+
+  - CodeBlock:
+    Comment: |
+      Werte einlesen: einfache Werte und mehrzeilige Texte werden sauber gesammelt, damit Content nicht durch Formatierung kaputt geht.
+    - Collapse:
+      LineNumbers: 97:168
+      Summary: "Details ein-/ausklappen"
+
+  - CodeBlock:
+    Comment: |
+      Normalisierung: erkannte Werte werden in einen stabilen Typ ueberfuehrt, damit die spaetere Verarbeitung eindeutig ist.
+    - Code:
+      LineNumbers: 170:206
+
+  - CodeBlock:
+    Comment: |
+      Hilfsfunktionen: Einrueckung, Fehlertexte und Zeilenbezug sind hier gebuendelt, damit Debugging schnell bleibt.
+    - Collapse:
+      LineNumbers: 208:253
+      Summary: "Details ein-/ausklappen"
+

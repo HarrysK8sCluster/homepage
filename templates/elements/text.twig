@@ -1,1 +1,7 @@
-<p>{{ Content }}</p>
+<p>
+    {% if Raw %}
+        {{ Content|raw }}
+    {% else %}
+        {{ Content }}
+    {% endif %}
+</p>

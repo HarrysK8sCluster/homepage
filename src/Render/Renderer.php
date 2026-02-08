@@ -14,7 +14,6 @@ final class Renderer
 
     public function render(ElementInterface $element): string
     {
-        $html = $element->render($this->context);
-        return $this->inlineParser->parse($html);
+        return $element->render($this->context, $this->inlineParser);
     }
 }

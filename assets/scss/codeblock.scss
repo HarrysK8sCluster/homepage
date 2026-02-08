@@ -1,0 +1,150 @@
+@use "vars";
+@use "geshi-tokens";
+
+.sourcefile {
+
+  code {
+    white-space: pre;
+  }
+
+  border: 1px solid vars.$pkdark-border;
+  border-radius: 1.25rem;
+  overflow: hidden;
+
+  &>header {
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+    padding: 0.5rem 1rem;
+    border-bottom: 1px solid vars.$pkdark-border;
+    background: vars.$pkdark-bg;
+
+    .title {
+      align-self: center;
+    }
+
+    .lang {
+      background: vars.$pk-blue;
+      color: #ffffff;
+      padding: 7px 13px;
+      border-radius: 999px;
+    }
+  }
+
+  .codeblock {
+    position: relative;
+    min-height: 120px;
+
+    &>aside {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      z-index: 2;
+      max-width: 40%;
+      border: 1px solid vars.$pk-blue;
+      background: #00070f;
+      padding: 0.5rem 1rem;
+      border-radius: 1.25rem;
+
+
+      details {
+
+        display: flex;
+
+        summary {
+          margin-right: 10px;
+          display: flex;
+        }
+
+
+
+        &[open] {
+
+          summary {
+            display: revert;
+          }
+
+
+          summary pre {
+            display: none;
+          }
+        }
+
+        p {
+          margin: 0;
+        }
+      }
+
+    }
+
+    @for $i from 1 through 20 {
+      .collapse.ident-#{$i} {
+        summary {
+          margin-left: $i * 12.5px;
+        }
+      }
+    }
+
+    .collapse {
+
+      summary {
+        padding: 0.5rem 1rem;
+        border: 1px solid vars.$pkdark-border;
+        border-radius: 1.25rem;
+        background: vars.$pkdark-bg;
+        width: fit-content;
+      }
+
+      &[open] {
+        summary {
+          border-bottom-left-radius: 0;
+          border-bottom-right-radius: 0;
+          border-bottom: none;
+        }
+      }
+
+      .code {
+        $red: red(vars.$pkdark-bg);
+        $green: green(vars.$pkdark-bg);
+        $blue: blue(vars.$pkdark-bg);
+        background: rgba($red, $green, $blue, 0.3);
+        border-top: 1px solid vars.$pkdark-border;
+        border-bottom: 1px solid vars.$pkdark-border;
+
+      }
+    }
+
+
+
+
+    &>div {
+      width: 100%;
+    }
+
+  }
+
+  .code {
+    padding: 0.5rem 1rem;
+  }
+
+  .collapseblock {
+    border-bottom: 1px solid vars.$pkdark-border;
+
+    summary {
+      padding: 0.5rem 1rem;
+      border-top: 1px solid vars.$pkdark-border;
+      border-bottom: 1px solid vars.$pkdark-border;
+      background: vars.$pkdark-bg;
+
+    }
+
+    .code {
+
+      $red: red(vars.$pkdark-bg);
+      $green: green(vars.$pkdark-bg);
+      $blue: blue(vars.$pkdark-bg);
+      background: rgba($red, $green, $blue, 0.3);
+    }
+
+  }
+}

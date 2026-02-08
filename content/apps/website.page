@@ -1,0 +1,222 @@
+Template: "index"
+
+- Heading:
+  Main: 'Website "pkremer.de"'
+  Outro: "Twig // Webpack // Clean Content"
+  Image: "/media/apps/website.png"
+  - Text:
+    Content: |
+      Auf dieser Seite dokumentiere ich den Aufbau des Projekts: Struktur, Templates, Assets und die wichtigsten
+      Entscheidungen, damit Aenderungen schnell, nachvollziehbar und reproduzierbar bleiben.
+
+- Teaser:
+  Header: "Technische Doku – wie diese Website gebaut ist"
+  - Text:
+    Content: |
+      Ein Blick "unter die Haube": Content-Format, Template-Struktur, Asset-Build und die Stellen, an denen die
+      Seite absichtlich simpel bleibt. Ziel ist eine kleine, performante Codebase, die man nach Wochen Pause sofort
+      wieder versteht – und genauso schnell ins Homelab ausrollen kann.
+
+- Header:
+  Type: "h2"
+  Content: "Quickstart // Überblick"
+
+- Row:
+  - Card:
+    Heading: "Wo liegt der Quellcode"
+    - Text:
+      Content: |
+        Der komplette Quellcode dieser Website liegt oeffentlich auf GitHub. Dort findest du die DSL-Content-Dateien,
+        Twig-Templates, PHP-Renderer und die Webpack-Pipeline fuer Assets – alles versioniert und nachvollziehbar.
+        Repo: @(link|github.com/HarrysK8sCluster/homepage|https://github.com/HarrysK8sCluster/homepage)
+
+  - Card:
+    Heading: "Welche Tools werden verwendet"
+    - Tagcloud:
+      - Item:
+        Content: "PHP"
+      - Item:
+        Content: "Twig"
+      - Item:
+        Content: "Composer"
+      - Item:
+        Content: "YAML (ext-yaml)"
+      - Item:
+        Content: "Webpack 5"
+      - Item:
+        Content: "Node.js / npm"
+      - Item:
+        Content: "Sass (SCSS)"
+      - Item:
+        Content: "PostCSS"
+      - Item:
+        Content: "Docker"
+      - Item:
+        Content: "GitHub Actions"
+      - Item:
+        Content: "GHCR"
+
+- Header:
+  Type: "h2"
+  Content: "Der Weg des Requests"
+
+- Image:
+  Href: "/media/apps/request-flow.svg"
+  Description: "Website Flow"
+  Width: 100%
+
+- Header:
+  Type: "h2"
+  Content: "DSL - Content anders gedacht"
+
+- Card:
+  Heading: "DSL - was ist das?"
+  - Text:
+    Content: |
+      Mein "DSL" ist ein bewusst simples, YAML‑aehnliches Content-Format fuer diese Website: Statt Markdown oder CMS
+      beschreibe ich Seiten als Baum aus UI‑Elementen (z.B. Heading, Row, Card, Text, List). Ein kleiner Parser baut
+      daraus eine AST/Element-Struktur, validiert Properties (Schema/Defaults) und rendert sie ueber Twig-Templates zu
+      sauberem HTML. Ergebnis: Inhalte bleiben versionierbar, strukturiert und ohne Editor‑Magie reproduzierbar.
+
+  - Text:
+    Content: |
+      @(link|DSL im Detail (Beispiele + Parser)|/apps/website/dsl)
+
+
+- Header:
+  Type: "h2"
+  Content: "Ordnerstruktur - Übersicht"
+
+- FileTree:
+  - FileTreeItem:
+    Type: "Directory"
+    Path: "/assets"
+    Content: "CSS, JS Assets"
+  - FileTreeItem:
+    Type: "Directory"
+    Path: "/content"
+    Content: "*.page DSL Dateien"
+  - FileTreeItem:
+    Type: "Directory"
+    Path: "/html"
+    Content: "Document-Root"
+  - FileTreeItem:
+    Type: "Directory"
+    Path: "/html/media"
+    Content: "Bilder der Website"
+  - FileTreeItem:
+    Type: "Directory"
+    Path: "/html/assets"
+    Content: "Kompilierte CSS/JS Assets"
+  - FileTreeItem:
+    Type: "Directory"
+    Path: "/src"
+    Content: "PHP Quelltext Dateien"
+  - FileTreeItem:
+    Type: "Directory"
+    Path: "/templates"
+    Content: "Twig Templates"
+  - FileTreeItem:
+    Type: "File"
+    Path: "Dockerfile"
+    Content: "Docker Build File"
+  - FileTreeItem:
+    Type: "File"
+    Path: "docker-compose.yml"
+    Content: "Docker Compose fuer Dev-Umgebung"
+  - FileTreeItem:
+    Type: "File"
+    Path: "*-php.ini"
+    Content: "PHP ini fuer die ENVs"
+
+
+
+- Header:
+  Type: "h2"
+  Content: "Kapitel"
+
+- Row:
+
+  - Card:
+    Heading: "Content & Routing"
+    Footer: @(button|Details →|/apps/website/content)
+    - Text:
+      Content: |
+        /content, routes.yaml, Seitenstruktur.
+
+  - Card:
+    Heading: "DSL"
+    Footer: @(button|Details →|/apps/website/dsl)
+    - Text:
+      Content: |
+        Format, Inline-Makros, Parser.
+
+  - Card:
+    Heading: "CI/CD"
+    Footer: @(button|Details →|/apps/website/cicd)
+    - Text:
+      Content: |
+        GitHub Actions, Docker, GitOps.
+
+- Row:
+  - Card:
+    Heading: "PHP Source"
+    Footer: @(button|Details →|/apps/website/php)
+    - Text:
+      Content: |
+        Element-Factory, Render-Protokoll.
+
+  - Card:
+    Heading: "Twig Templates"
+    Footer: @(button|Details →|/apps/website/templates)
+    - Text:
+      Content: |
+        Layouts, Pages, Element-Templates.
+
+  - Card:
+    Heading: "Assets & Build"
+    Footer: @(button|Details →|/apps/website/assets)
+    - Text:
+      Content: |
+        SCSS, Manifest, Webpack Pipeline.
+
+- Header:
+  Type: "h2"
+  Content: "Roadmap"
+
+- Card:
+  - Text:
+    Content: |
+      Die Codebase soll klein bleiben, aber an den richtigen Stellen wachsen: bessere Entkopplung im Backend,
+      automatisierte Qualitaetschecks im UI und mittelfristig die Option, Content aus einem Headless CMS zu ziehen.
+
+- Row:
+  - Card:
+    Heading: "PHP-DI (1-2 Monate)"
+    - Text:
+      Content: |
+        Ein DI-Container macht Abhaengigkeiten explizit und reduziert Glue-Code im Entry-Point.
+        Das vereinfacht Tests, Konfiguration pro Environment und spaetere Erweiterungen (z.B. neue Renderer/Handler).
+
+  - Card:
+    Heading: "Selenium UI Tests + Screenshots (ca 6 Monate)"
+    - Text:
+      Content: |
+        Automatisierte Browser-Checks fuer Kernseiten und kritische Komponenten.
+        Screenshots dienen als Regression-Signal, wenn Layout oder Rendering unbeabsichtigt kippt.
+
+- Row:
+  - Card:
+    Heading: "Testumgebung (ca 6 Monate)"
+    - Text:
+      Content: |
+        Eine dedizierte Staging-Umgebung, die prod moeglichst nah abbildet.
+        Ideal fuer Smoke-Tests, Preview von Content-Aenderungen und reproduzierbares Debugging.
+
+  - Card:
+    Heading: "Headless CMS Anbindung (1-2 Jahre)"
+    - Text:
+      Content: |
+        Content nicht mehr nur aus Git, sondern optional aus einem Headless CMS.
+        Ziel: DSL/Renderer als stabiles Frontend behalten und lediglich eine Datenquelle (Adapter) austauschen.
+

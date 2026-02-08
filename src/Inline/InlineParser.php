@@ -13,7 +13,7 @@ final class InlineParser
 
     public function parse(string $html): string
     {
-        return preg_replace_callback(
+        $html = preg_replace_callback(
             '/@\(([^|)]+)((?:\|[^)]*)?)\)/',
             function (array $m): string {
                 $name = $m[1];
@@ -28,6 +28,7 @@ final class InlineParser
             },
             $html
         );
+        return $html;
     }
 
     private function getElement(string $name): InlineElementInterface

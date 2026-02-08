@@ -2,6 +2,7 @@
 
 namespace pkremer\WebFrontend\Element;
 
+use pkremer\WebFrontend\Inline\InlineParser;
 use pkremer\WebFrontend\Schema\HasPropertySchema;
 use pkremer\WebFrontend\Schema\PropertySchema;
 use pkremer\WebFrontend\Schema\PropertyMapSchema;
@@ -19,17 +20,17 @@ final class PageElement extends AbstractElement implements HasPropertySchema
             ),
         ];
     }
-    public function render(RenderContext $context): string
+    public function render(RenderContext $context, InlineParser $inlineParser): string
     {
         $template = $this->getProperties()
             ->getProperties()['Template']
             ->getValue();
 
-        $html = $context->twig->render(
+        $html = $inlineParser->parse($context->twig->render(
             "{$context->pageTemplatePath}/{$template}.twig",
             array_merge($this->extractProperties(), $context->vars)
-        );
-        $html = str_replace('%content%', $this->renderChildren($context), $html);
+        ));
+        $html = str_replace('%content%', $this->renderChildren($context, $inlineParser), $html);
 
         return $html;
     }

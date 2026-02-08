@@ -13,6 +13,7 @@
   },
   "require": {
     "twig/twig": "v3.23.0",
+    "geshi/geshi": "dev-master",
     "ext-yaml": "*"
   }
 }

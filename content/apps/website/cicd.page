@@ -1,0 +1,85 @@
+Template: "index"
+
+- Heading:
+  Main: 'Website "pkremer.de"'
+  Outro: "CI/CD // GitOps"
+  Image: "/media/apps/website.png"
+  - Text:
+    Content: |
+      Build und Deploy sind Git-getrieben: Docker Image bauen, nach GHCR pushen und danach das Kubernetes-Repo
+      mit dem neuen Tag aktualisieren.
+
+- Text:
+  Content: |
+    @(Button|Zurück zur Übersicht des Projekts|/apps/website|house)
+
+- Header:
+  Type: "h2"
+  Content: "CI/CD"
+
+- FileItem:
+  Type: "Directory"
+  Path: "/.github/workflows"
+  Content: "Docker Build + Push + GitOps Update"
+
+- Card:
+  - Text:
+    Content: |
+      Der Pipeline-Teil ist GitOps-orientiert: Bei einem Push auf main baut GitHub Actions ein Docker Image,
+      pusht es nach GHCR (Tag = Commit SHA) und aktualisiert danach das Kubernetes Repo (kustomization.yaml newTag).
+
+      Dadurch ist der Deploy ein normaler Git-Change im k8s-Repo - nachvollziehbar und rollbackbar.
+
+- FileTree:
+  - FileTreeItem:
+    Type: "File"
+    Path: "/.github/workflows/docker-ghcr.yml"
+    Content: "Buildx -> GHCR -> Update k8s Repo"
+  - FileTreeItem:
+    Type: "File"
+    Path: "/Dockerfile"
+    Content: "Build des Web-Containers"
+  - FileTreeItem:
+    Type: "File"
+    Path: "/docker-compose.yml"
+    Content: "Lokale Dev-Umgebung"
+
+- Header:
+  Type: "h2"
+  Content: "GitHub Workflow (kommentiert)"
+
+- SourceFile:
+  Language: "yaml"
+  Title: ".github/workflows/docker-ghcr.yml"
+  Source: "apps/website/docker-ghcr.yml"
+
+  - CodeBlock:
+    Comment: |
+      Ausloeser und Rechte: wann der Workflow laeuft und welche Berechtigungen fuer Registry und Repository gebraucht werden.
+    - Code:
+      LineNumbers: 1:18
+
+  - CodeBlock:
+    Comment: |
+      Grundsetup: Variablen fuer Image-Namen und Registry, dann Checkout und Build-Umgebung.
+    - Code:
+      LineNumbers: 20:27
+
+  - CodeBlock:
+    Comment: |
+      Authentifizierung und Version: Login fuer den Push, dann wird ein stabiler Tag aus dem aktuellen Commit abgeleitet.
+    - Code:
+      LineNumbers: 28:44
+
+  - CodeBlock:
+    Comment: |
+      Build und Push: erzeugt das Image reproduzierbar und publiziert es mit eindeutigen Tags.
+    - Code:
+      LineNumbers: 45:53
+
+  - CodeBlock:
+    Comment: |
+      GitOps-Schritt: aktualisiert im Cluster-Repo nur den Image-Tag, damit Deployments als Git-Aenderung nachvollziehbar bleiben.
+    - Code:
+      LineNumbers: 55:71
+

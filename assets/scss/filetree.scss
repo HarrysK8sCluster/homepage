@@ -1,0 +1,136 @@
+@use "vars";
+
+ul.filetree {
+  list-style: none;
+  padding: 1rem .5rem;
+  margin: 20px 0;
+  border-radius: 1rem;
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  background: rgba(255, 255, 255, 0.55);
+
+  @media (prefers-color-scheme: dark) {
+    border-color: rgba(236, 241, 251, 0.10);
+    background: rgba(17, 24, 39, 0.55);
+  }
+
+  li {
+    display: grid;
+    grid-template-columns: 22px minmax(220px, 360px) 1fr;
+    gap: 0;
+    align-items: center;
+    padding: 6px 10px;
+  }
+
+  li::before { display: none; }
+
+  li > span:first-child {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: vars.$pk-blue;
+    opacity: 0.95;
+    line-height: 0;
+  }
+
+  li > span:first-child svg {
+    display: block;
+    width: 18px;
+    height: 18px;
+    stroke-width: 2;
+  }
+
+  li > code {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    font-size: 0.95rem;
+    color: vars.$pk-text;
+    @media (prefers-color-scheme: dark) {
+      color: vars.$pkdark-text;
+    }
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  li > span:last-child {
+    color: rgba(15, 23, 42, 0.7);
+    @media (prefers-color-scheme: dark) {
+      color: rgba(236, 241, 251, 0.78);
+    }
+  }
+
+  li[data-type="Directory"] > span:first-child { opacity: 1; }
+  li[data-type="File"] > span:first-child { opacity: 0.85; }
+
+  @media (max-width: 800px) {
+    li {
+      grid-template-columns: 22px 1fr;
+      grid-template-rows: auto auto;
+      row-gap: 0;
+    }
+
+    li > span:last-child {
+      grid-column: 1 / -1;
+      padding-left: calc(22px + 7px);
+    }
+  }
+}
+
+/* Standalone "FileItem" helper (no background, used as a section marker) */
+.fileitem {
+  display: grid;
+  grid-template-columns: 22px minmax(220px, 360px) 1fr;
+  gap: 0;
+  align-items: center;
+  padding: 6px 0;
+  margin: 10px 0;
+
+}
+
+.fileitem::before { display: none; }
+
+.fileitem > span:first-child {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: vars.$pk-blue;
+  opacity: 0.95;
+  line-height: 0;
+}
+
+.fileitem > span:first-child svg {
+  display: block;
+  width: 18px;
+  height: 18px;
+  stroke-width: 2;
+}
+
+.fileitem > code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-size: 0.95rem;
+  color: vars.$pk-text;
+  @media (prefers-color-scheme: dark) { color: vars.$pkdark-text; }
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.fileitem > span:last-child {
+  color: rgba(15, 23, 42, 0.7);
+  @media (prefers-color-scheme: dark) { color: rgba(236, 241, 251, 0.78); }
+}
+
+.fileitem[data-type="Directory"] > span:first-child { opacity: 1; }
+.fileitem[data-type="File"] > span:first-child { opacity: 0.85; }
+
+@media (max-width: 800px) {
+  .fileitem {
+    grid-template-columns: 22px 1fr;
+    grid-template-rows: auto auto;
+    row-gap: 0;
+  }
+
+  .fileitem > span:last-child {
+    grid-column: 1 / -1;
+    padding-left: calc(22px + 7px);
+  }
+}

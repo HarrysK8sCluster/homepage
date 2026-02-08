@@ -1,0 +1,12 @@
+<header class="entry">
+    <img src="{{ Image }}" alt="{{ Main }}" />
+    <div>
+        <h1>
+            {% if Intro %}<small class="intro">{{ Intro }}</small>{% endif %}
+            <small class="main">{{ Main }}</small>
+            {% if Outro %}<small class="outro">{{ Outro }}</small>{% endif %}
+        </h1>
+        %content%
+    </div>
+</header>
+

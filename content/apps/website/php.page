@@ -1,0 +1,96 @@
+Template: "index"
+
+- Heading:
+  Main: 'Website "pkremer.de"'
+  Outro: "PHP // Renderer // Elemente"
+  Image: "/media/apps/website.png"
+  - Text:
+    Content: |
+      Die PHP-Seite ist bewusst klein: Routing -> DSL-Pipeline -> Render. Hier sind die wichtigsten Bausteine
+      fuer Objektmodell und Rendering.
+
+- Text:
+  Content: |
+    @(Button|Zurück zur Übersicht des Projekts|/apps/website|house)
+
+- Header:
+  Type: "h2"
+  Content: "PHP Source"
+
+- FileItem:
+  Type: "Directory"
+  Path: "/src"
+  Content: "Parser, Element-Model, Rendering, Inline-Makros"
+
+- Card:
+  - Text:
+    Raw: true
+    Content: |
+      Der PHP-Teil ist bewusst klein und direkt: Request kommt in /html/index.php an, routes.yaml mappt die URL auf eine
+      *.page Datei. Danach laeuft die DSL-Pipeline: parse -> AST -> Elemente -> Validierung -> Render.
+
+      Die wichtigsten Bausteine sind ElementFactory (AST -> Objekte), ElementNormalizer (Schema),
+      Renderer (Twig) und InlineParser (&#64;(...)-Makros im Fliesstext).
+
+- FileTree:
+  - FileTreeItem:
+    Type: "File"
+    Path: "/html/index.php"
+    Content: "Entry-Point: Routing, Cache, Render, 404/500"
+  - FileTreeItem:
+    Type: "File"
+    Path: "/src/ElementFactory.php"
+    Content: "AST -> Element-Objekte (naming convention)"
+  - FileTreeItem:
+    Type: "Directory"
+    Path: "/src/Element"
+    Content: "Element-Klassen (Heading, Row, Card, ... + Custom Elements)"
+  - FileTreeItem:
+    Type: "Directory"
+    Path: "/src/Render"
+    Content: "Renderer + Context"
+  - FileTreeItem:
+    Type: "Directory"
+    Path: "/src/Inline"
+    Content: "Inline-Makros (&#64;(link|...), &#64;(button|...))"
+  - FileTreeItem:
+    Type: "Directory"
+    Path: "/src/Validation"
+    Content: "Schema/Defaults/Types fuer Properties"
+
+- Header:
+  Type: "h2"
+  Content: "AST -> Elemente"
+
+- SourceFile:
+  Language: "php"
+  Title: "src/ElementFactory.php (Type -> Klasse)"
+  Source: "apps/website/elementfactory.php"
+
+  - CodeBlock:
+    Comment: |
+      Bruecke vom AST zu Objekten: aus einem Element-Typ wird eine passende Instanz gebaut, unbekannte Typen brechen frueh ab.
+    - Code:
+      LineNumbers: 1:32
+  - CollapseBlock:
+    LineNumbers: 33:66
+    Summary: "Details: Properties + Children Mapping"
+
+- Header:
+  Type: "h2"
+  Content: "Render-Protokoll"
+
+- SourceFile:
+  Language: "php"
+  Title: "src/Element/AbstractElement.php (Render Slot)"
+  Source: "apps/website/abstractelement.php"
+
+  - CodeBlock:
+    Comment: |
+      Gemeinsamer Renderablauf: jedes Element rendert sein Template, rendert seine Kinder und setzt sie in den Inhaltsslot ein.
+    - Code:
+      LineNumbers: 1:38
+  - CollapseBlock:
+    LineNumbers: 39:57
+    Summary: "Details: Template name + Child rendering"
+

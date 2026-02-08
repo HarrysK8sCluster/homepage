@@ -2,6 +2,7 @@
 
 namespace pkremer\WebFrontend\Element;
 
+use pkremer\WebFrontend\Inline\InlineParser;
 use pkremer\WebFrontend\Property\Property;
 use pkremer\WebFrontend\Property\PropertyMap;
 use pkremer\WebFrontend\Render\RenderContext;
@@ -14,6 +15,11 @@ abstract class AbstractElement implements ElementInterface, RenderableElementInt
     public function __construct()
     {
         $this->properties = new PropertyMap();
+    }
+
+    public function validate(): bool
+    {
+        return true;
     }
 
     public function addProperty(Property $property): void
@@ -40,15 +46,15 @@ abstract class AbstractElement implements ElementInterface, RenderableElementInt
         return [];
     }
 
-    public function render(RenderContext $context): string
+    public function render(RenderContext $context, InlineParser $inlineParser): string
     {
         $vars = $this->getVars();
         $template = $this->defaultTemplateName();
-        $html = $context->twig->render(
+        $html = $inlineParser->parse($context->twig->render(
             "{$context->elementTemplatePath}/{$template}.twig",
             array_merge($this->extractProperties(), $vars, $context->vars)
-        );
-        $html = str_replace('%content%', $this->renderChildren($context), $html);
+        ));
+        $html = str_replace('%content%', $this->renderChildren($context, $inlineParser), $html);
         return $html;
     }
 
@@ -59,12 +65,12 @@ abstract class AbstractElement implements ElementInterface, RenderableElementInt
         );
     }
 
-    protected function renderChildren(RenderContext $context): string
+    protected function renderChildren(RenderContext $context, InlineParser $inlineParser): string
     {
         $html = '';
 
         foreach ($this->elements as $child) {
-            $html .= $child->render($context);
+            $html .= $child->render($context, $inlineParser);
         }
 
         return $html;

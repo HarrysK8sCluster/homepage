@@ -12,4 +12,14 @@ final class RenderContext
         public readonly string $elementTemplatePath = 'elements',
         public readonly string $pageTemplatePath = 'page',
     ) {}
+
+    public function createChildContext(array $vars = []): RenderContext
+    {
+        return new RenderContext(
+            $this->twig,
+            array_merge($this->vars, $vars),
+            $this->elementTemplatePath,
+            $this->pageTemplatePath
+        );
+    }
 }

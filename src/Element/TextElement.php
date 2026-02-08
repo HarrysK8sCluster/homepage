@@ -12,6 +12,7 @@ final class TextElement extends AbstractElement implements HasPropertySchema
     {
         return [
             new PropertySchema('Content', 'string', null, true),
+            new PropertySchema('Raw', 'bool', false, false),
         ];
     }
 

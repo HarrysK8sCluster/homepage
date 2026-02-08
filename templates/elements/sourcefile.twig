@@ -1,0 +1,16 @@
+<section class="sourcefile">
+    <header>
+        {% if Title %}
+            <span class="title">
+                {{ Title }}
+            </span>
+        {% endif %}
+        {% if Language %}
+            <span class="lang">{{ Language }}</span>
+        {% endif %}
+    </header>
+    <div>
+        %content%
+    </div>
+</section>
+

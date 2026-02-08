@@ -1,0 +1,48 @@
+/*
+  GeSHi token classes (enable_classes(true))
+  Purpose: provide a consistent theme without inline styles.
+
+  Notes:
+  - Many classes come in numbered variants (kw1, kw2, … / co1, co2, … / re0, re1, …).
+  - Selectors use "starts-with" matching to cover all numbered variants.
+  - This file intentionally contains ONLY GeSHi-related class selectors.
+*/
+
+/* Keyword groups: kw1, kw2, ... */
+span[class^="kw"] { color: #60a5fa; font-weight: 700; }
+
+/* Identifiers / barewords: id1, id2, ... (some languages use this) */
+span[class^="id"] { color: #a78bfa; }
+
+/* Variables: var, var1, ... (language-dependent) */
+span[class^="var"] { color: #fbbf24; }
+
+/* Strings: st0, st1, ... */
+span[class^="st"] { color: #34d399; }
+
+/* Comments: co1, co2, ... */
+span[class^="co"] { color: #94a3b8; }
+
+/* Numbers: nu0, nu1, ... */
+span[class^="nu"] { color: #cc66cc; }
+
+/* Regex / patterns: re0, re1, ... */
+span[class^="re"] { color: #22c55e; }
+
+/* Brackets / delimiters: br0, br1, ... */
+span[class^="br"] { color: #93c5fd; }
+
+/* Symbols / operators: sy0, sy1, ... */
+span[class^="sy"] { color: #e2e8f0; }
+
+/* Escapes: es0, es1, ... */
+span[class^="es"] { color: #38bdf8; font-weight: 700; }
+
+/* Methods / function-like tokens: me0, me1, ... */
+span[class^="me"] { color: #a7f3d0; }
+
+/* Script sections / embedded languages: sc0, sc1, ... */
+span[class^="sc"] { color: #f472b6; }
+
+/* Extra highlighting / emphasis: xtra (and variants) */
+span[class^="xtra"] { background: rgba(0, 119, 248, 0.12); border-radius: 6px; padding: 0 0.15em; }
