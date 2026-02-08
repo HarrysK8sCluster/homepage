@@ -3,7 +3,7 @@ Template: "index"
 - Heading:
   Main: 'Website "pkremer.de"'
   Outro: "CI/CD // GitOps"
-  Image: "/media/apps/website.png"
+  Image: "/media/apps/website.webp"
   - Text:
     Content: |
       Build und Deploy sind Git-getrieben: Docker Image bauen, nach GHCR pushen und danach das Kubernetes-Repo

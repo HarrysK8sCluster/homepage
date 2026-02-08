@@ -3,7 +3,7 @@ Template: "index"
 - Heading:
   Main: 'Website "pkremer.de"'
   Outro: "PHP // Renderer // Elemente"
-  Image: "/media/apps/website.png"
+  Image: "/media/apps/website.webp"
   - Text:
     Content: |
       Die PHP-Seite ist bewusst klein: Routing -> DSL-Pipeline -> Render. Hier sind die wichtigsten Bausteine

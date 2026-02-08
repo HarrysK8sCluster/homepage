@@ -3,7 +3,7 @@ Template: "index"
 - Heading:
   Main: 'Website "pkremer.de"'
   Outro: "Content // routes.yaml // Pages"
-  Image: "/media/apps/website.png"
+  Image: "/media/apps/website.webp"
   - Text:
     Content: |
       Inhalte liegen komplett in Git: Seiten als *.page (DSL) und eine zentrale Routing-Tabelle. Das macht Änderungen

@@ -3,7 +3,7 @@ Template: "index"
 - Heading:
   Main: 'Website "pkremer.de"'
   Outro: "DSL // Parser // Inline"
-  Image: "/media/apps/website.png"
+  Image: "/media/apps/website.webp"
   - Text:
     Content: |
       Diese Seite zeigt das Content-Format (DSL) im Detail: Aufbau, Inline-Makros und wie der Parser daraus

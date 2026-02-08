@@ -3,7 +3,7 @@ Template: "index"
 - Heading:
   Main: 'Website "pkremer.de"'
   Outro: "Twig // Webpack // Clean Content"
-  Image: "/media/apps/website.png"
+  Image: "/media/apps/website.webp"
   - Text:
     Content: |
       Auf dieser Seite dokumentiere ich den Aufbau des Projekts: Struktur, Templates, Assets und die wichtigsten

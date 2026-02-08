@@ -3,7 +3,7 @@ Template: "index"
 - Heading:
   Main: 'Website "pkremer.de"'
   Outro: "Twig // Layouts // Elements"
-  Image: "/media/apps/website.png"
+  Image: "/media/apps/website.webp"
   - Text:
     Content: |
       Twig ist hier die View-Schicht: ein Basis-Layout, Page-Templates und viele kleine Element-Templates.

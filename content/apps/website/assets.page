@@ -3,7 +3,7 @@ Template: "index"
 - Heading:
   Main: 'Website "pkremer.de"'
   Outro: "Assets // SCSS // Webpack"
-  Image: "/media/apps/website.png"
+  Image: "/media/apps/website.webp"
   - Text:
     Content: |
       Alles rund um Styles, Bilder und den Asset-Build: was im Source-Ordner liegt, was im DocumentRoot landet

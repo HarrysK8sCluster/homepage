@@ -47,7 +47,7 @@ Template: "index"
 
 - Row:
   - Card:
-    Image: "media/apps/website.png"
+    Image: "media/apps/website.webp"
     Heading: "Deepdive Website"
     Footer: @(button|Technische Doku →|/app/website)
     - Text:
