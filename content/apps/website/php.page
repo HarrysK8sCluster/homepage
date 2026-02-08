@@ -7,11 +7,11 @@ Template: "index"
   - Text:
     Content: |
       Die PHP-Seite ist bewusst klein: Routing -> DSL-Pipeline -> Render. Hier sind die wichtigsten Bausteine
-      fuer Objektmodell und Rendering.
+      für Objektmodell und Rendering.
 
 - Text:
   Content: |
-    @(Button|Zurück zur Übersicht des Projekts|/apps/website|house)
+    @(Button|Zurück zur Übersicht des Projekts|/app/website|house)
 
 - Header:
   Type: "h2"
@@ -27,10 +27,10 @@ Template: "index"
     Raw: true
     Content: |
       Der PHP-Teil ist bewusst klein und direkt: Request kommt in /html/index.php an, routes.yaml mappt die URL auf eine
-      *.page Datei. Danach laeuft die DSL-Pipeline: parse -> AST -> Elemente -> Validierung -> Render.
+      *.page Datei. Danach läuft die DSL-Pipeline: parse -> AST -> Elemente -> Validierung -> Render.
 
       Die wichtigsten Bausteine sind ElementFactory (AST -> Objekte), ElementNormalizer (Schema),
-      Renderer (Twig) und InlineParser (&#64;(...)-Makros im Fliesstext).
+      Renderer (Twig) und InlineParser (&#64;(...)-Makros im Fließtext).
 
 - FileTree:
   - FileTreeItem:
@@ -56,7 +56,7 @@ Template: "index"
   - FileTreeItem:
     Type: "Directory"
     Path: "/src/Validation"
-    Content: "Schema/Defaults/Types fuer Properties"
+    Content: "Schema/Defaults/Types für Properties"
 
 - Header:
   Type: "h2"
@@ -69,7 +69,7 @@ Template: "index"
 
   - CodeBlock:
     Comment: |
-      Bruecke vom AST zu Objekten: aus einem Element-Typ wird eine passende Instanz gebaut, unbekannte Typen brechen frueh ab.
+      Brücke vom AST zu Objekten: aus einem Element-Typ wird eine passende Instanz gebaut, unbekannte Typen brechen früh ab.
     - Code:
       LineNumbers: 1:32
   - CollapseBlock:
@@ -94,3 +94,7 @@ Template: "index"
     LineNumbers: 39:57
     Summary: "Details: Template name + Child rendering"
 
+
+- Text:
+  Content: |
+    @(Button|Zurück zur Übersicht des Projekts|/app/website|house)

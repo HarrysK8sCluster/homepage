@@ -11,7 +11,7 @@ Template: "index"
 
 - Text:
   Content: |
-    @(Button|Zurück zur Übersicht des Projekts|/apps/website|house)
+      @(Button|Zurück zur Übersicht des Projekts|/app/website|house)
 
 - Header:
   Type: "h2"
@@ -55,19 +55,19 @@ Template: "index"
 
   - CodeBlock:
     Comment: |
-      Ausloeser und Rechte: wann der Workflow laeuft und welche Berechtigungen fuer Registry und Repository gebraucht werden.
+      Auslöser und Rechte: wann der Workflow läuft und welche Berechtigungen für Registry und Repository gebraucht werden.
     - Code:
       LineNumbers: 1:18
 
   - CodeBlock:
     Comment: |
-      Grundsetup: Variablen fuer Image-Namen und Registry, dann Checkout und Build-Umgebung.
+      Grundsetup: Variablen für Image-Namen und Registry, dann Checkout und Build-Umgebung.
     - Code:
       LineNumbers: 20:27
 
   - CodeBlock:
     Comment: |
-      Authentifizierung und Version: Login fuer den Push, dann wird ein stabiler Tag aus dem aktuellen Commit abgeleitet.
+      Authentifizierung und Version: Login für den Push, dann wird ein stabiler Tag aus dem aktuellen Commit abgeleitet.
     - Code:
       LineNumbers: 28:44
 
@@ -79,7 +79,12 @@ Template: "index"
 
   - CodeBlock:
     Comment: |
-      GitOps-Schritt: aktualisiert im Cluster-Repo nur den Image-Tag, damit Deployments als Git-Aenderung nachvollziehbar bleiben.
+      GitOps-Schritt: aktualisiert im Cluster-Repo nur den Image-Tag, damit Deployments als Git-Änderung nachvollziehbar bleiben.
     - Code:
       LineNumbers: 55:71
 
+
+
+- Text:
+  Content: |
+      @(Button|Zurück zur Übersicht des Projekts|/app/website|house)

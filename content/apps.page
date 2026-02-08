@@ -18,6 +18,7 @@ Template: "index"
 - Row:
   - Card:
     Heading: "Diese Website"
+    Footer: @(button|Technische Doku →|/app/website)
     - Text:
       Content: |
         Meine persönliche Webpräsenz: eine kleine, performante Seite als Home für

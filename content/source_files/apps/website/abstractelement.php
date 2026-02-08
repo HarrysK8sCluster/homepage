@@ -2,6 +2,7 @@
 
 namespace pkremer\WebFrontend\Element;
 
+use pkremer\WebFrontend\Inline\InlineParser;
 use pkremer\WebFrontend\Property\Property;
 use pkremer\WebFrontend\Property\PropertyMap;
 use pkremer\WebFrontend\Render\RenderContext;
@@ -26,16 +27,16 @@ abstract class AbstractElement implements ElementInterface, RenderableElementInt
         $this->elements[] = $element;
     }
 
-    public function render(RenderContext $context): string
+    public function render(RenderContext $context, InlineParser $inlineParser): string
     {
         $template = $this->defaultTemplateName();
-        $html = $context->twig->render(
+        $html = $inlineParser->parse($context->twig->render(
             "{$context->elementTemplatePath}/{$template}.twig",
             array_merge($this->extractProperties(), $context->vars)
-        );
+        ));
 
         // %content% ist der Slot fuer gerenderte Kind-Elemente
-        return str_replace('%content%', $this->renderChildren($context), $html);
+        return str_replace('%content%', $this->renderChildren($context, $inlineParser), $html);
     }
 
     protected function defaultTemplateName(): string
@@ -45,11 +46,11 @@ abstract class AbstractElement implements ElementInterface, RenderableElementInt
         );
     }
 
-    protected function renderChildren(RenderContext $context): string
+    protected function renderChildren(RenderContext $context, InlineParser $inlineParser): string
     {
         $html = '';
         foreach ($this->elements as $child) {
-            $html .= $child->render($context);
+            $html .= $child->render($context, $inlineParser);
         }
         return $html;
     }

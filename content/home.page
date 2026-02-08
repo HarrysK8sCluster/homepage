@@ -40,3 +40,17 @@ Template: "index"
       Content: |
         Alles rund um GitOps & Kubernetes: Deployments, CI/CD,
         Automatisierung und Betrieb moderner Services.
+
+- Header:
+  Type: "h2"
+  Content: "Neue Artikel"
+
+- Row:
+  - Card:
+    Image: "media/apps/website.png"
+    Heading: "Deepdive Website"
+    Footer: @(button|Technische Doku →|/app/website)
+    - Text:
+      Content: |
+        Neu: Die technische Doku zur Website ist jetzt online. Dort dokumentiere ich Aufbau, DSL, Templates,
+        Build und CI/CD und halte kuenftige Aenderungen als kurze Updates fest.

@@ -46,3 +46,18 @@ span[class^="sc"] { color: #f472b6; }
 
 /* Extra highlighting / emphasis: xtra (and variants) */
 span[class^="xtra"] { background: rgba(0, 119, 248, 0.12); border-radius: 6px; padding: 0 0.15em; }
+
+@media (prefers-color-scheme: light) {
+  span[class^="kw"] { color: #1d4ed8; }
+  span[class^="id"] { color: #6d28d9; }
+  span[class^="var"] { color: #b45309; }
+  span[class^="st"] { color: #047857; }
+  span[class^="co"] { color: #64748b; }
+  span[class^="nu"] { color: #a21caf; }
+  span[class^="re"] { color: #15803d; }
+  span[class^="br"] { color: #1e40af; }
+  span[class^="sy"] { color: #334155; }
+  span[class^="es"] { color: #0369a1; }
+  span[class^="me"] { color: #0f766e; }
+  span[class^="sc"] { color: #be185d; }
+}

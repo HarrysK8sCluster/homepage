@@ -7,7 +7,7 @@ Template: "index"
   - Text:
     Content: |
       Auf dieser Seite dokumentiere ich den Aufbau des Projekts: Struktur, Templates, Assets und die wichtigsten
-      Entscheidungen, damit Aenderungen schnell, nachvollziehbar und reproduzierbar bleiben.
+      Entscheidungen, damit Änderungen schnell, nachvollziehbar und reproduzierbar bleiben.
 
 - Teaser:
   Header: "Technische Doku – wie diese Website gebaut ist"
@@ -26,8 +26,8 @@ Template: "index"
     Heading: "Wo liegt der Quellcode"
     - Text:
       Content: |
-        Der komplette Quellcode dieser Website liegt oeffentlich auf GitHub. Dort findest du die DSL-Content-Dateien,
-        Twig-Templates, PHP-Renderer und die Webpack-Pipeline fuer Assets – alles versioniert und nachvollziehbar.
+        Der komplette Quellcode dieser Website liegt öffentlich auf GitHub. Dort findest du die DSL-Content-Dateien,
+        Twig-Templates, PHP-Renderer und die Webpack-Pipeline für Assets – alles versioniert und nachvollziehbar.
         Repo: @(link|github.com/HarrysK8sCluster/homepage|https://github.com/HarrysK8sCluster/homepage)
 
   - Card:
@@ -73,14 +73,14 @@ Template: "index"
   Heading: "DSL - was ist das?"
   - Text:
     Content: |
-      Mein "DSL" ist ein bewusst simples, YAML‑aehnliches Content-Format fuer diese Website: Statt Markdown oder CMS
+      Mein "DSL" ist ein bewusst simples, YAML‑ähnliches Content-Format für diese Website: Statt Markdown oder CMS
       beschreibe ich Seiten als Baum aus UI‑Elementen (z.B. Heading, Row, Card, Text, List). Ein kleiner Parser baut
-      daraus eine AST/Element-Struktur, validiert Properties (Schema/Defaults) und rendert sie ueber Twig-Templates zu
+      daraus eine AST/Element-Struktur, validiert Properties (Schema/Defaults) und rendert sie über Twig-Templates zu
       sauberem HTML. Ergebnis: Inhalte bleiben versionierbar, strukturiert und ohne Editor‑Magie reproduzierbar.
 
   - Text:
     Content: |
-      @(link|DSL im Detail (Beispiele + Parser)|/apps/website/dsl)
+      @(link|DSL im Detail (Beispiele + Parser)|/app/website/dsl)
 
 
 - Header:
@@ -123,11 +123,11 @@ Template: "index"
   - FileTreeItem:
     Type: "File"
     Path: "docker-compose.yml"
-    Content: "Docker Compose fuer Dev-Umgebung"
+    Content: "Docker Compose für Dev-Umgebung"
   - FileTreeItem:
     Type: "File"
     Path: "*-php.ini"
-    Content: "PHP ini fuer die ENVs"
+    Content: "PHP ini für die ENVs"
 
 
 
@@ -139,46 +139,52 @@ Template: "index"
 
   - Card:
     Heading: "Content & Routing"
-    Footer: @(button|Details →|/apps/website/content)
+    Footer: @(button|Details →|/app/website/content)
     - Text:
       Content: |
-        /content, routes.yaml, Seitenstruktur.
+        Seiten leben komplett in `content/`: `*.page` Dateien + `routes.yaml`.
+        Ziel: Änderungen bleiben klar versionierbar und ohne Patterns/Overhead nachvollziehbar.
 
   - Card:
     Heading: "DSL"
-    Footer: @(button|Details →|/apps/website/dsl)
+    Footer: @(button|Details →|/app/website/dsl)
     - Text:
       Content: |
-        Format, Inline-Makros, Parser.
+        YAML-ähnliches Format, Inline-Makros im Fließtext und der Parser, der daraus einen stabilen Element-Baum baut.
+        Fokus: Struktur statt Freitext-Magie.
 
   - Card:
     Heading: "CI/CD"
-    Footer: @(button|Details →|/apps/website/cicd)
+    Footer: @(button|Details →|/app/website/cicd)
     - Text:
       Content: |
-        GitHub Actions, Docker, GitOps.
+        Build -> GHCR -> GitOps Update ins k8s-Repo.
+        Deployments sind Git-Änderungen: nachvollziehbar und rollbackbar.
 
 - Row:
   - Card:
     Heading: "PHP Source"
-    Footer: @(button|Details →|/apps/website/php)
+    Footer: @(button|Details →|/app/website/php)
     - Text:
       Content: |
-        Element-Factory, Render-Protokoll.
+        Kleine Pipeline statt Framework: Factory, Normalizer und Renderer.
+        Hier liegen die Regeln, wie aus Content HTML wird.
 
   - Card:
     Heading: "Twig Templates"
-    Footer: @(button|Details →|/apps/website/templates)
+    Footer: @(button|Details →|/app/website/templates)
     - Text:
       Content: |
-        Layouts, Pages, Element-Templates.
+        Layout-Shell, Page-Templates und viele kleine Element-Templates.
+        Die View-Schicht bleibt modular und gut wiederverwendbar.
 
   - Card:
     Heading: "Assets & Build"
-    Footer: @(button|Details →|/apps/website/assets)
+    Footer: @(button|Details →|/app/website/assets)
     - Text:
       Content: |
-        SCSS, Manifest, Webpack Pipeline.
+        SCSS als Module, Webpack als Build-Pipeline, Manifest für Cache-Busting.
+        Source und DocumentRoot sind bewusst strikt getrennt.
 
 - Header:
   Type: "h2"
@@ -188,21 +194,21 @@ Template: "index"
   - Text:
     Content: |
       Die Codebase soll klein bleiben, aber an den richtigen Stellen wachsen: bessere Entkopplung im Backend,
-      automatisierte Qualitaetschecks im UI und mittelfristig die Option, Content aus einem Headless CMS zu ziehen.
+      automatisierte Qualitätschecks im UI und mittelfristig die Option, Content aus einem Headless CMS zu ziehen.
 
 - Row:
   - Card:
     Heading: "PHP-DI (1-2 Monate)"
     - Text:
       Content: |
-        Ein DI-Container macht Abhaengigkeiten explizit und reduziert Glue-Code im Entry-Point.
-        Das vereinfacht Tests, Konfiguration pro Environment und spaetere Erweiterungen (z.B. neue Renderer/Handler).
+        Ein DI-Container macht Abhängigkeiten explizit und reduziert Glue-Code im Entry-Point.
+        Das vereinfacht Tests, Konfiguration pro Environment und spätere Erweiterungen (z.B. neue Renderer/Handler).
 
   - Card:
     Heading: "Selenium UI Tests + Screenshots (ca 6 Monate)"
     - Text:
       Content: |
-        Automatisierte Browser-Checks fuer Kernseiten und kritische Komponenten.
+        Automatisierte Browser-Checks für Kernseiten und kritische Komponenten.
         Screenshots dienen als Regression-Signal, wenn Layout oder Rendering unbeabsichtigt kippt.
 
 - Row:
@@ -210,8 +216,8 @@ Template: "index"
     Heading: "Testumgebung (ca 6 Monate)"
     - Text:
       Content: |
-        Eine dedizierte Staging-Umgebung, die prod moeglichst nah abbildet.
-        Ideal fuer Smoke-Tests, Preview von Content-Aenderungen und reproduzierbares Debugging.
+        Eine dedizierte Staging-Umgebung, die prod möglichst nah abbildet.
+        Ideal für Smoke-Tests, Preview von Content-Änderungen und reproduzierbares Debugging.
 
   - Card:
     Heading: "Headless CMS Anbindung (1-2 Jahre)"
@@ -219,4 +225,3 @@ Template: "index"
       Content: |
         Content nicht mehr nur aus Git, sondern optional aus einem Headless CMS.
         Ziel: DSL/Renderer als stabiles Frontend behalten und lediglich eine Datenquelle (Adapter) austauschen.
-

@@ -6,12 +6,12 @@ Template: "index"
   Image: "/media/apps/website.png"
   - Text:
     Content: |
-      Inhalte liegen komplett in Git: Seiten als *.page (DSL) und eine zentrale Routing-Tabelle. Das macht Aenderungen
+      Inhalte liegen komplett in Git: Seiten als *.page (DSL) und eine zentrale Routing-Tabelle. Das macht Änderungen
       transparent und reproduzierbar.
 
 - Text:
   Content: |
-    @(Button|Zurück zur Übersicht des Projekts|/apps/website|house)
+    @(Button|Zurück zur Übersicht des Projekts|/app/website|house)
 
 - Header:
   Type: "h2"
@@ -28,7 +28,7 @@ Template: "index"
       Alles, was du auf der Website siehst, liegt versioniert in /content: Seiten als *.page (DSL) und eine zentrale
       routes.yaml, die Request-Paths auf Seiten-Dateien mapped.
 
-      Eine neue Seite besteht damit aus genau zwei Aenderungen: eine neue *.page anlegen und eine Route in routes.yaml
+      Eine neue Seite besteht damit aus genau zwei Änderungen: eine neue *.page anlegen und eine Route in routes.yaml
       eintragen. Der Page-Wert ist dabei der Pfad relativ zu /content ohne Dateiendung.
 
 - FileTree:
@@ -47,7 +47,7 @@ Template: "index"
   - FileTreeItem:
     Type: "Directory"
     Path: "/content/apps"
-    Content: "Unterseiten (z.B. /apps/website)"
+    Content: "Unterseiten (z.B. /app/website)"
   - FileTreeItem:
     Type: "File"
     Path: "/content/apps/website.page"
@@ -68,7 +68,12 @@ Template: "index"
 
   - CodeBlock:
     Comment: |
-      Die Website-Doku ist hier als eigener Block geroutet: Uebersicht plus Deep-Dive Unterseiten.
-      Zusaetzlich gibt es eine Kurzform als Alias unter /app/website.
+      Die Website-Doku ist hier als eigener Block geroutet: Übersicht plus Deep-Dive Unterseiten.
+      Zusätzlich gibt es eine Kurzform als Alias unter /app/website.
     - Code:
       LineNumbers: 22:62
+
+
+- Text:
+  Content: |
+    @(Button|Zurück zur Übersicht des Projekts|/app/website|house)

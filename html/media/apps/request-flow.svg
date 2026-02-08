@@ -5,26 +5,72 @@
     </filter>
 
     <marker id="arrowBlue" markerWidth="10" markerHeight="10" refX="7" refY="3" orient="auto" markerUnits="strokeWidth">
-      <path d="M0,0 L9,3 L0,6 Z" fill="#60A5FA" />
+      <path d="M0,0 L9,3 L0,6 Z" />
     </marker>
     <marker id="arrowRed" markerWidth="10" markerHeight="10" refX="7" refY="3" orient="auto" markerUnits="strokeWidth">
-      <path d="M0,0 L9,3 L0,6 Z" fill="#F87171" />
+      <path d="M0,0 L9,3 L0,6 Z" />
     </marker>
 
     <style>
-      .label { font: 600 18px ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji"; fill: #E5E7EB; letter-spacing: 0.2px; }
-      .sub { font: 500 13px ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial; fill: #9CA3AF; }
-      .num { font: 700 14px ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial; fill: #0B1220; }
+      :root {
+        --text: #0f172a;
+        --muted: #64748b;
+        --dim: rgba(15, 23, 42, 0.72);
 
-      .nodeBlue { fill: #0B1220; stroke: #3B82F6; stroke-width: 2; }
-      .nodeRed { fill: #0B1220; stroke: #EF4444; stroke-width: 2; }
-      .chipBlue { fill: #60A5FA; }
-      .chipRed { fill: #F87171; }
+        --node-bg: rgba(255, 255, 255, 0.92);
+        --node-blue: #0077f8;
+        --node-red: #ef4444;
 
-      .flowBlue { stroke: #60A5FA; stroke-width: 3; fill: none; marker-end: url(#arrowBlue); }
-      .flowRed { stroke: #F87171; stroke-width: 3; fill: none; marker-end: url(#arrowRed); }
-      .tapRed { stroke: #F87171; stroke-width: 3; fill: none; }
-      .flow404 { stroke: #F87171; stroke-width: 3; fill: none; stroke-dasharray: 8 6; marker-end: url(#arrowRed); }
+        --chip-blue: #0077f8;
+        --chip-red: #ef4444;
+        --chip-text: #ffffff;
+
+        --flow-blue: #0077f8;
+        --flow-red: #ef4444;
+
+        --legend-bg: rgba(255, 255, 255, 0.85);
+        --legend-border: rgba(15, 23, 42, 0.14);
+      }
+
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --text: #E5E7EB;
+          --muted: #9CA3AF;
+          --dim: #CBD5E1;
+
+          --node-bg: #0B1220;
+          --node-blue: #3B82F6;
+          --node-red: #EF4444;
+
+          --chip-blue: #60A5FA;
+          --chip-red: #F87171;
+          --chip-text: #0B1220;
+
+          --flow-blue: #60A5FA;
+          --flow-red: #F87171;
+
+          --legend-bg: #0B1220;
+          --legend-border: #334155;
+        }
+      }
+
+      #arrowBlue path { fill: var(--flow-blue); }
+      #arrowRed path { fill: var(--flow-red); }
+
+      .label { font: 600 18px ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji"; fill: var(--text); letter-spacing: 0.2px; }
+      .sub { font: 500 13px ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial; fill: var(--muted); }
+      .num { font: 700 14px ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial; fill: var(--chip-text); }
+      .dim { fill: var(--dim); }
+
+      .nodeBlue { fill: var(--node-bg); stroke: var(--node-blue); stroke-width: 2; }
+      .nodeRed { fill: var(--node-bg); stroke: var(--node-red); stroke-width: 2; }
+      .chipBlue { fill: var(--chip-blue); }
+      .chipRed { fill: var(--chip-red); }
+
+      .flowBlue { stroke: var(--flow-blue); stroke-width: 3; fill: none; marker-end: url(#arrowBlue); }
+      .flowRed { stroke: var(--flow-red); stroke-width: 3; fill: none; marker-end: url(#arrowRed); }
+      .tapRed { stroke: var(--flow-red); stroke-width: 3; fill: none; }
+      .flow404 { stroke: var(--flow-red); stroke-width: 3; fill: none; stroke-dasharray: 8 6; marker-end: url(#arrowRed); }
     </style>
   </defs>
 
@@ -42,7 +88,7 @@
   <path class="flowBlue" d="M300 746 V782" />
 
   <!-- error bus (500) -->
-  <path d="M640 398 V810" stroke="#F87171" stroke-width="10" stroke-linecap="round" />
+  <path d="M640 398 V810" stroke="var(--flow-red)" stroke-width="10" stroke-linecap="round" />
 
   <!-- error flows: 404 (distinct dashed path) -->
   <path class="flow404" d="M560 366 H628 A12 12 0 0 0 640 354 V322 A12 12 0 0 1 652 310 H775" />
@@ -68,7 +114,7 @@
     <circle class="chipBlue" cx="72" cy="52" r="14" />
     <text class="num" x="72" y="57" text-anchor="middle">1</text>
     <text class="label" x="100" y="50">DocumentRoot</text>
-    <text class="sub" x="100" y="72">Entry: <tspan fill="#CBD5E1">html/index.php</tspan></text>
+    <text class="sub" x="100" y="72">Entry: <tspan class="dim">html/index.php</tspan></text>
 
     <!-- 2 -->
     <rect class="nodeBlue" x="40" y="130" width="520" height="64" rx="16" />
@@ -137,13 +183,12 @@
 
   <!-- Legend -->
   <g>
-    <rect x="680" y="50" width="380" height="132" rx="16" fill="#0B1220" stroke="#334155" stroke-width="1.5" />
-    <path d="M710 85 H890" stroke="#60A5FA" stroke-width="4" marker-end="url(#arrowBlue)" />
+    <rect x="680" y="50" width="380" height="132" rx="16" fill="var(--legend-bg)" stroke="var(--legend-border)" stroke-width="1.5" />
+    <path d="M710 85 H890" stroke="var(--flow-blue)" stroke-width="4" marker-end="url(#arrowBlue)" />
     <text class="sub" x="940" y="90">main flow</text>
-    <path d="M710 120 H890" stroke="#F87171" stroke-width="4" marker-end="url(#arrowRed)" />
+    <path d="M710 120 H890" stroke="var(--flow-red)" stroke-width="4" marker-end="url(#arrowRed)" />
     <text class="sub" x="940" y="125">error flow</text>
-    <path d="M710 155 H890" stroke="#F87171" stroke-width="4" stroke-dasharray="8 6" marker-end="url(#arrowRed)" />
+    <path d="M710 155 H890" stroke="var(--flow-red)" stroke-width="4" stroke-dasharray="8 6" marker-end="url(#arrowRed)" />
     <text class="sub" x="940" y="160">404 path</text>
   </g>
 </svg>
-

@@ -11,7 +11,7 @@ Template: "index"
 
 - Text:
   Content: |
-    @(Button|Zurück zur Übersicht des Projekts|/apps/website|house)
+    @(Button|Zurück zur Übersicht des Projekts|/app/website|house)
 
 - Header:
   Type: "h2"
@@ -64,7 +64,7 @@ Template: "index"
   - FileTreeItem:
     Type: "File"
     Path: "/templates/elements/row.twig"
-    Content: "Row-Layout fuer Cards"
+    Content: "Row-Layout für Cards"
   - FileTreeItem:
     Type: "File"
     Path: "/templates/elements/text.twig"
@@ -81,7 +81,7 @@ Template: "index"
 
   - CodeBlock:
     Comment: |
-      Das globale Seitenlayout: HTML-Grundgeruest, gemeinsame Meta-Infos und Einbindung der Basis-Assets.
+      Das globale Seitenlayout: HTML-Grundgerüst, gemeinsame Meta-Infos und Einbindung der Basis-Assets.
     - Code:
       LineNumbers: 1:14
   - CollapseBlock:
@@ -95,7 +95,7 @@ Template: "index"
 
   - CodeBlock:
     Comment: |
-      Eine konkrete Seite: erweitert das Layout, bindet page-spezifische Styles ein und liefert den Inhalt fuer den Hauptbereich.
+      Eine konkrete Seite: erweitert das Layout, bindet page-spezifische Styles ein und liefert den Inhalt für den Hauptbereich.
     - Code:
       LineNumbers: 1:10
 
@@ -106,7 +106,11 @@ Template: "index"
 
   - CodeBlock:
     Comment: |
-      Ein Element-Template bleibt klein: es zeichnet den Rahmen und laesst innen Platz fuer den gerenderten Inhalt der Kind-Elemente.
+      Ein Element-Template bleibt klein: es zeichnet den Rahmen und lässt innen Platz für den gerenderten Inhalt der Kind-Elemente.
     - Code:
       LineNumbers: 1:18
 
+
+- Text:
+  Content: |
+    @(Button|Zurück zur Übersicht des Projekts|/app/website|house)

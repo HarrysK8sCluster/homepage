@@ -11,7 +11,7 @@ Template: "index"
 
 - Text:
   Content: |
-    @(Button|Zurück zur Übersicht des Projekts|/apps/website|house)
+    @(Button|Zurück zur Übersicht des Projekts|/app/website|house)
 
 - Header:
   Type: "h2"
@@ -37,12 +37,12 @@ Template: "index"
 
   - CodeBlock:
     Comment: |
-      Seitenkopf und Metadaten: welches Layout verwendet wird und welche Basisinfos der Renderer spaeter braucht.
+      Seitenkopf und Metadaten: welches Layout verwendet wird und welche Basisinfos der Renderer später braucht.
     - Code:
       LineNumbers: 1:2
   - CodeBlock:
     Comment: |
-      Ein erster Inhaltsslot: Ueberschrift plus begleitender Text. Das zeigt, wie Elemente Kinder haben koennen.
+      Ein erster Inhaltsslot: Überschrift plus begleitender Text. Das zeigt, wie Elemente Kinder haben können.
     - Code:
       LineNumbers: 3:11
   - CollapseBlock:
@@ -58,7 +58,7 @@ Template: "index"
     Summary: "Restlicher Demo-Code"
   - CodeBlock:
     Comment: |
-      Inline-Makros erlauben kleine Bausteine direkt im Fliesstext, ohne den Seitenbaum aufzubrechen.
+      Inline-Makros erlauben kleine Bausteine direkt im Fließtext, ohne den Seitenbaum aufzubrechen.
     - Code:
       LineNumbers: 89:102
 
@@ -86,7 +86,7 @@ Template: "index"
 
   - CodeBlock:
     Comment: |
-      Kernlogik: anhand der Einrueckung wird entschieden, ob neue Elemente beginnen oder ob Eigenschaften zum aktuellen Element gehoeren.
+      Kernlogik: anhand der Einrückung wird entschieden, ob neue Elemente beginnen oder ob Eigenschaften zum aktuellen Element gehören.
     - Code:
       LineNumbers: 35:95
 
@@ -99,14 +99,18 @@ Template: "index"
 
   - CodeBlock:
     Comment: |
-      Normalisierung: erkannte Werte werden in einen stabilen Typ ueberfuehrt, damit die spaetere Verarbeitung eindeutig ist.
+      Normalisierung: erkannte Werte werden in einen stabilen Typ überführt, damit die spätere Verarbeitung eindeutig ist.
     - Code:
       LineNumbers: 170:206
 
   - CodeBlock:
     Comment: |
-      Hilfsfunktionen: Einrueckung, Fehlertexte und Zeilenbezug sind hier gebuendelt, damit Debugging schnell bleibt.
+      Hilfsfunktionen: Einrückung, Fehlertexte und Zeilenbezug sind hier gebündelt, damit Debugging schnell bleibt.
     - Collapse:
       LineNumbers: 208:253
       Summary: "Details ein-/ausklappen"
 
+
+- Text:
+  Content: |
+    @(Button|Zurück zur Übersicht des Projekts|/app/website|house)
