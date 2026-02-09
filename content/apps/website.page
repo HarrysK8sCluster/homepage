@@ -80,7 +80,7 @@ Template: "index"
 
   - Text:
     Content: |
-      @(link|DSL im Detail (Beispiele + Parser)|/apps/website/dsl)
+      @(link|DSL im Detail Beispiele + Parser|/apps/website/dsl)
 
 
 - Header:

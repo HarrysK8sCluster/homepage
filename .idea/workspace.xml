@@ -4,22 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5f9b890d-3c1d-4b04-a87f-f70f5ed4a900" name="Changes" comment="optimize website image">
+    <list default="true" id="5f9b890d-3c1d-4b04-a87f-f70f5ed4a900" name="Changes" comment="some content fixes">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/scss/codeblock.scss" beforeDir="false" afterPath="$PROJECT_DIR$/assets/scss/codeblock.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/apps.page" beforeDir="false" afterPath="$PROJECT_DIR$/content/apps.page" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/content/apps/website.page" beforeDir="false" afterPath="$PROJECT_DIR$/content/apps/website.page" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/apps/website/assets.page" beforeDir="false" afterPath="$PROJECT_DIR$/content/apps/website/assets.page" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/apps/website/cicd.page" beforeDir="false" afterPath="$PROJECT_DIR$/content/apps/website/cicd.page" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/apps/website/content.page" beforeDir="false" afterPath="$PROJECT_DIR$/content/apps/website/content.page" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/apps/website/dsl.page" beforeDir="false" afterPath="$PROJECT_DIR$/content/apps/website/dsl.page" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/apps/website/php.page" beforeDir="false" afterPath="$PROJECT_DIR$/content/apps/website/php.page" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/apps/website/templates.page" beforeDir="false" afterPath="$PROJECT_DIR$/content/apps/website/templates.page" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/home.page" beforeDir="false" afterPath="$PROJECT_DIR$/content/home.page" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/routes.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/content/routes.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/source_files/apps/website/docker-ghcr.yml" beforeDir="false" afterPath="$PROJECT_DIR$/content/source_files/apps/website/docker-ghcr.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/source_files/apps/website/routes.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/content/source_files/apps/website/routes.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -206,7 +193,7 @@
       <workItem from="1769550884985" duration="68283000" />
       <workItem from="1769961517160" duration="43876000" />
       <workItem from="1770222762564" duration="7975000" />
-      <workItem from="1770308732824" duration="112475000" />
+      <workItem from="1770308732824" duration="114757000" />
     </task>
     <task id="LOCAL-00001" summary="v1">
       <option name="closed" value="true" />
@@ -528,7 +515,15 @@
       <option name="project" value="LOCAL" />
       <updated>1770579242688</updated>
     </task>
-    <option name="localTasksCounter" value="41" />
+    <task id="LOCAL-00041" summary="some content fixes">
+      <option name="closed" value="true" />
+      <created>1770629117230</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1770629117230</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -549,7 +544,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="fix mail visibility and add auto deployment" />
     <MESSAGE value="add auto deployment" />
     <MESSAGE value="change menu name from imprint to impressum" />
     <MESSAGE value="add frontcontroller and layout" />
@@ -574,7 +568,8 @@
     <MESSAGE value="add website doku V0.7" />
     <MESSAGE value="add website doku V0.9" />
     <MESSAGE value="optimize website image" />
-    <option name="LAST_COMMIT_MESSAGE" value="optimize website image" />
+    <MESSAGE value="some content fixes" />
+    <option name="LAST_COMMIT_MESSAGE" value="some content fixes" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
