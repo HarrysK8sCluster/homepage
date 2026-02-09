@@ -49,7 +49,7 @@ Template: "index"
   - Card:
     Image: "media/apps/website.webp"
     Heading: "Deepdive Website"
-    Footer: @(button|Technische Doku →|/app/website)
+    Footer: @(button|Technische Doku →|/apps/website)
     - Text:
       Content: |
         Neu: Die technische Doku zur Website ist jetzt online. Dort dokumentiere ich Aufbau, DSL, Templates,

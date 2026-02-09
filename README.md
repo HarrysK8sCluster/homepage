@@ -6,7 +6,7 @@ Kleines PHP/Twig-Frontend mit Webpack Asset-Pipeline und einem eigenen DSL für 
 
 Die komplette technische Dokumentation (Architektur, DSL, Templates, Build, CI/CD) liegt auf der Website:
 
-- https://www.pkremer.de/app/website *(derzeit noch nicht public)*
+- https://www.pkremer.de/apps/website *(derzeit noch nicht public)*
 
 ## Lokal starten (kurz)
 

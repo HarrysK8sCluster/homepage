@@ -39,24 +39,3 @@
 
 - route: /apps/website/cicd
   page: apps/website/cicd
-
-- route: /app/website
-  page: apps/website
-
-- route: /app/website/dsl
-  page: apps/website/dsl
-
-- route: /app/website/assets
-  page: apps/website/assets
-
-- route: /app/website/content
-  page: apps/website/content
-
-- route: /app/website/templates
-  page: apps/website/templates
-
-- route: /app/website/php
-  page: apps/website/php
-
-- route: /app/website/cicd
-  page: apps/website/cicd

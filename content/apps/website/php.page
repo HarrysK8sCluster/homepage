@@ -11,7 +11,7 @@ Template: "index"
 
 - Text:
   Content: |
-    @(Button|Zurück zur Übersicht des Projekts|/app/website|house)
+    @(Button|Zurück zur Übersicht des Projekts|/apps/website|house)
 
 - Header:
   Type: "h2"
@@ -97,4 +97,4 @@ Template: "index"
 
 - Text:
   Content: |
-    @(Button|Zurück zur Übersicht des Projekts|/app/website|house)
+    @(Button|Zurück zur Übersicht des Projekts|/apps/website|house)

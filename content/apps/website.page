@@ -80,7 +80,7 @@ Template: "index"
 
   - Text:
     Content: |
-      @(link|DSL im Detail (Beispiele + Parser)|/app/website/dsl)
+      @(link|DSL im Detail (Beispiele + Parser)|/apps/website/dsl)
 
 
 - Header:
@@ -139,7 +139,7 @@ Template: "index"
 
   - Card:
     Heading: "Content & Routing"
-    Footer: @(button|Details →|/app/website/content)
+    Footer: @(button|Details →|/apps/website/content)
     - Text:
       Content: |
         Seiten leben komplett in `content/`: `*.page` Dateien + `routes.yaml`.
@@ -147,7 +147,7 @@ Template: "index"
 
   - Card:
     Heading: "DSL"
-    Footer: @(button|Details →|/app/website/dsl)
+    Footer: @(button|Details →|/apps/website/dsl)
     - Text:
       Content: |
         YAML-ähnliches Format, Inline-Makros im Fließtext und der Parser, der daraus einen stabilen Element-Baum baut.
@@ -155,7 +155,7 @@ Template: "index"
 
   - Card:
     Heading: "CI/CD"
-    Footer: @(button|Details →|/app/website/cicd)
+    Footer: @(button|Details →|/apps/website/cicd)
     - Text:
       Content: |
         Build -> GHCR -> GitOps Update ins k8s-Repo.
@@ -164,7 +164,7 @@ Template: "index"
 - Row:
   - Card:
     Heading: "PHP Source"
-    Footer: @(button|Details →|/app/website/php)
+    Footer: @(button|Details →|/apps/website/php)
     - Text:
       Content: |
         Kleine Pipeline statt Framework: Factory, Normalizer und Renderer.
@@ -172,7 +172,7 @@ Template: "index"
 
   - Card:
     Heading: "Twig Templates"
-    Footer: @(button|Details →|/app/website/templates)
+    Footer: @(button|Details →|/apps/website/templates)
     - Text:
       Content: |
         Layout-Shell, Page-Templates und viele kleine Element-Templates.
@@ -180,7 +180,7 @@ Template: "index"
 
   - Card:
     Heading: "Assets & Build"
-    Footer: @(button|Details →|/app/website/assets)
+    Footer: @(button|Details →|/apps/website/assets)
     - Text:
       Content: |
         SCSS als Module, Webpack als Build-Pipeline, Manifest für Cache-Busting.

@@ -119,7 +119,7 @@
         padding: 0.5rem 1rem;
         border: 1px solid vars.$pk-border;
         border-radius: 1.25rem;
-        background: vars.$pk-bg;
+        background: rgba(vars.$pk-bg, 0.95);
         width: fit-content;
       }
 
@@ -245,22 +245,19 @@
       &>aside {
         background: #00070f;
       }
-    }
 
-    .collapse {
-      summary {
-        border: 1px solid vars.$pkdark-border;
-        background: vars.$pkdark-bg;
-      }
+      .collapse {
+        summary {
+          border: 1px solid vars.$pkdark-border;
+          background: rgba(vars.$pkdark-card, 0.72);
+        }
 
-      .code {
-        $red: red(vars.$pkdark-bg);
-        $green: green(vars.$pkdark-bg);
-        $blue: blue(vars.$pkdark-bg);
-        background: rgba($red, $green, $blue, 0.3);
-        border-top: 1px solid vars.$pkdark-border;
-        border-bottom: 1px solid vars.$pkdark-border;
+        .code {
+          background: rgba(vars.$pkdark-card, 0.38);
+          border-top: 1px solid vars.$pkdark-border;
+          border-bottom: 1px solid vars.$pkdark-border;
 
+        }
       }
     }
 

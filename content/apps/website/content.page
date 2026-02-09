@@ -11,7 +11,7 @@ Template: "index"
 
 - Text:
   Content: |
-    @(Button|Zurück zur Übersicht des Projekts|/app/website|house)
+    @(Button|Zurück zur Übersicht des Projekts|/apps/website|house)
 
 - Header:
   Type: "h2"
@@ -47,7 +47,7 @@ Template: "index"
   - FileTreeItem:
     Type: "Directory"
     Path: "/content/apps"
-    Content: "Unterseiten (z.B. /app/website)"
+    Content: "Unterseiten (z.B. /apps/website)"
   - FileTreeItem:
     Type: "File"
     Path: "/content/apps/website.page"
@@ -69,11 +69,11 @@ Template: "index"
   - CodeBlock:
     Comment: |
       Die Website-Doku ist hier als eigener Block geroutet: Übersicht plus Deep-Dive Unterseiten.
-      Zusätzlich gibt es eine Kurzform als Alias unter /app/website.
+      Zusätzlich gibt es eine Kurzform als Alias unter /apsp/website.
     - Code:
-      LineNumbers: 22:62
+      LineNumbers: 1:41
 
 
 - Text:
   Content: |
-    @(Button|Zurück zur Übersicht des Projekts|/app/website|house)
+    @(Button|Zurück zur Übersicht des Projekts|/apps/website|house)

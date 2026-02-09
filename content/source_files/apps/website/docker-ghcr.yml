@@ -69,4 +69,3 @@ jobs:
           git add .
           git commit -m "Update wiki image to ${CONTENT_SHA}" || echo "Nothing to commit"
           git push
-

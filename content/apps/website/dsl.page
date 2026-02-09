@@ -11,7 +11,7 @@ Template: "index"
 
 - Text:
   Content: |
-    @(Button|Zurück zur Übersicht des Projekts|/app/website|house)
+    @(Button|Zurück zur Übersicht des Projekts|/apps/website|house)
 
 - Header:
   Type: "h2"
@@ -82,7 +82,7 @@ Template: "index"
     Comment: |
       Startpunkt des Parsers: der Input wird vorbereitet und der Seitenbaum beginnt mit einem Root-Knoten.
     - Code:
-      LineNumbers: 1:33
+      LineNumbers: 1:34
 
   - CodeBlock:
     Comment: |
@@ -90,27 +90,23 @@ Template: "index"
     - Code:
       LineNumbers: 35:95
 
-  - CodeBlock:
-    Comment: |
+  - CollapseBlock:
+    Summary: |
       Werte einlesen: einfache Werte und mehrzeilige Texte werden sauber gesammelt, damit Content nicht durch Formatierung kaputt geht.
-    - Collapse:
-      LineNumbers: 97:168
-      Summary: "Details ein-/ausklappen"
+    LineNumbers: 97:168
 
   - CodeBlock:
     Comment: |
       Normalisierung: erkannte Werte werden in einen stabilen Typ überführt, damit die spätere Verarbeitung eindeutig ist.
     - Code:
-      LineNumbers: 170:206
+      LineNumbers: 170:207
 
-  - CodeBlock:
-    Comment: |
+  - CollapseBlock:
+    Summary: |
       Hilfsfunktionen: Einrückung, Fehlertexte und Zeilenbezug sind hier gebündelt, damit Debugging schnell bleibt.
-    - Collapse:
-      LineNumbers: 208:253
-      Summary: "Details ein-/ausklappen"
+    LineNumbers: 208:253
 
 
 - Text:
   Content: |
-    @(Button|Zurück zur Übersicht des Projekts|/app/website|house)
+    @(Button|Zurück zur Übersicht des Projekts|/apps/website|house)
